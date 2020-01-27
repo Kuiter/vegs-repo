@@ -1,0 +1,3769 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ItemCreateComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/admin/item-create/item-create.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Item create component </p>
+<p>Component script and template for creating and editing base items, also used for editing items allocated to 
+a specific treament.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-item-create</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./item-create.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./item-create.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addOnBlur">addOnBlur</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumnsLabel">displayedColumnsLabel</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumnsScore">displayedColumnsScore</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumnsTax">displayedColumnsTax</a>
+                            </li>
+                            <li>
+                                <a href="#itemFormObject">itemFormObject</a>
+                            </li>
+                            <li>
+                                <a href="#labelItems">labelItems</a>
+                            </li>
+                            <li>
+                                <a href="#removable">removable</a>
+                            </li>
+                            <li>
+                                <a href="#scoreForm">scoreForm</a>
+                            </li>
+                            <li>
+                                <a href="#scoreItems">scoreItems</a>
+                            </li>
+                            <li>
+                                <a href="#scores">scores</a>
+                            </li>
+                            <li>
+                                <a href="#selectable">selectable</a>
+                            </li>
+                            <li>
+                                <a href="#selectedItem">selectedItem</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#separatorKeysCodes">separatorKeysCodes</a>
+                            </li>
+                            <li>
+                                <a href="#show">show</a>
+                            </li>
+                            <li>
+                                <a href="#showDescription">showDescription</a>
+                            </li>
+                            <li>
+                                <a href="#showLabel">showLabel</a>
+                            </li>
+                            <li>
+                                <a href="#showNav">showNav</a>
+                            </li>
+                            <li>
+                                <a href="#showScore">showScore</a>
+                            </li>
+                            <li>
+                                <a href="#showScoreForm">showScoreForm</a>
+                            </li>
+                            <li>
+                                <a href="#showSwaps">showSwaps</a>
+                            </li>
+                            <li>
+                                <a href="#showTax">showTax</a>
+                            </li>
+                            <li>
+                                <a href="#showTaxForm">showTaxForm</a>
+                            </li>
+                            <li>
+                                <a href="#swapItems">swapItems</a>
+                            </li>
+                            <li>
+                                <a href="#taxes">taxes</a>
+                            </li>
+                            <li>
+                                <a href="#taxForm">taxForm</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems">taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#treatmentEdit">treatmentEdit</a>
+                            </li>
+                            <li>
+                                <a href="#visible">visible</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                <a href="#addDescriptionItem">addDescriptionItem</a>
+                            </li>
+                            <li>
+                                <a href="#addLabel">addLabel</a>
+                            </li>
+                            <li>
+                                <a href="#addScore">addScore</a>
+                            </li>
+                            <li>
+                                <a href="#addSwapItems">addSwapItems</a>
+                            </li>
+                            <li>
+                                <a href="#addTax">addTax</a>
+                            </li>
+                            <li>
+                                <a href="#closeEdit">closeEdit</a>
+                            </li>
+                            <li>
+                                <a href="#deleteLabel">deleteLabel</a>
+                            </li>
+                            <li>
+                                <a href="#deleteScore">deleteScore</a>
+                            </li>
+                            <li>
+                                <a href="#deleteSwap">deleteSwap</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTax">deleteTax</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#populateEmpty">populateEmpty</a>
+                            </li>
+                            <li>
+                                <a href="#populateForms">populateForms</a>
+                            </li>
+                            <li>
+                                <a href="#refreshLabelItems">refreshLabelItems</a>
+                            </li>
+                            <li>
+                                <a href="#refreshScoreItems">refreshScoreItems</a>
+                            </li>
+                            <li>
+                                <a href="#refreshSwapItems">refreshSwapItems</a>
+                            </li>
+                            <li>
+                                <a href="#refreshTaxItems">refreshTaxItems</a>
+                            </li>
+                            <li>
+                                <a href="#removeTag">removeTag</a>
+                            </li>
+                            <li>
+                                <a href="#saveItem">saveItem</a>
+                            </li>
+                            <li>
+                                <a href="#saveScoers">saveScoers</a>
+                            </li>
+                            <li>
+                                <a href="#saveTax">saveTax</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#close">close</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="close"></a>
+                        <b>close</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:28</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Databinding for emission of close event. Parent switches visibility off for the create component. </p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <b>
+                            add
+                        </b>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>add(event: MatChipInputEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="652"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:652</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener Mat-chip list specific function for adding tags to the item</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MatChipInputEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDescriptionItem"></a>
+                    <span class="name">
+                        <b>
+                            addDescriptionItem
+                        </b>
+                        <a href="#addDescriptionItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addDescriptionItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="281"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:281</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for adding descriptions to an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addLabel"></a>
+                    <span class="name">
+                        <b>
+                            addLabel
+                        </b>
+                        <a href="#addLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addLabel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="318"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:318</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for adding labels to an existing item either base / or treatment specific.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addScore"></a>
+                    <span class="name">
+                        <b>
+                            addScore
+                        </b>
+                        <a href="#addScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addScore()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:365</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for adding a score to an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSwapItems"></a>
+                    <span class="name">
+                        <b>
+                            addSwapItems
+                        </b>
+                        <a href="#addSwapItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addSwapItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:245</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for adding a swap item to a item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addTax"></a>
+                    <span class="name">
+                        <b>
+                            addTax
+                        </b>
+                        <a href="#addTax"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addTax()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="376"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:376</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for adding taxes to an item. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeEdit"></a>
+                    <span class="name">
+                        <b>
+                            closeEdit
+                        </b>
+                        <a href="#closeEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeEdit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Onclick listener for close edit display.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteLabel"></a>
+                    <span class="name">
+                        <b>
+                            deleteLabel
+                        </b>
+                        <a href="#deleteLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteLabel(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for deleting label references placed on an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteScore"></a>
+                    <span class="name">
+                        <b>
+                            deleteScore
+                        </b>
+                        <a href="#deleteScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteScore(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="357"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:357</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for deleting a score allocated to an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteSwap"></a>
+                    <span class="name">
+                        <b>
+                            deleteSwap
+                        </b>
+                        <a href="#deleteSwap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteSwap(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:226</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for deleting swap reference on item. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTax"></a>
+                    <span class="name">
+                        <b>
+                            deleteTax
+                        </b>
+                        <a href="#deleteTax"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTax(tax)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="422"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:422</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for deleting tax references on an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tax</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnInti livecycle hook sets up data for display. Checks if data is present, and if initializes data
+with their appropriate variables for editing and display purposes.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="populateEmpty"></a>
+                    <span class="name">
+                        <b>
+                            populateEmpty
+                        </b>
+                        <a href="#populateEmpty"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>populateEmpty()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="605"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:605</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function for populating all forms but with the default values, where no values are given.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="populateForms"></a>
+                    <span class="name">
+                        <b>
+                            populateForms
+                        </b>
+                        <a href="#populateForms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>populateForms()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="547"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:547</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function populate the forms if any existing values are present. 
+Primarily important for hte case if an item is edited after it has been created.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshLabelItems"></a>
+                    <span class="name">
+                        <b>
+                            refreshLabelItems
+                        </b>
+                        <a href="#refreshLabelItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshLabelItems(label)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:188</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh UI function for label display.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>label</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshScoreItems"></a>
+                    <span class="name">
+                        <b>
+                            refreshScoreItems
+                        </b>
+                        <a href="#refreshScoreItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshScoreItems(scores)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:215</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh UI function for allocated scores.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>scores</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshSwapItems"></a>
+                    <span class="name">
+                        <b>
+                            refreshSwapItems
+                        </b>
+                        <a href="#refreshSwapItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshSwapItems(swaps)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh UI funtion for swap display.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>swaps</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshTaxItems"></a>
+                    <span class="name">
+                        <b>
+                            refreshTaxItems
+                        </b>
+                        <a href="#refreshTaxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshTaxItems(taxes)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="388"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:388</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh UI representation of allocated taxes function.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>taxes</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeTag"></a>
+                    <span class="name">
+                        <b>
+                            removeTag
+                        </b>
+                        <a href="#removeTag"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeTag(tag: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="671"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:671</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener Mat-chip list for removing a tag</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tag</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveItem"></a>
+                    <span class="name">
+                        <b>
+                            saveItem
+                        </b>
+                        <a href="#saveItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="451"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:451</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for saving the edited or created item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveScoers"></a>
+                    <span class="name">
+                        <b>
+                            saveScoers
+                        </b>
+                        <a href="#saveScoers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveScoers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="434"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:434</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for saving scores to an item. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveTax"></a>
+                    <span class="name">
+                        <b>
+                            saveTax
+                        </b>
+                        <a href="#saveTax"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveTax()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="399"
+                            class="link-to-prism">src/app/admin/item-create/item-create.component.ts:399</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for saving tax definitions to an item.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addOnBlur"></a>
+                        <span class="name">
+                            <b>
+                            addOnBlur</b>
+                            <a href="#addOnBlur"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:90</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Part of chiplist definition </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;_id&#x27;, &#x27;name&#x27;, &#x27;brand&#x27;, &#x27;delete&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Mat-table column definition </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumnsLabel"></a>
+                        <span class="name">
+                            <b>
+                            displayedColumnsLabel</b>
+                            <a href="#displayedColumnsLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;_id&#x27;, &#x27;header&#x27;, &#x27;description&#x27;, &#x27;delete&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Mat-table column definition label</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumnsScore"></a>
+                        <span class="name">
+                            <b>
+                            displayedColumnsScore</b>
+                            <a href="#displayedColumnsScore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;scoreID&#x27;, &#x27;header&#x27;, &#x27;amount&#x27;, &#x27;delete&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Mat-table column definition score </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumnsTax"></a>
+                        <span class="name">
+                            <b>
+                            displayedColumnsTax</b>
+                            <a href="#displayedColumnsTax"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;taxID&#x27;, &#x27;header&#x27;, &#x27;shortDescription&#x27;, &#x27;delete&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:69</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Mat-table column definition taxes </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="itemFormObject"></a>
+                        <span class="name">
+                            <b>
+                            itemFormObject</b>
+                            <a href="#itemFormObject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Object for holding current item information. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="labelItems"></a>
+                        <span class="name">
+                            <b>
+                            labelItems</b>
+                            <a href="#labelItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Datasource for mat-table for displaying allocated labels </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="removable"></a>
+                        <span class="name">
+                            <b>
+                            removable</b>
+                            <a href="#removable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for chip removability. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scoreForm"></a>
+                        <span class="name">
+                            <b>
+                            scoreForm</b>
+                            <a href="#scoreForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:76</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>FormGroup variable for add score form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scoreItems"></a>
+                        <span class="name">
+                            <b>
+                            scoreItems</b>
+                            <a href="#scoreItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:55</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Datasource for mat-table for displaying allocated scores </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scores"></a>
+                        <span class="name">
+                            <b>
+                            scores</b>
+                            <a href="#scores"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:72</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Holds base scores for dropdown select </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectable"></a>
+                        <span class="name">
+                            <b>
+                            selectable</b>
+                            <a href="#selectable"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for selectability on chiplist. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedItem"></a>
+                        <span class="name">
+                            <b>
+                            selectedItem</b>
+                            <a href="#selectedItem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Holds reference to the selected item data. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="separatorKeysCodes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Readonly</span>
+                            separatorKeysCodes</b>
+                            <a href="#separatorKeysCodes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>number[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[ENTER, COMMA]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:92</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Part of chiplist definition </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="show"></a>
+                        <span class="name">
+                            <b>
+                            show</b>
+                            <a href="#show"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility toggle of edit component template. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showDescription"></a>
+                        <span class="name">
+                            <b>
+                            showDescription</b>
+                            <a href="#showDescription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of item description </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLabel"></a>
+                        <span class="name">
+                            <b>
+                            showLabel</b>
+                            <a href="#showLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of item labels </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showNav"></a>
+                        <span class="name">
+                            <b>
+                            showNav</b>
+                            <a href="#showNav"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of navigation button </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showScore"></a>
+                        <span class="name">
+                            <b>
+                            showScore</b>
+                            <a href="#showScore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of item scores </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showScoreForm"></a>
+                        <span class="name">
+                            <b>
+                            showScoreForm</b>
+                            <a href="#showScoreForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of score form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSwaps"></a>
+                        <span class="name">
+                            <b>
+                            showSwaps</b>
+                            <a href="#showSwaps"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of item swap options </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTax"></a>
+                        <span class="name">
+                            <b>
+                            showTax</b>
+                            <a href="#showTax"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of item taxes </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTaxForm"></a>
+                        <span class="name">
+                            <b>
+                            showTaxForm</b>
+                            <a href="#showTaxForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for visibility of tax form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swapItems"></a>
+                        <span class="name">
+                            <b>
+                            swapItems</b>
+                            <a href="#swapItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Datasource for mat-table for displaying allocated swap options </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxes"></a>
+                        <span class="name">
+                            <b>
+                            taxes</b>
+                            <a href="#taxes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Holds base taxes for dropdown select </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxForm"></a>
+                        <span class="name">
+                            <b>
+                            taxForm</b>
+                            <a href="#taxForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>FormGroup variable for add tax form </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxItems"></a>
+                        <span class="name">
+                            <b>
+                            taxItems</b>
+                            <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:80</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Datasource for mat-table, for allocated tax display. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="treatmentEdit"></a>
+                        <span class="name">
+                            <b>
+                            treatmentEdit</b>
+                            <a href="#treatmentEdit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for determining if item is beeing edited on treatment or in base item mode. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visible"></a>
+                        <span class="name">
+                            <b>
+                            visible</b>
+                            <a href="#visible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/admin/item-create/item-create.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for chip list display for associated tags. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Output, EventEmitter } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { ItemService } from &#x27;../services/item.service&#x27;;
+import { TreatmentService } from &#x27;../services/treatment.service&#x27;;
+import { MatChipInputEvent } from &#x27;@angular/material/chips&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { ItemAllocateDialogComponent } from &#x27;../item-allocate-dialog/item-allocate-dialog.component&#x27;;
+import { LabelService } from &#x27;../services/label.service&#x27;;
+import { LabelAllocateDialogComponent } from &#x27;../label-allocate-dialog/label-allocate-dialog.component&#x27;;
+import { ScoreService } from &#x27;../services/score.service&#x27;;
+import { TaxService } from &#x27;../services/tax.service&#x27;;
+import { COMMA, ENTER } from &#x27;@angular/cdk/keycodes&#x27;;
+
+/**
+ * Item create component 
+ * 
+ * Component script and template for creating and editing base items, also used for editing items allocated to 
+ * a specific treament.
+ */
+@Component({
+  selector: &#x27;app-item-create&#x27;,
+  templateUrl: &#x27;./item-create.component.html&#x27;,
+  styleUrls: [&#x27;./item-create.component.scss&#x27;]
+})
+export class ItemCreateComponent implements OnInit {
+  /**Databinding for emission of close event. Parent switches visibility off for the create component. */
+  @Output() close: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+  /**Object for holding current item information. */
+  itemFormObject: any;
+  /**Switch for visibility toggle of edit component template. */
+  show &#x3D; false;
+  /**Switch for visibility of item description */
+  showDescription &#x3D; false;
+  // showTax &#x3D; false;
+  /**Switch for visibility of item labels */
+  showLabel &#x3D; false;
+  /**Switch for visibility of navigation button */
+  showNav &#x3D; false;
+  /**Switch for visibility of item scores */
+  showScore &#x3D; false;
+  /**Switch for visibility of score form */
+  showScoreForm &#x3D; false;
+  /**Switch for visibility of item taxes */
+  showTax &#x3D; false;
+  /**Switch for visibility of tax form */
+  showTaxForm &#x3D; false;
+  /**Switch for visibility of item swap options */
+  showSwaps &#x3D; false;
+  /**Datasource for mat-table for displaying allocated swap options */
+  swapItems: any[];
+  /**Datasource for mat-table for displaying allocated labels */
+  labelItems: any[];
+  /**Datasource for mat-table for displaying allocated scores */
+  scoreItems: any[];
+
+  // if treatment Edit
+  /**Switch for determining if item is beeing edited on treatment or in base item mode. */
+  treatmentEdit &#x3D; false;
+  /**Holds reference to the selected item data. */
+  selectedItem: any;
+  /**Mat-table column definition */
+  displayedColumns &#x3D; [&#x27;_id&#x27;, &#x27;name&#x27;, &#x27;brand&#x27;, &#x27;delete&#x27;];
+  /**Mat-table column definition label*/
+  displayedColumnsLabel &#x3D; [&#x27;_id&#x27;, &#x27;header&#x27;, &#x27;description&#x27;, &#x27;delete&#x27;];
+  /**Mat-table column definition score */
+  displayedColumnsScore &#x3D; [&#x27;scoreID&#x27;, &#x27;header&#x27;, &#x27;amount&#x27;, &#x27;delete&#x27;];
+  /**Mat-table column definition taxes */
+  displayedColumnsTax &#x3D; [&#x27;taxID&#x27;, &#x27;header&#x27;, &#x27;shortDescription&#x27;, &#x27;delete&#x27;];
+
+  /**Holds base scores for dropdown select */
+  scores: any;
+  /**Holds base taxes for dropdown select */
+  taxes: any;
+  /**FormGroup variable for add score form */
+  scoreForm: FormGroup;
+  /**FormGroup variable for add tax form */
+  taxForm: FormGroup;
+  /**Datasource for mat-table, for allocated tax display. */
+  taxItems: any;
+
+  // for chip list (tags)
+  /**Switch for chip list display for associated tags. */
+  visible &#x3D; true;
+  /**Switch for selectability on chiplist. */
+  selectable &#x3D; true;
+  /**Switch for chip removability. */
+  removable &#x3D; true;
+  /**Part of chiplist definition */
+  addOnBlur &#x3D; true;
+  /**Part of chiplist definition */
+  readonly separatorKeysCodes: number[] &#x3D; [ENTER, COMMA];
+
+  /**
+   * @ignore
+   * @param fb 
+   * @param route 
+   * @param itemService 
+   * @param scoreService 
+   * @param router 
+   * @param treatmentService 
+   * @param dialog 
+   * @param labelService 
+   * @param taxService 
+   */
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private itemService: ItemService,
+    private scoreService: ScoreService,
+    private router: Router,
+    private treatmentService: TreatmentService,
+    private dialog: MatDialog,
+    private labelService: LabelService,
+    private taxService: TaxService
+  ) { }
+  /**
+   * OnInti livecycle hook sets up data for display. Checks if data is present, and if initializes data
+   * with their appropriate variables for editing and display purposes.
+   */
+  ngOnInit() {
+    // check if Item edit is chosen
+    if (this.route.snapshot.parent.url[0].path &#x3D;&#x3D; &#x27;treatmentEdit&#x27;) {
+      this.treatmentEdit &#x3D; true;
+      const treatmentID &#x3D; this.route.snapshot.parent.url[1].path;
+      this.route.params.subscribe((param) &#x3D;&gt; {
+        this.treatmentService.getSpecificTreatment(treatmentID).subscribe((val: any) &#x3D;&gt; {
+          this.selectedItem &#x3D; val[0].items.filter((x) &#x3D;&gt; { return x._id &#x3D;&#x3D; param.itemID })[0];
+          // populate form with existing data
+          this.populateForms();
+          this.swapItems &#x3D; [];
+          // load all specified scores 
+          this.scoreService.getAllScores().subscribe(
+            (scores) &#x3D;&gt; {
+              this.scores &#x3D; scores;
+            },
+            (error) &#x3D;&gt; { console.error(error) }
+          );
+          this.taxService.getAllTaxes().subscribe(
+            (taxes: any) &#x3D;&gt; {
+              this.taxes &#x3D; taxes;
+            }
+          );
+          if (this.itemFormObject.taxes.length &gt; 0) {
+            this.taxItems &#x3D; this.itemFormObject.taxes;
+            this.showTax &#x3D; true;
+          }
+          // check if swap items are available
+          if (this.itemFormObject.swaps.length &gt; 0) {
+            // get item data from treatment service!
+            this.swapItems &#x3D; this.treatmentService.getItemsOfTreatmentByArray(this.route.snapshot.parent.url[1].path, this.itemFormObject.swaps);
+            this.showSwaps &#x3D; true;
+          }
+          if (this.itemFormObject.label.length &gt; 0) {
+            // get item data from treatment service!
+            this.labelService.getLabelByArray(this.itemFormObject.label).subscribe((label: any[]) &#x3D;&gt; {
+              this.labelItems &#x3D; label;
+              this.showLabel &#x3D; true;
+            });
+          }
+          // populate scores
+          if (this.itemFormObject.score !&#x3D; undefined) {
+            if (this.itemFormObject.score.length &gt; 0) {
+              this.scoreItems &#x3D; this.itemFormObject.score;
+              this.showScore &#x3D; true;
+            }
+          }
+        });
+      })
+      return;
+    }
+    // if baseItem edit is selected
+    if (this.route.snapshot.parent.data.items) {
+      this.route.params.subscribe((param) &#x3D;&gt; {
+        let ind &#x3D; this.route.snapshot.parent.data.items.findIndex(x &#x3D;&gt; x._id &#x3D;&#x3D; param.itemID);
+        this.selectedItem &#x3D; this.route.snapshot.parent.data.items[ind];
+        this.populateForms();
+      });
+      return;
+    }
+    this.showNav &#x3D; true;
+    this.populateEmpty()
+  }
+  /**
+   * Refresh UI function for label display.
+   * @param label 
+   */
+  refreshLabelItems(label) {
+    this.showLabel &#x3D; false;
+    this.labelItems &#x3D; null;
+    if (label.length &gt; 0) {
+      this.labelService.getLabelByArray(label).subscribe((label: any) &#x3D;&gt; {
+        this.labelItems &#x3D; label;
+        this.showLabel &#x3D; true;
+      });
+    }
+  }
+  /**
+   * Refresh UI funtion for swap display.
+   * @param swaps 
+   */
+  refreshSwapItems(swaps) {
+    this.showSwaps &#x3D; false;
+    this.swapItems &#x3D; null;
+    if (swaps.length &gt; 0) {
+      this.swapItems &#x3D; this.treatmentService.getItemsOfTreatmentByArray(this.route.snapshot.parent.url[1].path, swaps);
+      this.showSwaps &#x3D; true;
+    }
+  }
+
+  /**
+   * Refresh UI function for allocated scores.
+   * @param scores 
+   */
+  refreshScoreItems(scores) {
+    this.showScore &#x3D; false;
+    this.scoreItems &#x3D; scores;
+    console.log(this.scoreItems);
+    if (this.scoreItems.length &lt; 1) {
+      return;
+    }
+    this.showScore &#x3D; true;
+  }
+
+  /**OnClick listener for deleting swap reference on item. */
+  deleteSwap(id) {
+    // from swapItems
+    const ind &#x3D; this.swapItems.findIndex(x &#x3D;&gt; x._id &#x3D;&#x3D; id);
+    if (ind &#x3D;&#x3D; -1) {
+      return;
+    }
+    this.swapItems.splice(ind, 1);
+    this.swapItems &#x3D; this.swapItems;
+    const indObj &#x3D; this.itemFormObject.swaps.indexOf(id);
+    if (indObj &#x3D;&#x3D; -1) {
+      return;
+    }
+    this.itemFormObject.swaps.splice(indObj, 1);
+    this.refreshSwapItems(this.itemFormObject.swaps);
+  }
+
+  /**
+   * OnClick listener for adding a swap item to a item.
+   */
+  addSwapItems() {
+    let treatmentItems &#x3D; this.treatmentService.getItemsofTreatment(this.route.snapshot.parent.url[1].path);
+    const dialogRef &#x3D; this.dialog.open(ItemAllocateDialogComponent, {
+      width: &#x27;80%&#x27;,
+      data: {
+        itemID: this.itemFormObject._id,
+        allItems: treatmentItems,
+        selectedItems: this.itemFormObject.swaps,
+        ref: &#x27;swap&#x27;
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result) {
+        result.forEach(element &#x3D;&gt; {
+          if (this.itemFormObject.swaps.includes(element._id)) { } else {
+            this.itemFormObject.swaps.push(element._id);
+          }
+        });
+        this.swapItems &#x3D; this.treatmentService.getItemsOfTreatmentByArray(this.route.snapshot.parent.url[1].path, this.itemFormObject.swaps);
+        this.showSwaps &#x3D; true;
+      }
+    });
+  }
+
+  /**
+   * Onclick listener for close edit display.
+   * @emits closeEdit
+   */
+  closeEdit() {
+    this.itemService.emitCloseEdit();
+  }
+
+  /**
+   * OnClick listener for adding descriptions to an item.
+   */
+  addDescriptionItem() {
+    this.itemFormObject.description.push(
+      this.fb.group({
+        header: [&#x27;&#x27;],
+        text: [&#x27;&#x27;],
+      })
+    );
+    this.showDescription &#x3D; true;
+  }
+
+  /**
+   * OnClick listener for deleting label references placed on an item.
+   * @param id 
+   */
+  deleteLabel(id) {
+    // from labelItems
+    const ind &#x3D; this.labelItems.findIndex(x &#x3D;&gt; x._id &#x3D;&#x3D; id);
+    if (ind &#x3D;&#x3D; -1) {
+      console.log(&#x27;No label found? In labelItems&#x27;)
+      return;
+    }
+    this.labelItems.splice(ind, 1);
+
+    // from objecForm
+    const indObj &#x3D; this.itemFormObject.label.indexOf(id);
+    if (indObj &#x3D;&#x3D; -1) {
+      // may happen if item not saved.
+      console.log(&#x27;No label found? In Obj&#x27;)
+      return;
+    }
+    this.itemFormObject.label.splice(indObj, 1);
+    this.refreshLabelItems(this.itemFormObject.label);
+  }
+
+  /**
+   * OnClick listener for adding labels to an existing item either base / or treatment specific.
+   */
+  addLabel() {
+    this.labelService.getAllMyLabel().subscribe((label) &#x3D;&gt; {
+      const dialogRef &#x3D; this.dialog.open(LabelAllocateDialogComponent, {
+        width: &#x27;80%&#x27;,
+        data: {
+          itemID: this.itemFormObject._id,
+          allLabel: label,
+          selectedLabel: this.itemFormObject.label,
+          ref: &#x27;swap&#x27;
+        }
+      });
+      dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+        if (result) {
+          console.log(result);
+          // console.log(this.itemFormObject);
+          result.forEach(element &#x3D;&gt; {
+            if (this.itemFormObject.label.includes(element._id)) { } else {
+              this.itemFormObject.label.push(element._id);
+            }
+          });
+          // get exact description of label from treatment of backend if new items always backend
+          this.labelService.getLabelByArray(this.itemFormObject.label).subscribe(
+            (label: any) &#x3D;&gt; {
+              this.labelItems &#x3D; label;
+              this.showLabel &#x3D; true;
+            }
+          );
+          // console.log(this.swapItems);
+          // console.log(this.itemFormObject);
+
+        }
+      });
+    });
+  }
+
+  /**
+   * OnClick listener for deleting a score allocated to an item.
+   * @param id 
+   */
+  deleteScore(id) {
+    this.itemFormObject.score &#x3D; {};
+    this.refreshScoreItems([]);
+  }
+
+  /**
+   * OnClick listener for adding a score to an item.
+   */
+  addScore() {
+    this.scoreForm &#x3D; this.fb.group({
+      scoreID: [&#x27;&#x27;],
+      amount: []
+    });
+    this.showScoreForm &#x3D; true;
+  }
+
+  /**
+   * OnClick listener for adding taxes to an item. 
+   */
+  addTax() {
+    this.taxForm &#x3D; this.fb.group({
+      taxID: [&#x27;&#x27;],
+      amount: []
+    });
+    this.showTaxForm &#x3D; true;
+  }
+
+  /**
+   * Refresh UI representation of allocated taxes function.
+   * @param taxes 
+   */
+  refreshTaxItems(taxes) {
+    this.showTax &#x3D; false;
+    this.taxItems &#x3D; taxes;
+    if (this.taxItems.length &gt; 0) {
+      this.showTax &#x3D; true;
+    }
+  }
+
+  /**
+   * OnClick listener for saving tax definitions to an item.
+   */
+  saveTax() {
+    const ind &#x3D; this.taxes.findIndex(x &#x3D;&gt; x._id &#x3D;&#x3D; this.taxForm.controls.taxID.value);
+    if (ind &#x3D;&#x3D; -1) {
+      return;
+    }
+    if (!this.itemFormObject.taxes) { this.itemFormObject.taxes &#x3D; [] }
+    this.itemFormObject.taxes.push(
+      {
+        taxID: this.taxForm.controls.taxID.value,
+        header: this.taxes[ind].header,
+        description: this.taxes[ind].description,
+        shortDescription: this.taxes[ind].shortDescription,
+        amount: this.taxForm.controls.amount.value
+      }
+    );
+    this.refreshTaxItems(this.itemFormObject.taxes);
+    this.showTaxForm &#x3D; false;
+  }
+
+  /**
+   * OnClick listener for deleting tax references on an item.
+   * @param tax 
+   */
+  deleteTax(tax) {
+    const ind &#x3D; this.itemFormObject.taxes.findIndex(x &#x3D;&gt; x.taxID &#x3D;&#x3D; tax);
+    if (ind &#x3D;&#x3D; -1) {
+      return;
+    }
+    this.itemFormObject.taxes.splice(ind, 1);
+    this.refreshTaxItems(this.itemFormObject.taxes);
+  }
+
+  /**
+   * OnClick listener for saving scores to an item. 
+   */
+  saveScoers() {
+    let ind &#x3D; this.scores.findIndex(x &#x3D;&gt; x._id &#x3D;&#x3D; this.scoreForm.controls.scoreID.value);
+    if (ind &#x3D;&#x3D; -1) {
+      return;
+    }
+    this.itemFormObject.score &#x3D; {
+      scoreID: this.scoreForm.controls.scoreID.value,
+      amount: this.scoreForm.controls.amount.value
+    }
+    Object.assign(this.itemFormObject.score, this.scores[ind]);
+    this.refreshScoreItems([this.itemFormObject.score]);
+    this.showScoreForm &#x3D; false;
+  }
+
+  /**
+   * OnClick listener for saving the edited or created item.
+   */
+  saveItem() {
+    let item &#x3D; {
+      _id: &#x27;&#x27;,
+      name: this.itemFormObject.data.controls.name.value,
+      brand: this.itemFormObject.data.controls.brand.value,
+      description: [],
+      nutritionalTable: {
+        kj: this.itemFormObject.nutritionalTable.controls.kj.value,
+        kcal: this.itemFormObject.nutritionalTable.controls.kcal.value,
+        totalFat: this.itemFormObject.nutritionalTable.controls.totalFat.value,
+        saturatedFat: this.itemFormObject.nutritionalTable.controls.saturatedFat.value,
+        totalCarbohydrate: this.itemFormObject.nutritionalTable.controls.totalCarbohydrate.value,
+        sugar: this.itemFormObject.nutritionalTable.controls.sugar.value,
+        protein: this.itemFormObject.nutritionalTable.controls.protein.value,
+        salt: this.itemFormObject.nutritionalTable.controls.salt.value,
+      },
+      netPrice: this.itemFormObject.data.controls.netPrice.value,
+      currency: this.itemFormObject.data.controls.currency.value,
+      vat: this.itemFormObject.data.controls.vat.value,
+      tax: {
+        // steht noch aus wie es implementiert wird
+      },
+      amount: this.itemFormObject.data.controls.amount.value,
+      content: {
+        contentType: this.itemFormObject.content.controlscontentType.value,
+        amountInKG: this.itemFormObject.content.controls.amountInKG.value,
+        displayAmount: this.itemFormObject.content.controls.displayAmount.value,
+      },
+      images: [],
+      ingredients: this.itemFormObject.data.controls.ingredients.value,
+      allergens: this.itemFormObject.data.controls.allergens.value,
+      // superGroup: this.itemFormObject.data.controls.superGroup.value,
+      // subGroup: this.itemFormObject.data.controls.subGroup.value,
+      score: this.itemFormObject.score,
+      swaps: this.itemFormObject.swaps,
+      label: this.itemFormObject.label,
+      taxes: this.itemFormObject.taxes,
+      tags: this.itemFormObject.tags
+    };
+    console.log(item);
+    if (this.itemFormObject.description.length &gt; 0) {
+      this.itemFormObject.description.forEach(d &#x3D;&gt; {
+        item.description.push(
+          {
+            header: d.controls.header.value,
+            text: d.controls.text.value,
+            // order: d.controls.order.value,
+          }
+        );
+      });
+    }
+
+    if (!this.selectedItem) {
+      this.itemService.saveNewItem(item).subscribe(
+        (item) &#x3D;&gt; {
+          console.log(&#x27;sucess&#x27;);
+          if (this.treatmentEdit) {
+            this.treatmentService.getAllTreatments().subscribe(() &#x3D;&gt; { });
+          }
+          // load all items new... ?
+
+        },
+        (error) &#x3D;&gt; {
+          console.log(error);
+        }
+      );
+    } else {
+      item._id &#x3D; this.selectedItem._id;
+      item.images &#x3D; this.selectedItem.images;
+      if (this.treatmentEdit) {
+        // console.log(item._id);
+        this.treatmentService.updateInformationOfItemInTreatment(item).subscribe(
+          (val) &#x3D;&gt; {
+            console.log(val);
+            this.treatmentService.replaceTreatment(val);
+          }
+        );
+        return;
+      }
+      this.itemService.saveEditedItem(item).subscribe(
+        (item) &#x3D;&gt; {
+          console.log(item);
+          // replace item in route data with updated item
+        },
+        (error) &#x3D;&gt; {
+          console.log(error);
+        }
+      );
+    }
+    // this.itemService.saveNewItem(item).subscribe(());
+  }
+
+  /**
+   * Function populate the forms if any existing values are present. 
+   * Primarily important for hte case if an item is edited after it has been created.
+   */
+  populateForms() {
+    console.log(this.selectedItem);
+    this.itemFormObject &#x3D; {
+      _id: this.selectedItem._id,
+      data: this.fb.group({
+        name: [this.selectedItem.name],
+        brand: [this.selectedItem.brand],
+        currency: [this.selectedItem.currency],
+        vat: [this.selectedItem.vat],
+        amount: [this.selectedItem.amount],
+        ingredients: [this.selectedItem.ingredients],
+        allergens: [this.selectedItem.allergens],
+        superGroup: [this.selectedItem.superGroup],
+        subGroup: [this.selectedItem.subGroup],
+        netPrice: [this.selectedItem.netPrice],
+        niceness: [this.selectedItem.niceness]
+      }),
+      nutritionalTable: this.fb.group({
+        kj: [this.selectedItem.nutritionalTable.kj],
+        kcal: [this.selectedItem.nutritionalTable.kcal],
+        totalFat: [this.selectedItem.nutritionalTable.totalFat],
+        saturatedFat: [this.selectedItem.nutritionalTable.saturatedFat],
+        totalCarbohydrate: [this.selectedItem.nutritionalTable.totalCarbohydrate],
+        sugar: [this.selectedItem.nutritionalTable.sugar],
+        protein: [this.selectedItem.nutritionalTable.protein],
+        salt: [this.selectedItem.nutritionalTable.salt],
+        // additionalInformation: [
+        //   AdditionalInformationSchema
+        // ]
+      }),
+      content: this.fb.group({
+        contentType: [this.selectedItem.content.contentType],
+        amountInKG: [this.selectedItem.content.amountInKG],
+        displayAmount: [this.selectedItem.content.displayAmount]
+      }),
+      description: [],
+      swaps: this.selectedItem.swaps,
+      label: this.selectedItem.label,
+      score: this.selectedItem.score,
+      taxes: this.selectedItem.taxes,
+      tags: this.selectedItem.tags
+    }
+    // add description items
+    if (this.selectedItem.description.length &gt; 0) {
+      this.selectedItem.description.forEach(desc &#x3D;&gt; {
+        this.itemFormObject.description.push(this.fb.group({
+          header: [desc.header],
+          text: [desc.text],
+        }));
+      });
+      this.showDescription &#x3D; true;
+    }
+    this.show &#x3D; true;
+  }
+
+  /**
+   * Function for populating all forms but with the default values, where no values are given.
+   */
+  populateEmpty() {
+    this.itemFormObject &#x3D; {
+      data: this.fb.group({
+        name: [&#x27;&#x27;],
+        brand: [&#x27;&#x27;],
+        currency: [&#x27;EUR&#x27;],
+        vat: [0],
+        amount: [],
+        ingredients: [&#x27;&#x27;],
+        allergens: [&#x27;&#x27;],
+        superGroup: [&#x27;&#x27;],
+        subGroup: [&#x27;&#x27;],
+        netPrice: [],
+        niceness: [1]
+      }),
+      nutritionalTable: this.fb.group({
+        kj: [],
+        kcal: [],
+        totalFat: [],
+        saturatedFat: [],
+        totalCarbohydrate: [],
+        sugar: [],
+        protein: [],
+        salt: [],
+        // additionalInformation: [
+        //   AdditionalInformationSchema
+        // ]
+      }),
+      description: [],
+      content: this.fb.group({
+        contentType: [&#x27;solid&#x27;],
+        amountInKG: [],
+        displayAmount: [&#x27;g&#x27;],
+      }),
+      score: {},
+      swaps: [],
+      label: [],
+      taxes: [],
+      tags: []
+    }
+    this.show &#x3D; true;
+  }
+
+  /**
+   * OnClick listener Mat-chip list specific function for adding tags to the item
+   * @param event 
+   */
+  add(event: MatChipInputEvent): void {
+    const input &#x3D; event.input;
+    const value &#x3D; event.value;
+
+    // Add our fruit
+    if ((value || &#x27;&#x27;).trim()) {
+      this.itemFormObject.tags.push(value.trim());
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value &#x3D; &#x27;&#x27;;
+    }
+  }
+
+  /**
+   * OnClick listener Mat-chip list for removing a tag
+   * @param tag 
+   */
+  removeTag(tag: String): void {
+    const index &#x3D; this.itemFormObject.tags.indexOf(tag);
+
+    if (index &gt;&#x3D; 0) {
+      this.itemFormObject.tags.splice(index, 1);
+    }
+  }
+  /**@ignore */
+  onBack() {
+    this.router.navigate([&#x27;/admin&#x27;]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;showNav&quot; class&#x3D;&quot;mini-nav&quot;&gt;
+    &lt;button mat-icon-button (click)&#x3D;&quot;onBack()&quot;&gt;
+      &lt;mat-icon&gt;arrow_back&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;h3 class&#x3D;&quot;ml-2 mt-1&quot;&gt;Back to administration&lt;/h3&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;subcard&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;!showNav; else createItem&quot; class&#x3D;&quot;bar-back&quot;&gt;
+      &lt;span style&#x3D;&quot;font-size: 20px&quot;&gt;Edit item&lt;/span&gt;
+      &lt;span class&#x3D;&quot;toolbar-spacer&quot;&gt;&lt;/span&gt;
+      &lt;div&gt;
+        &lt;button (click)&#x3D;&quot;closeEdit()&quot; mat-icon-button&gt;
+          &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ng-template #createItem&gt;
+      &lt;div class&#x3D;&quot;bar-back&quot;&gt;
+        &lt;span style&#x3D;&quot;font-size: 20px&quot;&gt;Create new base item&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;div *ngIf&#x3D;&quot;show&quot;&gt;
+      &lt;div class&#x3D;&quot;subform&quot;&gt;
+        &lt;!-- &lt;h4 *ngIf&#x3D;&quot;showNav&quot;&gt;Neues Produkt anlegen&lt;/h4&gt; --&gt;
+        &lt;form [formGroup]&#x3D;&quot;itemFormObject.data&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Product name&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;name&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Brand&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;brand&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Amount&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;amount&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Net Price&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;netPrice&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Vat.&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;vat&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Ingredients&lt;/mat-label&gt;
+                &lt;textarea matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;ingredients&quot;&gt;&lt;/textarea&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Allergens&lt;/mat-label&gt;
+                &lt;textarea matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;allergens&quot;&gt;&lt;/textarea&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Niceness&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;niceness&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;1&quot;&gt;
+                &lt;mat-hint&gt;Min 0, max 1&lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;subform&quot;&gt;
+        &lt;h5&gt;Nutritional table&lt;/h5&gt;
+        &lt;form [formGroup]&#x3D;&quot;itemFormObject.nutritionalTable&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;KJ&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;kj&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Kcal&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;kcal&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Fat&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;totalFat&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Saturated fat&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;saturatedFat&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Carbohydrates&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;totalCarbohydrate&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Sugar&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;sugar&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Protein&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;protein&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Salt&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;number&quot; formControlName&#x3D;&quot;salt&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;subform&quot;&gt;
+        &lt;h5&gt;Add product descriptions&lt;/h5&gt;
+        &lt;div *ngIf&#x3D;&quot;showDescription&quot;&gt;
+          &lt;div *ngFor&#x3D;&quot;let fg of itemFormObject.description&quot;&gt;
+            &lt;form [formGroup]&#x3D;&quot;fg&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Header&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;header&quot;&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Text&lt;/mat-label&gt;
+                &lt;textarea matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;text&quot;&gt;&lt;/textarea&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;button mat-raised-button (click)&#x3D;&quot;addDescriptionItem()&quot;&gt;Add&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;subform&quot;&gt;
+        &lt;mat-form-field class&#x3D;&quot;example-chip-list&quot;&gt;
+          &lt;mat-chip-list #chipList aria-label&#x3D;&quot;Edit tags&quot;&gt;
+            &lt;mat-chip *ngFor&#x3D;&quot;let tag of itemFormObject.tags&quot; [selectable]&#x3D;&quot;selectable&quot; [removable]&#x3D;&quot;removable&quot;
+              (removed)&#x3D;&quot;removeTag(tag)&quot;&gt;
+              {{tag}}
+              &lt;mat-icon matChipRemove *ngIf&#x3D;&quot;removable&quot;&gt;cancel&lt;/mat-icon&gt;
+            &lt;/mat-chip&gt;
+            &lt;input placeholder&#x3D;&quot;New tag...&quot; [matChipInputFor]&#x3D;&quot;chipList&quot;
+              [matChipInputSeparatorKeyCodes]&#x3D;&quot;separatorKeysCodes&quot; [matChipInputAddOnBlur]&#x3D;&quot;addOnBlur&quot;
+              (matChipInputTokenEnd)&#x3D;&quot;add($event)&quot;&gt;
+          &lt;/mat-chip-list&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;subform&quot;&gt;
+        &lt;h5&gt;Content&lt;/h5&gt;
+        &lt;form [formGroup]&#x3D;&quot;itemFormObject.content&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Content in kg&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;amountInKG&quot;&gt;
+                &lt;mat-hint&gt;E.g. 500g as 0.5&lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Type of content&lt;/mat-label&gt;
+                &lt;mat-select formControlName&#x3D;&quot;contentType&quot;&gt;
+                  &lt;mat-option value&#x3D;&quot;fluid&quot;&gt;Fluid&lt;/mat-option&gt;
+                  &lt;mat-option value&#x3D;&quot;solid&quot;&gt;Solid&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Conversion&lt;/mat-label&gt;
+                &lt;mat-select formControlName&#x3D;&quot;displayAmount&quot;&gt;
+                  &lt;mat-option value&#x3D;&quot;g&quot;&gt;Gramm / Millilitre&lt;/mat-option&gt;
+                  &lt;mat-option value&#x3D;&quot;kg&quot;&gt;Kilogramm / Liter&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+                &lt;mat-hint&gt;Price per 100g or per 1kg&lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;subform&quot; *ngIf&#x3D;&quot;treatmentEdit&quot;&gt;
+        &lt;button mat-raised-button (click)&#x3D;&quot;addSwapItems()&quot;&gt;Add Swap&lt;/button&gt;
+        &lt;div *ngIf&#x3D;&quot;showSwaps&quot;&gt;
+          &lt;table mat-table [dataSource]&#x3D;&quot;swapItems&quot;&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;_id&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; ID &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element._id}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;name&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Name &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.name}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;brand&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Marke &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.brand}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-container matColumnDef&#x3D;&quot;delete&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Delete &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+                &lt;button (click)&#x3D;&quot;deleteSwap(element._id)&quot; mat-icon-button&gt;
+                  &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+            &lt;/ng-container&gt;
+
+            &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+            &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns;&quot;&gt;&lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;subform&quot; *ngIf&#x3D;&quot;treatmentEdit&quot;&gt;
+        &lt;button mat-raised-button (click)&#x3D;&quot;addLabel()&quot;&gt;Add Label&lt;/button&gt;
+        &lt;div *ngIf&#x3D;&quot;showLabel&quot;&gt;
+          &lt;table mat-table [dataSource]&#x3D;&quot;labelItems&quot;&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;_id&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; ID &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element._id}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;header&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Name &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.header}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+            &lt;ng-container matColumnDef&#x3D;&quot;description&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Description &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.description}} &lt;/td&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-container matColumnDef&#x3D;&quot;delete&quot;&gt;
+              &lt;th mat-header-cell *matHeaderCellDef&gt; Delete &lt;/th&gt;
+              &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+                &lt;button (click)&#x3D;&quot;deleteLabel(element._id)&quot; mat-icon-button&gt;
+                  &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+                &lt;/button&gt;
+              &lt;/td&gt;
+            &lt;/ng-container&gt;
+
+            &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumnsLabel&quot;&gt;&lt;/tr&gt;
+            &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumnsLabel;&quot;&gt;&lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;subform&quot; *ngIf&#x3D;&quot;treatmentEdit&quot;&gt;
+          &lt;button mat-raised-button (click)&#x3D;&quot;addScore()&quot;&gt;Add Score&lt;/button&gt;
+          &lt;div *ngIf&#x3D;&quot;showScore&quot;&gt;
+            &lt;table mat-table [dataSource]&#x3D;&quot;scoreItems&quot;&gt;
+              &lt;ng-container matColumnDef&#x3D;&quot;scoreID&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; ID &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.scoreID}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;ng-container matColumnDef&#x3D;&quot;header&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Score &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.header}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;ng-container matColumnDef&#x3D;&quot;amount&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Score &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.amount}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;ng-container matColumnDef&#x3D;&quot;delete&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Delete &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+                  &lt;button (click)&#x3D;&quot;deleteScore(element.scoreID)&quot; mat-icon-button&gt;
+                    &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+                  &lt;/button&gt;
+                &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumnsScore&quot;&gt;&lt;/tr&gt;
+              &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumnsScore;&quot;&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;div *ngIf&#x3D;&quot;showScoreForm&quot;&gt;
+            &lt;form [formGroup]&#x3D;&quot;scoreForm&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Select Score&lt;/mat-label&gt;
+                &lt;mat-select formControlName&#x3D;&quot;scoreID&quot;&gt;
+                  &lt;mat-option *ngFor&#x3D;&quot;let s of scores&quot; [value]&#x3D;&quot;s._id&quot;&gt;{{s.header}}&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Score&lt;/mat-label&gt;
+                &lt;input matInput formControlName&#x3D;&quot;amount&quot; type&#x3D;&quot;number&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/form&gt;
+            &lt;button mat-raised-button (click)&#x3D;&quot;saveScoers()&quot;&gt;Add&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;subform&quot; *ngIf&#x3D;&quot;treatmentEdit&quot;&gt;
+          &lt;div *ngIf&#x3D;&quot;showTax&quot;&gt;
+            &lt;table mat-table [dataSource]&#x3D;&quot;taxItems&quot;&gt;
+              &lt;ng-container matColumnDef&#x3D;&quot;taxID&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; ID &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.taxID}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container matColumnDef&#x3D;&quot;header&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Name &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.header}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+              &lt;ng-container matColumnDef&#x3D;&quot;shortDescription&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Description &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.shortDescription}} &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;ng-container matColumnDef&#x3D;&quot;delete&quot;&gt;
+                &lt;th mat-header-cell *matHeaderCellDef&gt; Delete &lt;/th&gt;
+                &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+                  &lt;button (click)&#x3D;&quot;deleteTax(element.taxID)&quot; mat-icon-button&gt;
+                    &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+                  &lt;/button&gt;
+                &lt;/td&gt;
+              &lt;/ng-container&gt;
+
+              &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumnsTax&quot;&gt;&lt;/tr&gt;
+              &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumnsTax;&quot;&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;div *ngIf&#x3D;&quot;showTaxForm&quot;&gt;
+            &lt;form [formGroup]&#x3D;&quot;taxForm&quot;&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Select Score&lt;/mat-label&gt;
+                &lt;mat-select formControlName&#x3D;&quot;taxID&quot;&gt;
+                  &lt;mat-option *ngFor&#x3D;&quot;let s of taxes&quot; [value]&#x3D;&quot;s._id&quot;&gt;{{s.header}}&lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field&gt;
+                &lt;mat-label&gt;Tax&lt;/mat-label&gt;
+                &lt;input matInput formControlName&#x3D;&quot;amount&quot; type&#x3D;&quot;number&quot;&gt;
+                &lt;mat-hint&gt;in-%&lt;/mat-hint&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/form&gt;
+            &lt;button mat-raised-button (click)&#x3D;&quot;saveTax()&quot;&gt;Add&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;button mat-raised-button (click)&#x3D;&quot;addTax()&quot;&gt;Add Tax&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;button (click)&#x3D;&quot;saveItem()&quot; mat-raised-button&gt;Save Item&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;!treatmentEdit&gt;
+        &lt;button mat-raised-button (click)&#x3D;&quot;saveItem()&quot;&gt;Save Item&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./item-create.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">mat-form-field {
+  width: 100%;
+}
+
+.subform {
+  padding-top: 25px;
+}
+
+.mini-nav {
+  display: flex;
+}
+
+table {
+  width: 100%;
+}
+td {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  // cursor: pointer;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.subcard {
+  background-color: #fff;
+  margin-top: 0.5rem;
+  padding: 0 15px 15px 15px;
+  margin-bottom: 1.5rem;
+  /* background-color: rgba(0,0,0,0.12); */
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+div.bar-back {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  background-color: #3f51b5;
+  /* padding-top: 13px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+  margin-left: -15px;
+  min-height: 64px;
+  margin-right: -15px;
+  margin-top: 15px;
+  /* margin-bottom: 15px; */
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.example-chip-list {
+  width: 100%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div *ngIf="showNav" class="mini-nav">    <button mat-icon-button (click)="onBack()">      <mat-icon>arrow_back</mat-icon>    </button>    <h3 class="ml-2 mt-1">Back to administration</h3>  </div>  <div class="subcard">    <div *ngIf="!showNav; else createItem" class="bar-back">      <span style="font-size: 20px">Edit item</span>      <span class="toolbar-spacer"></span>      <div>        <button (click)="closeEdit()" mat-icon-button>          <mat-icon>close</mat-icon>        </button>      </div>    </div>    <ng-template #createItem>      <div class="bar-back">        <span style="font-size: 20px">Create new base item</span>      </div>    </ng-template>    <div *ngIf="show">      <div class="subform">        <!-- <h4 *ngIf="showNav">Neues Produkt anlegen</h4> -->        <form [formGroup]="itemFormObject.data">          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Product name</mat-label>                <input matInput type="text" formControlName="name">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Brand</mat-label>                <input matInput type="text" formControlName="brand">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Amount</mat-label>                <input matInput type="number" formControlName="amount">              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Net Price</mat-label>                <input matInput type="number" formControlName="netPrice">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Vat.</mat-label>                <input matInput type="number" formControlName="vat">              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Ingredients</mat-label>                <textarea matInput type="text" formControlName="ingredients"></textarea>              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Allergens</mat-label>                <textarea matInput type="text" formControlName="allergens"></textarea>              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Niceness</mat-label>                <input matInput type="number" formControlName="niceness" min="0" max="1">                <mat-hint>Min 0, max 1</mat-hint>              </mat-form-field>            </div>          </div>        </form>      </div>      <div class="subform">        <h5>Nutritional table</h5>        <form [formGroup]="itemFormObject.nutritionalTable">          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>KJ</mat-label>                <input matInput type="number" formControlName="kj">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Kcal</mat-label>                <input matInput type="number" formControlName="kcal">              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Fat</mat-label>                <input matInput type="number" formControlName="totalFat">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Saturated fat</mat-label>                <input matInput type="number" formControlName="saturatedFat">              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Carbohydrates</mat-label>                <input matInput type="number" formControlName="totalCarbohydrate">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Sugar</mat-label>                <input matInput type="number" formControlName="sugar">              </mat-form-field>            </div>          </div>          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Protein</mat-label>                <input matInput type="number" formControlName="protein">              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Salt</mat-label>                <input matInput type="number" formControlName="salt">              </mat-form-field>            </div>          </div>        </form>      </div>      <div class="subform">        <h5>Add product descriptions</h5>        <div *ngIf="showDescription">          <div *ngFor="let fg of itemFormObject.description">            <form [formGroup]="fg">              <mat-form-field>                <mat-label>Header</mat-label>                <input matInput type="text" formControlName="header">              </mat-form-field>              <mat-form-field>                <mat-label>Text</mat-label>                <textarea matInput type="text" formControlName="text"></textarea>              </mat-form-field>            </form>          </div>        </div>      </div>      <div>        <button mat-raised-button (click)="addDescriptionItem()">Add</button>      </div>      <div class="subform">        <mat-form-field class="example-chip-list">          <mat-chip-list #chipList aria-label="Edit tags">            <mat-chip *ngFor="let tag of itemFormObject.tags" [selectable]="selectable" [removable]="removable"              (removed)="removeTag(tag)">              {{tag}}              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>            </mat-chip>            <input placeholder="New tag..." [matChipInputFor]="chipList"              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"              (matChipInputTokenEnd)="add($event)">          </mat-chip-list>        </mat-form-field>      </div>      <div class="subform">        <h5>Content</h5>        <form [formGroup]="itemFormObject.content">          <div class="row">            <div class="col">              <mat-form-field>                <mat-label>Content in kg</mat-label>                <input matInput type="text" formControlName="amountInKG">                <mat-hint>E.g. 500g as 0.5</mat-hint>              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Type of content</mat-label>                <mat-select formControlName="contentType">                  <mat-option value="fluid">Fluid</mat-option>                  <mat-option value="solid">Solid</mat-option>                </mat-select>              </mat-form-field>            </div>            <div class="col">              <mat-form-field>                <mat-label>Conversion</mat-label>                <mat-select formControlName="displayAmount">                  <mat-option value="g">Gramm / Millilitre</mat-option>                  <mat-option value="kg">Kilogramm / Liter</mat-option>                </mat-select>                <mat-hint>Price per 100g or per 1kg</mat-hint>              </mat-form-field>            </div>          </div>        </form>      </div>      <div class="subform" *ngIf="treatmentEdit">        <button mat-raised-button (click)="addSwapItems()">Add Swap</button>        <div *ngIf="showSwaps">          <table mat-table [dataSource]="swapItems">            <ng-container matColumnDef="_id">              <th mat-header-cell *matHeaderCellDef> ID </th>              <td mat-cell *matCellDef="let element"> {{element._id}} </td>            </ng-container>            <ng-container matColumnDef="name">              <th mat-header-cell *matHeaderCellDef> Name </th>              <td mat-cell *matCellDef="let element"> {{element.name}} </td>            </ng-container>            <ng-container matColumnDef="brand">              <th mat-header-cell *matHeaderCellDef> Marke </th>              <td mat-cell *matCellDef="let element"> {{element.brand}} </td>            </ng-container>            <ng-container matColumnDef="delete">              <th mat-header-cell *matHeaderCellDef> Delete </th>              <td mat-cell *matCellDef="let element">                <button (click)="deleteSwap(element._id)" mat-icon-button>                  <mat-icon>close</mat-icon>                </button>              </td>            </ng-container>            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>          </table>        </div>      </div>      <div class="subform" *ngIf="treatmentEdit">        <button mat-raised-button (click)="addLabel()">Add Label</button>        <div *ngIf="showLabel">          <table mat-table [dataSource]="labelItems">            <ng-container matColumnDef="_id">              <th mat-header-cell *matHeaderCellDef> ID </th>              <td mat-cell *matCellDef="let element"> {{element._id}} </td>            </ng-container>            <ng-container matColumnDef="header">              <th mat-header-cell *matHeaderCellDef> Name </th>              <td mat-cell *matCellDef="let element"> {{element.header}} </td>            </ng-container>            <ng-container matColumnDef="description">              <th mat-header-cell *matHeaderCellDef> Description </th>              <td mat-cell *matCellDef="let element"> {{element.description}} </td>            </ng-container>            <ng-container matColumnDef="delete">              <th mat-header-cell *matHeaderCellDef> Delete </th>              <td mat-cell *matCellDef="let element">                <button (click)="deleteLabel(element._id)" mat-icon-button>                  <mat-icon>close</mat-icon>                </button>              </td>            </ng-container>            <tr mat-header-row *matHeaderRowDef="displayedColumnsLabel"></tr>            <tr mat-row *matRowDef="let row; columns: displayedColumnsLabel;"></tr>          </table>        </div>        <div class="subform" *ngIf="treatmentEdit">          <button mat-raised-button (click)="addScore()">Add Score</button>          <div *ngIf="showScore">            <table mat-table [dataSource]="scoreItems">              <ng-container matColumnDef="scoreID">                <th mat-header-cell *matHeaderCellDef> ID </th>                <td mat-cell *matCellDef="let element"> {{element.scoreID}} </td>              </ng-container>              <ng-container matColumnDef="header">                <th mat-header-cell *matHeaderCellDef> Score </th>                <td mat-cell *matCellDef="let element"> {{element.header}} </td>              </ng-container>              <ng-container matColumnDef="amount">                <th mat-header-cell *matHeaderCellDef> Score </th>                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>              </ng-container>              <ng-container matColumnDef="delete">                <th mat-header-cell *matHeaderCellDef> Delete </th>                <td mat-cell *matCellDef="let element">                  <button (click)="deleteScore(element.scoreID)" mat-icon-button>                    <mat-icon>close</mat-icon>                  </button>                </td>              </ng-container>              <tr mat-header-row *matHeaderRowDef="displayedColumnsScore"></tr>              <tr mat-row *matRowDef="let row; columns: displayedColumnsScore;"></tr>            </table>          </div>          <div *ngIf="showScoreForm">            <form [formGroup]="scoreForm">              <mat-form-field>                <mat-label>Select Score</mat-label>                <mat-select formControlName="scoreID">                  <mat-option *ngFor="let s of scores" [value]="s._id">{{s.header}}</mat-option>                </mat-select>              </mat-form-field>              <mat-form-field>                <mat-label>Score</mat-label>                <input matInput formControlName="amount" type="number">              </mat-form-field>            </form>            <button mat-raised-button (click)="saveScoers()">Add</button>          </div>        </div>        <div class="subform" *ngIf="treatmentEdit">          <div *ngIf="showTax">            <table mat-table [dataSource]="taxItems">              <ng-container matColumnDef="taxID">                <th mat-header-cell *matHeaderCellDef> ID </th>                <td mat-cell *matCellDef="let element"> {{element.taxID}} </td>              </ng-container>              <ng-container matColumnDef="header">                <th mat-header-cell *matHeaderCellDef> Name </th>                <td mat-cell *matCellDef="let element"> {{element.header}} </td>              </ng-container>              <ng-container matColumnDef="shortDescription">                <th mat-header-cell *matHeaderCellDef> Description </th>                <td mat-cell *matCellDef="let element"> {{element.shortDescription}} </td>              </ng-container>              <ng-container matColumnDef="delete">                <th mat-header-cell *matHeaderCellDef> Delete </th>                <td mat-cell *matCellDef="let element">                  <button (click)="deleteTax(element.taxID)" mat-icon-button>                    <mat-icon>close</mat-icon>                  </button>                </td>              </ng-container>              <tr mat-header-row *matHeaderRowDef="displayedColumnsTax"></tr>              <tr mat-row *matRowDef="let row; columns: displayedColumnsTax;"></tr>            </table>          </div>          <div *ngIf="showTaxForm">            <form [formGroup]="taxForm">              <mat-form-field>                <mat-label>Select Score</mat-label>                <mat-select formControlName="taxID">                  <mat-option *ngFor="let s of taxes" [value]="s._id">{{s.header}}</mat-option>                </mat-select>              </mat-form-field>              <mat-form-field>                <mat-label>Tax</mat-label>                <input matInput formControlName="amount" type="number">                <mat-hint>in-%</mat-hint>              </mat-form-field>            </form>            <button mat-raised-button (click)="saveTax()">Add</button>          </div>          <button mat-raised-button (click)="addTax()">Add Tax</button>        </div>        <button (click)="saveItem()" mat-raised-button>Save Item</button>      </div>      <div *ngIf=!treatmentEdit>        <button mat-raised-button (click)="saveItem()">Save Item</button>      </div>    </div>  </div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'ItemCreateComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ItemCreateComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

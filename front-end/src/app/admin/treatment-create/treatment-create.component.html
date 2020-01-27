@@ -1,0 +1,376 @@
+<div class="container">
+  <div class="mini-nav">
+    <button mat-icon-button (click)="onBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h3 class="ml-2 mt-1">Back to administration</h3>
+  </div>
+
+  <div class="info">
+    <h3>Create Treatment:</h3>
+    <span style="flex: 1 1 auto"></span>
+    <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseTreatment"
+      aria-expanded="false" aria-controls="collapseTreatment">
+      <mat-icon>info</mat-icon>
+    </button>
+  </div>
+  <div class="collapse" id="collapseTreatment">
+    <div class="card card-body my-2">
+      <p style="margin-bottom: 0">
+        The treatment edit screen gives you opportunity to configure the specificities of your individual
+        treatment needs. You can configure the selection of items to display in the shop, configure these items to
+        reflect changes, add filter options, and configure game and display options in the shop environment.
+        <br>
+        Note: Always remember to save the treatment after making changes to persist the changes.
+      </p>
+    </div>
+  </div>
+  <div *ngIf="show" class="subform">
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <h5>Treatment data:</h5>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse"
+            data-target="#collapseTreatmentData" aria-expanded="false" aria-controls="collapseTreatmentData">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseTreatmentData">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Input name and description of your individual treatment. These are only relevant for your reference. They
+              will not be displayed during a trial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form [formGroup]="treatmentForm" (ngSubmit)="saveTreatmentData()">
+      <mat-form-field>
+        <input type="text" matInput formControlName="name" placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea type="text" matInput formControlName="description" placeholder="Description"></textarea>
+      </mat-form-field>
+      <button *ngIf="treatmentForm.enabled" [disabled]="uploading" mat-raised-button type="submit">Save</button>
+    </form>
+    <button *ngIf="treatmentForm.disabled" mat-raised-button (click)="editData()">Edit</button>
+
+    <!-- allocate Tax also to individual item -->
+
+    <!-- allocate swaps also to individual item -->
+
+    <!-- allocate score individual item -->
+
+    <!-- set restrictions for subjects / max money; change item amount (necessary real time update of amount displayed) -->
+  </div>
+  <mat-divider></mat-divider>
+  <div class="subform" *ngIf="show">
+    <div class="info">
+      <h5>Items:</h5>
+      <span style="flex: 1 1 auto"></span>
+      <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseItems"
+        aria-expanded="false" aria-controls="collapseItems">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+    <div class="collapse" id="collapseItems">
+      <div class="card card-body my-2">
+        <p style="margin-bottom: 0">
+          Here you can add and delete items from your treatment specification. If items are added a copy of the
+          current base item is appended to the treatment. These copies can be edited to reflect the desired changes.
+          the corresponding base items will not be updated based on these changes. <br> Note: Swap options, taxes,
+          and scores can be added to the individual items by editing these treatment items.
+        </p>
+      </div>
+    </div>
+    <button mat-raised-button (click)="addItems()">Add Items</button>
+    <!-- <div *ngIf="newTreatment.items.length > 0">
+      <div *ngFor="let item of newTreatment.items">
+        Hallo
+      </div>
+    </div> -->
+    <app-item-manage [treatment]="newTreatment"></app-item-manage>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="subform">
+
+    <div class="info">
+      <h5>Add filter to treatment</h5>
+      <span style="flex: 1 1 auto"></span>
+      <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseFilter"
+        aria-expanded="false" aria-controls="collapseFilter">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+    <div class="collapse" id="collapseFilter">
+      <div class="card card-body my-2">
+        <p style="margin-bottom: 0">
+          Text.
+        </p>
+      </div>
+    </div>
+    <!-- select existing filter Tree allocate to treatment -->
+    <button (click)="addFilter()" mat-raised-button>Add filter</button>
+    <app-tree-manage></app-tree-manage>
+    <!-- <app-tree-create></app-tree-create> -->
+  </div>
+  <mat-divider></mat-divider>
+  <div class="subform" *ngIf="show">
+    <div class="info">
+      <h5>Display options</h5>
+      <span style="flex: 1 1 auto"></span>
+      <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseDisplay"
+        aria-expanded="false" aria-controls="collapseDisplay">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+    <div class="collapse" id="collapseDisplay">
+      <div class="card card-body my-2">
+        <p style="margin-bottom: 0">
+          Text.
+        </p>
+      </div>
+    </div>
+    <mat-form-field>
+      <mat-label>Amount</mat-label>
+      <input [(ngModel)]="newTreatment.showOptions.numOfItems" matInput type="number">
+      <mat-hint>Amount of items visible on store page</mat-hint>
+    </mat-form-field>
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.showOptions.showSum">Display cart sum
+          </mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseSum"
+            aria-expanded="false" aria-controls="collapseSum">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseSum">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to display the current sum of the shopping cart to the participants.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.showOptions.showBudget">Display budget
+          </mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapsebudget"
+            aria-expanded="false" aria-controls="collapsebudget">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapsebudget">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to display the current budget of the participants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.showOptions.showPopOverCart">Display popover shopping cart
+          </mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse"
+            data-target="#collapseshowPopOverCart" aria-expanded="false" aria-controls="collapseshowPopOverCart">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseshowPopOverCart">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to display the shopping cart in a popover on the item grid.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.showOptions.showScore">Display score</mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseScore"
+            aria-expanded="false" aria-controls="collapseScore">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseScore">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to display the score of an item in the shop.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.showOptions.showTax">Display taxes</mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseTax"
+            aria-expanded="false" aria-controls="collapseTax">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseTax">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to display the taxes of an item in the shop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.questionnaire">Show custom questionnaire
+          </mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseQuest"
+            aria-expanded="false" aria-controls="collapseQuest">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseQuest">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Before and after treatment navigate to q1 and q2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <h5>Swap configuration options</h5>
+  <div class="row">
+    <div class="col">
+      <div class="info">
+        <mat-checkbox [(ngModel)]="newTreatment.swapConfig.showSwaps">Show Swaps</mat-checkbox>
+        <span style="flex: 1 1 auto"></span>
+        <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseSwap"
+          aria-expanded="false" aria-controls="collapseSwap">
+          <mat-icon>info</mat-icon>
+        </button>
+      </div>
+      <div class="collapse" id="collapseSwap">
+        <div class="card card-body my-2">
+          <p style="margin-bottom: 0">
+            Choose this option to display the swap options of an item in the shop, when they are selected.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="info">
+        <mat-checkbox [(ngModel)]="newTreatment.swapConfig.showSwapEnd">Show Swaps at the end of treatment
+        </mat-checkbox>
+        <span style="flex: 1 1 auto"></span>
+        <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseSwapEnd"
+          aria-expanded="false" aria-controls="collapseSwapEnd">
+          <mat-icon>info</mat-icon>
+        </button>
+      </div>
+      <div class="collapse" id="collapseSwapEnd">
+        <div class="card card-body my-2">
+          <p style="margin-bottom: 0">
+            Choose this option to display the swaps specified on items when the treatment ends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="info">
+        <mat-checkbox [(ngModel)]="newTreatment.swapConfig.showOptInStart">Opt-In once at the start</mat-checkbox>
+        <span style="flex: 1 1 auto"></span>
+        <button color="primary" mat-icon-button type="button" data-toggle="collapse"
+          data-target="#collapseSwapOptInStart" aria-expanded="false" aria-controls="collapseSwapOptInStart">
+          <mat-icon>info</mat-icon>
+        </button>
+      </div>
+      <div class="collapse" id="collapseSwapOptInStart">
+        <div class="card card-body my-2">
+          <p style="margin-bottom: 0">
+            Choose Opt-In option. Show opt in swap option at start. Based on when the swap options are displayed it is
+            either displayed when the treatment starts or when the subject ends the treatment.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="info">
+        <mat-checkbox [(ngModel)]="newTreatment.swapConfig.showOptInEachTime">Opt-In before each</mat-checkbox>
+        <span style="flex: 1 1 auto"></span>
+        <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseOptInEach"
+          aria-expanded="false" aria-controls="collapseOptInEach">
+          <mat-icon>info</mat-icon>
+        </button>
+      </div>
+      <div class="collapse" id="collapseOptInEach">
+        <div class="card card-body my-2">
+          <p style="margin-bottom: 0">
+            Opt in each time a swap option would be displayed. Also includes a remember my answer option for the
+            subjects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="subform" *ngIf="show">
+    <!-- <h5>Game Options:</h5> -->
+    <div class="info">
+      <h5>Game options</h5>
+      <span style="flex: 1 1 auto"></span>
+      <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseGame"
+        aria-expanded="false" aria-controls="collapseGame">
+        <mat-icon>info</mat-icon>
+      </button>
+    </div>
+    <div class="collapse" id="collapseGame">
+      <div class="card card-body my-2">
+        <p style="margin-bottom: 0">
+          Text.
+        </p>
+      </div>
+    </div>
+    <mat-form-field>
+      <input type="number" matInput [(ngModel)]="newTreatment.subjectOptions.money">
+      <mat-hint>Amount of money each subject can spent</mat-hint>
+    </mat-form-field>
+    <div class="row">
+      <div class="col">
+        <div class="info">
+          <mat-checkbox [(ngModel)]="newTreatment.subjectOptions.restricted">Limit Budget</mat-checkbox>
+          <span style="flex: 1 1 auto"></span>
+          <button color="primary" mat-icon-button type="button" data-toggle="collapse" data-target="#collapseLimited"
+            aria-expanded="false" aria-controls="collapseLimited">
+            <mat-icon>info</mat-icon>
+          </button>
+        </div>
+        <div class="collapse" id="collapseLimited">
+          <div class="card card-body my-2">
+            <p style="margin-bottom: 0">
+              Choose this option to limit the budget of each participant to a set number.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="saveTreatment()" [disabled]="uploading" mat-raised-button type="submit">Save</button>
+</div>

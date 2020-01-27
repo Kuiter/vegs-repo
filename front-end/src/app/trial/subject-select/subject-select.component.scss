@@ -1,0 +1,32 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(#fff, rgba(0,0,0,0.5), #000);
+    z-index: 10;
+  }
+.form_card {
+    padding: 15px 25px;
+    max-width: 450px;
+    // height: 200px;
+    // line-height: 200px;
+    position: fixed;
+    top: 35%; 
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -225px;
+    background-color: #fff;
+    border-radius: 5px;
+    // text-align: center;
+    z-index: 11;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}

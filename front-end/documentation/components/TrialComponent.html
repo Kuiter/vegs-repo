@@ -1,0 +1,1869 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TrialComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/trial/trial.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Trial component</p>
+<p>This is the first component that is loaded if any routes with /t/<treatementID>/s/<subjectID>/...
+is loaded. Here data for the subject and treatment are initialized and reinitilized if the subject
+reloads the page.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-trial</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./trial.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./trial.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#innerWidth">innerWidth</a>
+                            </li>
+                            <li>
+                                <a href="#searchForm">searchForm</a>
+                            </li>
+                            <li>
+                                <a href="#show">show</a>
+                            </li>
+                            <li>
+                                <a href="#showBack">showBack</a>
+                            </li>
+                            <li>
+                                <a href="#showRemainder">showRemainder</a>
+                            </li>
+                            <li>
+                                <a href="#showSearchIcon">showSearchIcon</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancelSearch">cancelSearch</a>
+                            </li>
+                            <li>
+                                <a href="#navBack">navBack</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSearch">onSearch</a>
+                            </li>
+                            <li>
+                                <a href="#routeShoppingCart">routeShoppingCart</a>
+                            </li>
+                            <li>
+                                <a href="#setDataOnReload">setDataOnReload</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize">window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#sumCart">sumCart</a>
+                                </li>
+                                <li>
+                                    <a href="#currency">currency</a>
+                                </li>
+                                <li>
+                                    <a href="#numberOfItems">numberOfItems</a>
+                                </li>
+                                <li>
+                                    <a href="#showSum">showSum</a>
+                                </li>
+                                <li>
+                                    <a href="#showBudget">showBudget</a>
+                                </li>
+                                <li>
+                                    <a href="#budget">budget</a>
+                                </li>
+                                <li>
+                                    <a href="#remainder">remainder</a>
+                                </li>
+                                <li>
+                                    <a href="#showPopOverCart">showPopOverCart</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, trialTreatmentService: <a href="../guards/TrialTreatmentService.html">TrialTreatmentService</a>, shoppingCartService: <a href="../injectables/ShoppingCartService.html">ShoppingCartService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, eventsService: <a href="../injectables/EventsService.html">EventsService</a>, location: <a href="https://angular.io/api/common/Location" target="_blank">Location</a>, filterService: <a href="../injectables/FilterService.html">FilterService</a>, trialSubjectService: <a href="../injectables/TrialSubjectService.html">TrialSubjectService</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/trial/trial.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialTreatmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../guards/TrialTreatmentService.html" target="_self" >TrialTreatmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>shoppingCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShoppingCartService.html" target="_self" >ShoppingCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>location</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/Location" target="_blank" >Location</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>filterService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FilterService.html" target="_self" >FilterService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialSubjectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TrialSubjectService.html" target="_self" >TrialSubjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <b>
+                            window:resize
+                        </b>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/trial/trial.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelSearch"></a>
+                    <span class="name">
+                        <b>
+                            cancelSearch
+                        </b>
+                        <a href="#cancelSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/trial/trial.component.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for cancel search free text search field. 
+Deletes user input, emits 
+reset filter event,
+and switches icon displayed from close to search.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navBack"></a>
+                    <span class="name">
+                        <b>
+                            navBack
+                        </b>
+                        <a href="#navBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>navBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">src/app/trial/trial.component.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Onclick listener for back arrow, navigates back using location back.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/trial/trial.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>On Init retrieves the treatment data from router resolver, 
+sets subjectID using service, 
+sets treatment data on first load and reload in trialTreatmentService and session store,
+checks if subject is subjectID = 0, in which case no recording, else check if trial has already ended
+and then sets the visibility of the shop accordingly,
+subscribes to shoping show remainder calculation to update display.  </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearch"></a>
+                    <span class="name">
+                        <b>
+                            onSearch
+                        </b>
+                        <a href="#onSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/app/trial/trial.component.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listner for free text search bar. 
+Switches diplayed icon from search to close, 
+emits filter event,
+if not already on products page navigates there.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="routeShoppingCart"></a>
+                    <span class="name">
+                        <b>
+                            routeShoppingCart
+                        </b>
+                        <a href="#routeShoppingCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>routeShoppingCart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="222"
+                            class="link-to-prism">src/app/trial/trial.component.ts:222</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener for route to shopping cart button. 
+Emits show back event, for displaying arrow back for navigation, </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDataOnReload"></a>
+                    <span class="name">
+                        <b>
+                            setDataOnReload
+                        </b>
+                        <a href="#setDataOnReload"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setDataOnReload()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">src/app/trial/trial.component.ts:212</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handels treamtment data set up before page is displayed.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="innerWidth"></a>
+                        <span class="name">
+                            <b>
+                            innerWidth</b>
+                            <a href="#innerWidth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>window.innerWidth</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/trial/trial.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchForm"></a>
+                        <span class="name">
+                            <b>
+                            searchForm</b>
+                            <a href="#searchForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormGroup({
+    search: new FormControl(&#x27;&#x27;, Validators.required)
+  })</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/trial/trial.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>FormGroup for free text search </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="show"></a>
+                        <span class="name">
+                            <b>
+                            show</b>
+                            <a href="#show"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/trial/trial.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for displaying the entire trial component.
+Can be false if trial already ended.  </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showBack"></a>
+                        <span class="name">
+                            <b>
+                            showBack</b>
+                            <a href="#showBack"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/trial/trial.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>switch for diplaying nav button back. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showRemainder"></a>
+                        <span class="name">
+                            <b>
+                            showRemainder</b>
+                            <a href="#showRemainder"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/trial/trial.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for diplaying remainder of budget </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSearchIcon"></a>
+                        <span class="name">
+                            <b>
+                            showSearchIcon</b>
+                            <a href="#showSearchIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/trial/trial.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for displaying either search or close button on free text search. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sumCart"></a>
+                        <span class="name"><b>sumCart</b><a href="#sumCart"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>sumCart()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/trial/trial.component.ts:104</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currency"></a>
+                        <span class="name"><b>currency</b><a href="#currency"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>currency()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/trial/trial.component.ts:111</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="numberOfItems"></a>
+                        <span class="name"><b>numberOfItems</b><a href="#numberOfItems"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>numberOfItems()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/app/trial/trial.component.ts:118</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Provides length of cart array to button badge on shopping cart button.</p>
+</div>
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSum"></a>
+                        <span class="name"><b>showSum</b><a href="#showSum"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>showSum()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/trial/trial.component.ts:125</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showBudget"></a>
+                        <span class="name"><b>showBudget</b><a href="#showBudget"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>showBudget()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">src/app/trial/trial.component.ts:132</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="budget"></a>
+                        <span class="name"><b>budget</b><a href="#budget"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>budget()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/app/trial/trial.component.ts:139</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="remainder"></a>
+                        <span class="name"><b>remainder</b><a href="#remainder"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>remainder()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/app/trial/trial.component.ts:146</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showPopOverCart"></a>
+                        <span class="name"><b>showPopOverCart</b><a href="#showPopOverCart"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>showPopOverCart()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/app/trial/trial.component.ts:153</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>returns if a popover shopping cart should be displayed</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit, AfterContentChecked, HostListener, Inject } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router, RouterStateSnapshot } from &#x27;@angular/router&#x27;;
+import { TrialTreatmentService } from &#x27;./trial-services/trial-treatment.service&#x27;;
+import { FormGroup, FormControl, Validators } from &#x27;@angular/forms&#x27;;
+import { EventsService } from &#x27;./trial-services/events.service&#x27;;
+import { Location } from &#x27;@angular/common&#x27;;
+import { ShoppingCartService } from &#x27;./shopping-cart/shopping-cart.service&#x27;;
+import { FilterService } from &#x27;./trial-services/filter.service&#x27;;
+import { TrialSubjectService } from &#x27;./trial-services/trial-subject.service&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { SwapOptDialogComponent } from &#x27;./swap-opt-dialog/swap-opt-dialog.component&#x27;;
+
+/**
+ * Trial component
+ * 
+ * This is the first component that is loaded if any routes with /t/&lt;treatementID&gt;/s/&lt;subjectID&gt;/...
+ * is loaded. Here data for the subject and treatment are initialized and reinitilized if the subject
+ * reloads the page.
+ */
+
+@Component({
+  selector: &#x27;app-trial&#x27;,
+  templateUrl: &#x27;./trial.component.html&#x27;,
+  styleUrls: [&#x27;./trial.component.scss&#x27;]
+})
+export class TrialComponent implements OnInit, AfterViewInit {
+
+  @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
+  onResize(event) {
+    this.innerWidth &#x3D; window.innerWidth;
+  }
+  innerWidth: any &#x3D; window.innerWidth;
+
+  /**
+   * Switch for displaying the entire trial component.
+   * Can be false if trial already ended.  
+   */
+  show &#x3D; false;
+  /**Switch for diplaying remainder of budget */
+  showRemainder &#x3D; false;
+  /**switch for diplaying nav button back. */
+  showBack: boolean;
+  /**Switch for displaying either search or close button on free text search. */
+  showSearchIcon: boolean &#x3D; true;
+
+  /**FormGroup for free text search */
+  searchForm: FormGroup &#x3D; new FormGroup({
+    search: new FormControl(&#x27;&#x27;, Validators.required)
+  })
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private trialTreatmentService: TrialTreatmentService,
+    private shoppingCartService: ShoppingCartService,
+    private router: Router,
+    private eventsService: EventsService,
+    private location: Location,
+    private filterService: FilterService,
+    private trialSubjectService: TrialSubjectService,
+    private dialog: MatDialog,
+  ) { }
+
+  /**
+   * On Init retrieves the treatment data from router resolver, 
+   * sets subjectID using service, 
+   * sets treatment data on first load and reload in trialTreatmentService and session store,
+   * checks if subject is subjectID &#x3D; 0, in which case no recording, else check if trial has already ended
+   * and then sets the visibility of the shop accordingly,
+   * subscribes to shoping show remainder calculation to update display.  
+   */
+  ngOnInit() {
+    // console.log(this.activatedRoute.snapshot.data.treatment);
+    let t &#x3D; this.activatedRoute.snapshot.data.treatment;
+    this.trialSubjectService.setSubjectID(this.activatedRoute.snapshot.paramMap.get(&#x27;subjectID&#x27;))
+    // sessionStorage.setItem(&#x27;subjectID&#x27;, );
+    if (t) {
+      sessionStorage.setItem(&#x27;treatmentID&#x27;, t._id);
+      this.setDataOnReload();
+    }
+    if (this.trialSubjectService.getSubjectID() &#x3D;&#x3D; &#x27;0&#x27;) {
+      this.show &#x3D; true;
+    } else {
+      this.trialSubjectService.checkDataRecording(t._id, this.trialSubjectService.getSubjectID()).subscribe((val: boolean) &#x3D;&gt; {
+        this.show &#x3D; val;
+      })
+    }
+    this.shoppingCartService.showRemainder.subscribe((val) &#x3D;&gt; {
+      this.showRemainder &#x3D; val;
+    })
+    this.filterService.resetFilter.subscribe(() &#x3D;&gt; {
+      this.searchForm.reset();
+      this.showSearchIcon &#x3D; true;
+      this.eventsService.recordFilterEvents({ filter: &#x27;reset&#x27;, type: &#x27;general&#x27; });
+    })
+    this.filterService.filtered.subscribe((filter) &#x3D;&gt; {
+      this.eventsService.recordFilterEvents(filter);
+    })
+    console.log(&#x27;loaded&#x27;);
+  }
+
+  /**
+   * @returns {number} The Sum of all items in the shopping cart
+   */
+  get sumCart() {
+    return this.shoppingCartService.calcSumPriceOfItems();
+  }
+
+  /**
+   * @returns {string} The currency specified in the treatment
+   */
+  get currency() {
+    return this.trialTreatmentService.getCurrency();
+  }
+
+  /**Provides length of cart array to button badge on shopping cart button.
+   * @returns {Number}
+   */
+  get numberOfItems() {
+    return !this.shoppingCartService.cart ? 0 : this.shoppingCartService.cart.length;
+  }
+
+  /**
+   * @returns {boolean} The specified display option for show shopping cart sum
+   */
+  get showSum() {
+    return this.trialTreatmentService.getDisplayOptions().showSum;
+  }
+
+  /**
+   * @returns {boolean} The specified display option for show budget of subject
+   */
+  get showBudget() {
+    return this.trialTreatmentService.getDisplayOptions().showBudget;
+  }
+
+  /**
+   * @returns {number} The specified budget amount, specified in the treatment configurations
+   */
+  get budget() {
+    return this.trialTreatmentService.treatmentData.subjectOptions.money;
+  }
+
+  /**
+   * @returns {number} The remaining budget (budget - cart sum)
+   */
+  get remainder() {
+    return this.trialTreatmentService.treatmentData.subjectOptions.money - this.shoppingCartService.calcSumPriceOfItems();
+  }
+
+  /**
+   * returns if a popover shopping cart should be displayed
+   */
+  get showPopOverCart() {
+    // return true;
+    const url: string &#x3D; this.router.url;
+    return this.trialTreatmentService.getDisplayOptions().showPopOverCart &amp;&amp; !url.includes(&#x27;/cart&#x27;) &amp;&amp; this.numberOfItems &gt; 0;
+  }
+
+  /**
+   * @ignore
+   */
+  ngAfterViewInit() {
+    // console.log(&#x27;After View Init&#x27;);
+    this.eventsService.showBack.subscribe((bool) &#x3D;&gt; {
+      console.log(bool);
+      window.setTimeout(() &#x3D;&gt; {
+        this.showBack &#x3D; bool;
+      });
+    });
+    const { showSwaps, showOptInStart } &#x3D; this.trialTreatmentService.getSwapConfig();
+    if (showSwaps &amp;&amp; showOptInStart &amp;&amp; !localStorage.getItem(&#x27;rememberStart&#x27;)) {
+      this.dialog.open(SwapOptDialogComponent, {
+        data: {},
+        maxHeight: &#x27;80%&#x27;,
+        maxWidth: &#x27;80%&#x27;,
+      })
+    }
+  }
+
+  /**
+   * OnClick listner for free text search bar. 
+   * Switches diplayed icon from search to close, 
+   * emits filter event,
+   * if not already on products page navigates there.
+   */
+  onSearch() {
+    if (!this.searchForm.controls.search.value) { return }
+    this.showSearchIcon &#x3D; false;
+    this.filterService.filterItems(this.searchForm.controls.search.value, &#x27;notFilterTree&#x27;)
+    // when not on products page navigate there?
+    if (!this.router.routerState.snapshot.url.includes(&#x27;products&#x27;)) {
+      this.router.navigate([&#x27;products&#x27;], { relativeTo: this.activatedRoute })
+    };
+  }
+
+  /**
+   * OnClick listener for cancel search free text search field. 
+   * Deletes user input, emits 
+   * reset filter event,
+   * and switches icon displayed from close to search.
+   */
+  cancelSearch() {
+    // this.searchForm.reset();
+    // const filter &#x3D; { filter: &#x27;reset&#x27;, type: &#x27;general&#x27; }
+    // this.eventsService.recordSorting(filter);
+    this.filterService.resetFilterEmit();
+  }
+
+  /**
+   * Handels treamtment data set up before page is displayed.
+   */
+  setDataOnReload() {
+    console.log(this.activatedRoute.snapshot.data.treatment);
+    this.trialTreatmentService.setTreatmentDataOnReload(this.activatedRoute.snapshot.data.treatment);
+  }
+
+  /**
+   * OnClick listener for route to shopping cart button. 
+   * Emits show back event, for displaying arrow back for navigation, 
+   * 
+   */
+  routeShoppingCart() {
+    this.eventsService.emitShowBack(true);
+    this.router.navigate([&#x27;/t/&#x27; + this.trialTreatmentService.getTreatmentID() + &#x27;/s/&#x27; + this.trialSubjectService.getSubjectID() + &#x27;/shop/cart&#x27;]);
+    return;
+
+  }
+
+  /**
+   * Onclick listener for back arrow, navigates back using location back.
+   */
+  navBack() {
+    this.eventsService.emitShowBack(false);
+    this.location.back();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrapper&quot; *ngIf&#x3D;&quot;show; else error&quot;&gt;
+  &lt;div class&#x3D;&quot;header&quot;&gt;
+    &lt;app-header&gt;&lt;/app-header&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;info-bar&quot;&gt;
+    &lt;div class&#x3D;&quot;search&quot;&gt;
+      &lt;!-- &lt;div *ngIf&#x3D;&quot;showBack&quot;&gt; --&gt;
+      &lt;button *ngIf&#x3D;&quot;showBack&quot; (click)&#x3D;&quot;navBack()&quot; class&#x3D;&quot;btn-back&quot; mat-icon-button&gt;
+        &lt;mat-icon&gt;arrow_back&lt;/mat-icon&gt;
+      &lt;/button&gt;
+      &lt;!-- &lt;/div&gt; --&gt;
+      &lt;form [formGroup]&#x3D;&quot;searchForm&quot; class&#x3D;&quot;example&quot; (ngSubmit)&#x3D;&quot;onSearch()&quot;&gt;
+        &lt;input [ngClass]&#x3D;&quot;{&#x27;test&#x27;: !showBack, &#x27;test1&#x27;: showBack}&quot; formControlName&#x3D;&quot;search&quot; matInput type&#x3D;&quot;text&quot;
+          placeholder&#x3D;&quot;Search&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+        &lt;span&gt;
+          &lt;button *ngIf&#x3D;&quot;showSearchIcon&quot; mat-icon-button type&#x3D;&quot;submit&quot;&gt;
+            &lt;mat-icon [inline]&#x3D;&quot;true&quot;&gt;search&lt;/mat-icon&gt;
+          &lt;/button&gt;
+          &lt;button *ngIf&#x3D;&quot;!showSearchIcon&quot; mat-icon-button type&#x3D;&quot;button&quot; (click)&#x3D;&quot;cancelSearch()&quot;&gt;
+            &lt;mat-icon [inline]&#x3D;&quot;true&quot;&gt;close&lt;/mat-icon&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;info&quot; *ngIf&#x3D;&quot;innerWidth &gt; 520; else dropdown&quot;&gt;
+      &lt;div class&#x3D;&quot;shopping-cart&quot;&gt;
+        &lt;div [ngClass]&#x3D;&quot;{&#x27;popover__wrapper&#x27;: showPopOverCart}&quot;&gt;
+          &lt;button [matBadge]&#x3D;&quot;numberOfItems&quot; [matBadgeHidden]&#x3D;&quot;numberOfItems &lt; 1&quot; matBadgePosition&#x3D;&quot;before&quot;
+            mat-stroked-button (click)&#x3D;&quot;routeShoppingCart()&quot;&gt;
+            &lt;mat-icon&gt;shopping_cart&lt;/mat-icon&gt;
+            Warenkorb
+          &lt;/button&gt;
+          &lt;div class&#x3D;&quot;popover__content&quot;&gt;
+            &lt;mat-toolbar color&#x3D;&quot;primary&quot; style&#x3D;&quot;height: 48px&quot;&gt;
+              &lt;span&gt;Ihr Warenkorb&lt;/span&gt;
+            &lt;/mat-toolbar&gt;
+            &lt;div class&#x3D;&quot;container py-3&quot;&gt;
+              &lt;app-shopping-cart host&#x3D;&quot;popover&quot;&gt;&lt;/app-shopping-cart&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;showSum&quot; class&#x3D;&quot;shopping-cart&quot;&gt;
+          &lt;div class&#x3D;&quot;info&quot;&gt;
+            Sum: {{sumCart | currency: currency}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;showBudget&quot; class&#x3D;&quot;shopping-cart budget&quot;&gt;
+          &lt;div [ngClass]&#x3D;&quot;{&#x27;info&#x27;:!showRemainder, &#x27;b-expanded&#x27;:showRemainder}&quot;&gt;
+            &lt;div [ngClass]&#x3D;&quot;{&#x27;&#x27;:!showRemainder, &#x27;test&#x27;:showRemainder}&quot;&gt;
+              &lt;span *ngIf&#x3D;&quot;showRemainder&quot;&gt;Remaining: {{remainder | currency: currency}}&lt;/span&gt;
+              &lt;span [ngClass]&#x3D;&quot;{&#x27;shrink&#x27;:showRemainder}&quot;&gt;Budget: {{budget | currency: currency}}&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;body&quot;&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #error&gt;
+  &lt;div&gt;
+    &lt;div class&#x3D;&quot;lds-spinner&quot;&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #dropdown&gt;
+  &lt;button [matBadge]&#x3D;&quot;numberOfItems&quot; [matBadgeHidden]&#x3D;&quot;numberOfItems &lt; 1&quot; matBadgePosition&#x3D;&quot;before&quot; mat-stroked-button
+    (click)&#x3D;&quot;routeShoppingCart()&quot;&gt;
+    &lt;mat-icon&gt;shopping_cart&lt;/mat-icon&gt;
+  &lt;/button&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./trial.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.wrapper {
+  display: grid;
+  grid-template-rows: 64px auto auto;
+}
+
+.header {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.body {
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.info-bar {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 15px;
+}
+
+.search {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  border: 1px solid #dcdcdc;
+  // border-left: none;
+}
+.info {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  // border-top: 1px solid #DCDCDC;
+  // border-bottom: 1px solid #DCDCDC;
+  // display: grid;
+  // grid-template-columns: 3;
+  // justify-items: end;
+  //   border-right: 1px solid #DCDCDC;
+}
+
+@media (max-width: 520px) {
+  .info-bar {
+    grid-template-columns: 3fr 1fr;
+    column-gap: 1rem;
+  }
+  
+  .search {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 1px solid #dcdcdc;
+  }
+
+  .info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+.shopping-cart.budget {
+  // display: flex;
+  // flex-direction: column;
+}
+
+.shopping-cart button {
+  height: 50px;
+  float: right;
+  margin-left: 15px;
+}
+
+.shopping-cart .info {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  height: 50px;
+  float: right;
+  margin-left: 15px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.shopping-cart .b-expanded {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  height: 50px;
+  float: right;
+  margin-left: 15px;
+  line-height: 30px;
+  text-align: end;
+  padding: 0 15px;
+}
+
+.shrink {
+  color: grey;
+  font-size: 0.95rem;
+  margin-top: -10px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  height: 100%;
+}
+
+form.example input[type&#x3D;&quot;text&quot;] {
+  padding: 5px 0 0 24px;
+  font-size: 18px;
+  //   height: 100%;
+  height: 51px;
+  float: left;
+  border-right: 1px solid #dcdcdc;
+}
+
+form.example input[type&#x3D;&quot;text&quot;].test {
+  max-width: calc(100% - 49px);
+}
+
+form.example input[type&#x3D;&quot;text&quot;].test1 {
+  max-width: calc(100% - 98px);
+  // float: left;
+  // border-right: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+}
+
+form.example button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  //   height: 100%;
+  height: 50px;
+  width: 49px;
+  float: left;
+  font-size: 24px;
+  //   border: 1px solid #DCDCDC;
+  //   border-left: 1px solid #DCDCDC;
+  cursor: pointer;
+}
+
+.btn-back {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  //   height: 100%;
+  height: 50px;
+  width: 49px;
+  float: left;
+  font-size: 24px;
+  //   border: 1px solid #DCDCDC;
+  //   border-left: 1px solid #DCDCDC;
+  cursor: pointer;
+}
+
+.wrapper-spinner {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50%-40px);
+}
+
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: &quot; &quot;;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #000;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// a {
+//   text-decoration: none;
+// }
+
+.popover__title {
+  font-size: 24px;
+  line-height: 36px;
+  text-decoration: none;
+  color: rgb(228, 68, 68);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.popover__wrapper {
+  position: relative;
+  // margin-top: 1.5rem;
+  // display: inline-block;
+}
+.popover__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  // left: -150px;
+  right: 0;
+  top: 70px;
+  transform: translate(0, 10px);
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: auto;
+}
+.popover__wrapper:hover .popover__content {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -20px);
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message {
+  text-align: center;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrapper" *ngIf="show; else error">  <div class="header">    <app-header></app-header>  </div>  <div class="info-bar">    <div class="search">      <!-- <div *ngIf="showBack"> -->      <button *ngIf="showBack" (click)="navBack()" class="btn-back" mat-icon-button>        <mat-icon>arrow_back</mat-icon>      </button>      <!-- </div> -->      <form [formGroup]="searchForm" class="example" (ngSubmit)="onSearch()">        <input [ngClass]="{\'test\': !showBack, \'test1\': showBack}" formControlName="search" matInput type="text"          placeholder="Search" autocomplete="off">        <span>          <button *ngIf="showSearchIcon" mat-icon-button type="submit">            <mat-icon [inline]="true">search</mat-icon>          </button>          <button *ngIf="!showSearchIcon" mat-icon-button type="button" (click)="cancelSearch()">            <mat-icon [inline]="true">close</mat-icon>          </button>        </span>      </form>    </div>    <div class="info" *ngIf="innerWidth > 520; else dropdown">      <div class="shopping-cart">        <div [ngClass]="{\'popover__wrapper\': showPopOverCart}">          <button [matBadge]="numberOfItems" [matBadgeHidden]="numberOfItems < 1" matBadgePosition="before"            mat-stroked-button (click)="routeShoppingCart()">            <mat-icon>shopping_cart</mat-icon>            Warenkorb          </button>          <div class="popover__content">            <mat-toolbar color="primary" style="height: 48px">              <span>Ihr Warenkorb</span>            </mat-toolbar>            <div class="container py-3">              <app-shopping-cart host="popover"></app-shopping-cart>            </div>          </div>        </div>        <div *ngIf="showSum" class="shopping-cart">          <div class="info">            Sum: {{sumCart | currency: currency}}          </div>        </div>        <div *ngIf="showBudget" class="shopping-cart budget">          <div [ngClass]="{\'info\':!showRemainder, \'b-expanded\':showRemainder}">            <div [ngClass]="{\'\':!showRemainder, \'test\':showRemainder}">              <span *ngIf="showRemainder">Remaining: {{remainder | currency: currency}}</span>              <span [ngClass]="{\'shrink\':showRemainder}">Budget: {{budget | currency: currency}}</span>            </div>          </div>        </div>      </div>    </div>  </div>  <div class="body">    <router-outlet></router-outlet>  </div></div><ng-template #error>  <div>    <div class="lds-spinner">      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>      <div></div>    </div>  </div></ng-template><ng-template #dropdown>  <button [matBadge]="numberOfItems" [matBadgeHidden]="numberOfItems < 1" matBadgePosition="before" mat-stroked-button    (click)="routeShoppingCart()">    <mat-icon>shopping_cart</mat-icon>  </button></ng-template></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'TrialComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TrialComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1161 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ShoppingMetricsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/trial/shopping-metrics/shopping-metrics.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Shopping Metrics Component</p>
+<p>Place for additional shopping cart metrics ...
+eg.: Nutritional Information etc.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-shopping-metrics</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./shopping-metrics.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./shopping-metrics.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                <a href="#showSum">showSum</a>
+                            </li>
+                            <li>
+                                <a href="#swapCahin">swapCahin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculateSumOfItems">calculateSumOfItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#endTrial">endTrial</a>
+                            </li>
+                            <li>
+                                <a href="#finalCheckOut">finalCheckOut</a>
+                            </li>
+                            <li>
+                                <a href="#iterateSwaps">iterateSwaps</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#optInDialog">optInDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#currency">currency</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(shoppingCartService: <a href="../injectables/ShoppingCartService.html">ShoppingCartService</a>, trialTreatmentService: <a href="../guards/TrialTreatmentService.html">TrialTreatmentService</a>, eventsService: <a href="../injectables/EventsService.html">EventsService</a>, trialSubjectService: <a href="../injectables/TrialSubjectService.html">TrialSubjectService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>shoppingCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShoppingCartService.html" target="_self" >ShoppingCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialTreatmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../guards/TrialTreatmentService.html" target="_self" >TrialTreatmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialSubjectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TrialSubjectService.html" target="_self" >TrialSubjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateSumOfItems"></a>
+                    <span class="name">
+                        <b>
+                            calculateSumOfItems
+                        </b>
+                        <a href="#calculateSumOfItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateSumOfItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Sum of Items in shopping cart
+For html page</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="endTrial"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            endTrial
+                        </b>
+                        <a href="#endTrial"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>endTrial()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick Checkout Button for &quot;ending trial&quot;.
+Now implemented to redirect to questionnaire part 2.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="finalCheckOut"></a>
+                    <span class="name">
+                        <b>
+                            finalCheckOut
+                        </b>
+                        <a href="#finalCheckOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>finalCheckOut()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="iterateSwaps"></a>
+                    <span class="name">
+                        <b>
+                            iterateSwaps
+                        </b>
+                        <a href="#iterateSwaps"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>iterateSwaps(item)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="optInDialog"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            optInDialog
+                        </b>
+                        <a href="#optInDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>optInDialog(it: any | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>it</td>
+                                    <td>
+                                            <code>any | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean | null&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <span class="name">
+                            <b>
+                            items</b>
+                            <a href="#items"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.shoppingCartService.getCart()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Holds all items currently in cart and amount of items. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showSum"></a>
+                        <span class="name">
+                            <b>
+                            showSum</b>
+                            <a href="#showSum"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for displaying sum of items false if no items present. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="swapCahin"></a>
+                        <span class="name">
+                            <b>
+                            swapCahin</b>
+                            <a href="#swapCahin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Subject for iterating all items and possible swap options </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currency"></a>
+                        <span class="name"><b>currency</b><a href="#currency"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>currency()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/trial/shopping-metrics/shopping-metrics.component.ts:51</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div>
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ShoppingCartService } from &#x27;../shopping-cart/shopping-cart.service&#x27;;
+import { TrialTreatmentService } from &#x27;../trial-services/trial-treatment.service&#x27;;
+import { EventsService } from &#x27;../trial-services/events.service&#x27;;
+import { TrialSubjectService } from &#x27;../trial-services/trial-subject.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { SwapDialogComponent } from &#x27;../swap-dialog/swap-dialog.component&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { SwapOptDialogComponent } from &#x27;../swap-opt-dialog/swap-opt-dialog.component&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+
+/**
+ * Shopping Metrics Component
+ * 
+ * Place for additional shopping cart metrics ...
+ * eg.: Nutritional Information etc.
+ */
+@Component({
+  selector: &#x27;app-shopping-metrics&#x27;,
+  templateUrl: &#x27;./shopping-metrics.component.html&#x27;,
+  styleUrls: [&#x27;./shopping-metrics.component.scss&#x27;]
+})
+export class ShoppingMetricsComponent implements OnInit {
+  /**Holds all items currently in cart and amount of items. */
+  items &#x3D; this.shoppingCartService.getCart();
+  /**Switch for displaying sum of items false if no items present. */
+  showSum &#x3D; true;
+
+  /** Subject for iterating all items and possible swap options */
+  swapCahin: Subject&lt;any&gt;;
+
+  constructor(
+    private shoppingCartService: ShoppingCartService,
+    private trialTreatmentService: TrialTreatmentService,
+    private eventsService: EventsService,
+    private trialSubjectService: TrialSubjectService,
+    private router: Router,
+    private dialog: MatDialog,
+  ) { }
+
+  ngOnInit() {
+    console.log(this.items);
+    if (this.items.length &#x3D;&#x3D; 0) { return }
+    this.showSum &#x3D; true;
+  }
+
+  /**
+   * @return {String} currreny e.g.: EUR... 
+   * For the html page.
+   */
+  get currency() {
+    return this.trialTreatmentService.getCurrency();
+  }
+
+  /**
+   * 
+   * @returns {Number} Sum of Items in shopping cart
+   * For html page
+   */
+  calculateSumOfItems() {
+    if (this.items.length &#x3D;&#x3D; 0) {
+      return 0;
+    }
+    return this.shoppingCartService.calcSumPriceOfItems();
+  }
+  /**
+   * OnClick Checkout Button for &quot;ending trial&quot;.
+   * Now implemented to redirect to questionnaire part 2.
+   */
+  async endTrial() {
+    const { showSwapEnd, showOptInEachTime, showOptInStart } &#x3D; this.trialTreatmentService.getSwapConfig();
+    const items &#x3D; [...this.items];
+    if (showSwapEnd) {
+      if (showOptInStart) {
+        const bool &#x3D; await this.optInDialog(null);
+        if (bool) {
+          for (let it of items) {
+            await this.iterateSwaps(it);
+          }
+          this.finalCheckOut();
+        } else {
+          this.finalCheckOut();
+        }
+      } else if (showOptInEachTime) {
+        for (let it of items) {
+          console.log(it);
+          if (it.item.swaps.length &#x3D;&#x3D; 0) {
+            continue;
+            // promiseArray.push(new Promise((resolve, reject) &#x3D;&gt; { resolve() }));
+          }
+          let bool &#x3D; !localStorage.getItem(&#x27;remember&#x27;) ? null : (localStorage.getItem(&#x27;remember&#x27;) &#x3D;&#x3D; &#x27;true&#x27; ? true : false);
+          if (bool &#x3D;&#x3D; null) {
+            bool &#x3D; await this.optInDialog(it)
+            if (bool) {
+              console.log(&#x27;opted in&#x27;);
+              await this.iterateSwaps(it);
+            } else {
+              // promiseArray.push(new Promise((resolve, reject) &#x3D;&gt; { resolve() }));
+              console.log(&#x27;opted out&#x27;);
+              continue;
+            }
+          } else if (bool) {
+            console.log(&#x27;opted in permanently&#x27;);
+            await this.iterateSwaps(it);
+          } else if (bool &#x3D;&#x3D; false) {
+            // promiseArray.push(new Promise((resolve, reject) &#x3D;&gt; { resolve() }));
+            console.log(&#x27;opted out permanently&#x27;);
+            continue;
+          }
+        }
+        this.finalCheckOut();
+      } else {
+        // if no opt in Otion is selected
+        for (let it of items) {
+          if (it.item.swaps.length &#x3D;&#x3D; 0) { continue }
+          await this.iterateSwaps(it);
+          // promiseArray.push(new Promise((resolve, reject) &#x3D;&gt; { resolve() }));
+        }
+        this.finalCheckOut();
+      }
+    } else {
+      this.finalCheckOut();
+    }
+  }
+
+  // for ending trial
+  // this.eventsService.endTrial(this.shoppingCartService.getCart()).subscribe(
+  //   (trialData) &#x3D;&gt; {
+  //     this.trialSubjectService.recording &#x3D; false;
+  //     console.log(trialData);
+  //   },
+  //   (error) &#x3D;&gt; {
+  //     this.trialSubjectService.recording &#x3D; false;
+  //     console.log(error);
+  //   }
+  // );
+
+  finalCheckOut() {
+    const subjectID &#x3D; sessionStorage.getItem(&#x27;subjectID&#x27;);
+    const treatmentID &#x3D; sessionStorage.getItem(&#x27;treatmentID&#x27;);
+    console.log(&#x27;proceeded after iterate Swaps&#x27;)
+    // proceed to questionnaire
+    this.eventsService.endShoppingSession(this.shoppingCartService.getCart()).subscribe(
+      async (resp) &#x3D;&gt; {
+        if (this.trialTreatmentService.treatmentData.questionnaire) {
+          this.trialSubjectService.recording &#x3D; false;
+          this.router.navigate([&#x60;/t/${treatmentID}/s/${subjectID}/q2&#x60;])
+        } else {
+          const resp &#x3D; await this.eventsService.endTrial().toPromise();
+          this.trialSubjectService.recording &#x3D; false;
+          // route to end
+          this.router.navigate([&#x60;/t/${treatmentID}/s/${subjectID}/end&#x60;]);
+        }
+      },
+      (error) &#x3D;&gt; {
+        console.log(this.trialTreatmentService.treatmentData);
+        this.router.navigate([&#x60;/t/${treatmentID}/s/${subjectID}/end&#x60;]);
+        this.trialSubjectService.recording &#x3D; false;
+      }
+    )
+  }
+
+  async optInDialog(it: any | null): Promise&lt;boolean | null&gt; {
+    return new Promise((resolve, reject) &#x3D;&gt; {
+      const dialogRef &#x3D; !it ?
+        this.dialog.open(SwapOptDialogComponent, {
+          data: { item: it.item },
+          maxHeight: &#x27;80%&#x27;,
+          maxWidth: &#x27;80%&#x27;,
+        })
+        : this.dialog.open(SwapOptDialogComponent, {
+          data: {},
+          maxHeight: &#x27;80%&#x27;,
+          maxWidth: &#x27;80%&#x27;,
+        })
+      dialogRef.afterClosed().subscribe(async (bool) &#x3D;&gt; {
+        resolve(bool);
+      })
+    })
+  }
+
+  iterateSwaps(item) {
+    console.log(&#x27;initiated swap iterate &#x27;, item);
+    return new Promise((resolve, reject) &#x3D;&gt; {
+      if (!item.item.swaps) { resolve() } else {
+        if (item.item.swaps.length &gt; 0) {
+          this.eventsService.$recordEvent.emit(
+            {
+              event: &#x27;swapStarted&#x27;,
+              data: {
+                originalItem: item.item._id,
+                originalAmount: item.amount,
+                swapOptions: item.item.swaps
+              }
+            }
+          )
+          const dialogRef &#x3D; this.dialog.open(SwapDialogComponent, {
+            maxHeight: &#x27;80vh&#x27;,
+            width: &#x27;80%&#x27;,
+            data: {
+              originalItem: item.item._id,
+              items: item.item.swaps,
+              amount: item.amount
+            }
+          })
+
+          dialogRef.afterClosed().subscribe((result: any) &#x3D;&gt; {
+            console.log(result);
+            if (!result) {
+              this.eventsService.$recordEvent.emit(
+                {
+                  event: &#x27;swapEnded&#x27;,
+                  data: {
+                    resultItem: item.item._id,
+                    resultAmount: item.amount,
+                    success: false
+                  }
+                }
+              )
+              this.shoppingCartService.addItemToCart(item, item.amount);
+              resolve();
+            } else {
+              this.eventsService.$recordEvent.emit(
+                {
+                  event: &#x27;swapEnded&#x27;,
+                  data: {
+                    resultItem: result.item._id,
+                    resultAmount: result.amount,
+                    success: true
+                  }
+                }
+              )
+              this.shoppingCartService.removeItemFromCart(item.item);
+              this.shoppingCartService.addItemToCart(result.item, result.amount);
+              resolve();
+            }
+          });
+        } else { resolve() }
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrapper&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;showSum&quot; class&#x3D;&quot;price-sum&quot;&gt;
+    Summe: &lt;strong&gt;{{calculateSumOfItems() | currency: currency}}&lt;/strong&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;finish&quot;&gt;
+    &lt;button (click)&#x3D;&quot;endTrial()&quot; mat-raised-button&gt;Zur Kasse&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./shopping-metrics.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.wrapper {
+  display: grid;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+}
+
+.price-sum {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  align-self: end;
+}
+
+.finish {
+  align-self: end;
+}
+
+.finish button {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   display: block;
+  //   width: 90%;
+  width: 100%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrapper">  <div *ngIf="showSum" class="price-sum">    Summe: <strong>{{calculateSumOfItems() | currency: currency}}</strong>  </div>  <div class="finish">    <button (click)="endTrial()" mat-raised-button>Zur Kasse</button>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'ShoppingMetricsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ShoppingMetricsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

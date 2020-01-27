@@ -1,0 +1,34 @@
+.mini-nav {
+  display: flex;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul {
+  padding-inline-start: 15px;
+}
+
+.mat-tree-node {
+  // min-height: 34px !important;
+  cursor: pointer;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px
+}
+
+.subform {
+  margin: 15px 0;
+}
+
+// div.mat-tree-node {
+//     font-weight: bold;
+// }

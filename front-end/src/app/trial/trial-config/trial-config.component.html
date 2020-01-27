@@ -1,0 +1,22 @@
+<div *ngIf="show">
+  <div class="container">
+    <div class="row justify-content-center pt-4">
+      <div *ngIf="showSelectForm" class="col-md-6 cont-width">
+        <app-treatment-select (treatmentID)="setUpTreatment($event)"></app-treatment-select>
+      </div>
+    </div>
+    <div class="row justify-content-center pt-4">
+      <div class="col-md-6 cont-width">
+        <div *ngIf="showSubjectSelect">
+          <app-subject-select [tID]="id" (selected)="selected($event)"></app-subject-select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center pt-4">
+      <div class="col-md-6 cont-width">
+        <button [disabled]="id == null || subjectID == null" style="width:100%" mat-raised-button (click)="startTrial()">Test Starten</button>
+        <!-- <app-subject-select (selected)="selected($event)"></app-subject-select> -->
+      </div>
+    </div>
+  </div>
+</div>

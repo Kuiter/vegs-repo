@@ -1,0 +1,30 @@
+<div style="position:relative">
+  <div *ngIf="show">
+    <div class="close" (click)="onNoClick()">
+      <mat-icon>close</mat-icon>
+    </div>
+    <div class="mx-auto text-center">
+      <input [disabled]="uploading" id="file" class="inputfile" #file type="file" accept='image/*'
+        (change)="preview($event)" multiple>
+      <label for="file">
+        <span>
+          <div>
+            <img class="avatar" [src]="imgURL[0]">
+          </div>
+          <!-- <img src="./assets/Avatar.png" alt="Avatar" class="avatar my-4"> -->
+        </span>
+      </label>
+    </div>
+    <div *ngIf="maxFileSize" class="mx-auto alert">
+      <p>Es können nur Bilder unter {{environment.maxFileSize}} hochgeladen werden.</p>
+    </div>
+    <div class="mx-auto text-center" style="margin-bottom: 5px">
+      <label for="file" class="upload-btn">Bild Auswählen</label>
+    </div>
+    <div *ngIf="showUpload" class="mx-auto text-center">
+      <button class="upload-btn" mat-raised-button color="accent" (click)="upload(imgURL[0])">
+        Hochladen
+      </button>
+    </div>
+  </div>
+</div>

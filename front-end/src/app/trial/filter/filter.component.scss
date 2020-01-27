@@ -1,0 +1,48 @@
+// a.pointer {
+//     cursor: pointer;
+// }
+
+// a:hover {
+//     color: rgba(0,0,0,0.8)
+// }
+
+// mat-list-item {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul {
+  padding-inline-start: 15px;
+}
+
+.mat-tree-node {
+  min-height: 34px !important;
+  cursor: pointer;
+}
+
+div.mat-tree-node {
+  font-weight: bold;
+}
+
+.mat-tree-node.selected {
+  background-color: rgba(0, 123, 255, 0.3);
+}
+
+.height-limitter {
+  max-height: 75vh;
+  overflow: scroll;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}

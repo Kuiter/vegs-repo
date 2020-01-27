@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-icon {
+    padding: 0 5px;
+    display: inline-block;
+}
+
+.button-wrapper {
+    padding: 0px 0px;
+    display: inline-block;
+    line-height: 24px
+}
+
+.ic-test {
+    line-height: 0px;
+    padding: 0 13px;
+}
+
+.mat-toolbar {
+    height: 64px;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}

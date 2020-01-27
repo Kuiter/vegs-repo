@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+}
+td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // cursor: pointer;
+}

@@ -1,0 +1,155 @@
+<div *ngIf="show">
+  <div class="row" style="width:100%; margin: 0">
+    <div class="col-md-12 col-lg-3 pt-3">
+      <div *ngIf="product.image != undefined; else placeholder" style="text-align: center">
+        <img [src]="environment.apiURI + '/images/' + product.image.full" alt="product" width="260px" heihgt="260px">
+      </div>
+      <ng-template #placeholder>
+        <img src="assets/placeholder/placeholder-images-image_large.png" alt="" width="260px" heihgt="260px">
+      </ng-template>
+      <!-- <img class="mx-auto d-block"
+      src="../../../assets/products/BaxtersCountryGardenSoup400g-GemüsesuppemitReis_d9f2c4bd-a7d3-46dc-ac25-a9ddd0b517a5_mp.jpg"
+      alt="product" width="260" height="260"> -->
+    </div>
+    <div class="col-md-6 col-lg-6 pt-3">
+      <h3>{{product.name}}</h3>
+      <div *ngIf="product.description.length > 0">
+        <p>{{product.description[0].text}}</p>
+      </div>
+      <div *ngIf="showLabel">
+        <h3>Certification</h3>
+        <div class="label-container">
+          <div class="label" *ngFor="let l of product.label">
+            <img (click)="showInfo(l)" [src]="environment.apiURI + '/image/label/' + l" alt="Label" height="75px">
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showScore && product.score != undefined">
+        <div class="pt-3">
+          <h3>{{product.score.header}} Score: {{product.score.amount}}</h3>
+          <p>{{product.score.description}}</p>
+          <div class="rotate">
+            <div class="score-bar-background">
+              <div appScore [score]="calculateScore()"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showTax && product.taxes.length > 0">
+        <h5>This item is additionally taxed by:</h5>
+        <div *ngFor="let t of product.taxes">
+          <div class="info">
+            <div>{{t.header}} - {{t.shortDescription}}</div>
+            <span style="flex: 1 1 auto"></span>
+            <button (click)="showTaxInfo()" color="primary" mat-icon-button type="button">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="call-to-action">
+        <span class="call-to-action-num">Art.-Nr. {{product._id}}</span>
+        <div class="call-to-action-price additional" *ngIf="product.taxes.length > 0 && showTax">
+          <div *ngFor="let t of product.taxes">
+            <div>
+              {{t.shortDescription}} + {{t.amount * product.netPrice | currency: product.currency}}
+            </div>
+          </div>
+        </div>
+        <div class="call-to-action-price">
+          {{(product.netPrice + displayAdditionalTaxInfo()) * (1 + product.vat) | currency: product.currency}}</div>
+        <div class="call-to-action-price tax">inkl. gesetzliche Mwst.</div>
+        <div class="action-bar-wrapper">
+          <div class="counter-div" style="border: 1px solid #ccc;">
+            <button (click)="remove()" mat-button>
+              <mat-icon>remove</mat-icon>
+            </button>
+            <div class="counter">
+              <span class="number">
+                {{counter}}
+              </span>
+            </div>
+            <button (click)="add()" mat-button color="primary">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+        <button (click)="addToCart(product)" mat-raised-button style="width: 100%">
+          <mat-icon>shopping_cart</mat-icon>
+          <span>In den Warenkorb</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 1rem 2rem">
+    <mat-divider></mat-divider>
+  </div>
+  <div *ngIf="product.description.length > 0">
+    <div *ngFor="let d of product.description">
+      <div class="row" style="width:100%; margin: 0">
+        <div class="col">
+          <h5>{{d.header}}</h5>
+          <p>{{d.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="product.ingredients != null">
+    <div class="row" style="width:100%; margin: 0">
+      <div class="col">
+        <h5>Inhaltsstoffe:</h5>
+        <p>{{product.ingredients}}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="product.allergens != null">
+    <h5>Allergene:</h5>
+    <p>{{product.allergens}}</p>
+  </div>
+  <div style="margin: 1rem 2rem">
+    <mat-divider></mat-divider>
+  </div>
+  <div *ngIf="product.nutritionalTable != undefined" class="row" style="margin: 0">
+    <div class="col">
+      <table id="nutritionalInfo">
+        <tr>
+          <th colspan="2">Nutritional Information (100 g)</th>
+        </tr>
+        <tr>
+          <td>Kj.:</td>
+          <td>{{product.nutritionalTable.kj}}</td>
+        </tr>
+        <tr>
+          <td>Kcal.:</td>
+          <td>{{product.nutritionalTable.kcal}}</td>
+        </tr>
+        <tr>
+          <td>Protein:</td>
+          <td>{{product.nutritionalTable.protein}}&nbsp;g</td>
+        </tr>
+        <tr>
+          <td>Carbohydrate:</td>
+          <td>{{product.nutritionalTable.totalCarbohydrate}}&nbsp;g</td>
+        </tr>
+        <tr>
+          <td>Sugar:</td>
+          <td>{{product.nutritionalTable.sugar}}&nbsp;g</td>
+        </tr>
+        <tr>
+          <td>Fat:</td>
+          <td>{{product.nutritionalTable.totalFat}}&nbsp;g</td>
+        </tr>
+        <tr>
+          <td>saturated fat:</td>
+          <td>{{product.nutritionalTable.saturatedFat}}&nbsp;g</td>
+        </tr>
+        <tr>
+          <td>Salt:</td>
+          <td>{{product.nutritionalTable.salt}}&nbsp;g</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

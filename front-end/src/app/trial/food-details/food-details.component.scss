@@ -1,0 +1,149 @@
+.call-to-action {
+  background-color: #f5f4f2;
+  // margin: 1rem 1rem 0.5rem 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+span.call-to-action-num {
+  color: #9b9b9b;
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div.call-to-action-price {
+  align-self: flex-end;
+  flex-grow: 1;
+  // margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0 10px;
+  color: #4a4a4a;
+}
+
+div.call-to-action-price.additional {
+  font-size: 0.9rem;
+  color: red;
+}
+
+div.call-to-action-price.tax {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.action-bar-wrapper {
+  display: flex;
+  position: relative;
+  // min-width: 200px;
+  flex-direction: row;
+  height: 40px;
+  margin: 8px 10px 16px;
+}
+
+.counter-div {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.counter {
+  height: 100%;
+  width: 34px;
+  display: inline-block;
+  line-height: 36px;
+  // vertical-align: middle;
+}
+
+.number {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  border-left: none;
+  border-right: none;
+  width: 35px;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f6f6f6;
+  // padding-top: auto;
+}
+
+button {
+  padding: 0 !important;
+  min-width: 32px;
+}
+
+img {
+  // position: absolute;
+  margin: auto;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  height: 75px;
+  padding-right: 15px;
+}
+
+#nutritionalInfo td,
+#nutritionalInfo td {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#nutritionalInfo th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #3f51b5;
+  color: white;
+}
+
+#nutritionalInfo {
+  border-collapse: collapse;
+}
+
+#nutritionalInfo tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.score-bar-background {
+  // position: absolute;
+  // top: 8px;
+  // left: 8px;
+  // display: flex;
+  // width: 80%;
+  height: 24px;
+  background-image: linear-gradient(90deg, #00ff00, #ff4500);
+  // border-radius: 4px;
+}
+
+.rotate {
+  width: 80%;
+  position: relative;
+  transform: rotate(180deg);
+  // margin-right: -40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  line-height: 40px;
+}

@@ -1,0 +1,28 @@
+.wrapper {
+  // display: grid;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+}
+
+.price-sum {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  align-self: end;
+}
+
+.finish {
+  align-self: start;
+}
+
+.finish button {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   display: block;
+  //   width: 90%;
+  width: 100%;
+}

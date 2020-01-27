@@ -1,0 +1,45 @@
+<div>
+  <div class="filter-bar">
+    <span class="content item-filter">
+      <mat-form-field>
+        <mat-label>Sortieren nach...</mat-label>
+        <mat-select (selectionChange)="sortingSelection($event)">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let opt of filterOptions" [value]="opt">{{opt}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </span>
+    <div class="alert alert-info" style="display: table;" *ngIf="filtered | async">
+      <!-- <span class="content" style="display: inherit;"> -->
+      <div class="filter-alert-text">Produkte gefiltert</div>
+      <mat-icon (click)="resetFilter()" class="filter-alert-icon">close</mat-icon>
+      <!-- </span> -->
+    </div>
+    <!-- <span class="content" style="display: flex;">
+      <div>some content</div>
+      <button mat-icon-button>
+        <mat-icon>close</mat-icon>
+      </button>
+    </span> -->
+  </div>
+  <div>
+    <div class="cont" *ngIf="showGrid">
+      <div style="padding:5px" *ngFor="let p of dataSource.slice">
+        <app-food-card [product]="p"></app-food-card>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="footer">
+      <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizes" [showFirstLastButtons]="true"
+        [pageIndex]="currentPage" (page)="handlePage($event)">
+      </mat-paginator>
+    </div>
+  </div>
+  <!-- <div class="row" style="width:100%; margin-left: 0;">
+    <div class="col">
+      <mat-paginator #paginator [pageSize]="pageSize" [pageSizeOptions]="pageSizes" [showFirstLastButtons]="true"
+        [pageIndex]="currentPage" (page)="handlePage($event)">
+      </mat-paginator>
+    </div>
+  </div> -->
+</div>

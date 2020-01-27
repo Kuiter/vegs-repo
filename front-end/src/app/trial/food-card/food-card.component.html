@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <a (click)="routeToItemDetails(product._id)">
+    <div class="img_wrapper">
+      <div class="label-container">
+        <div class="label" *ngIf="showLabel">
+          <img [src]="environment.apiURI + '/image/label/' + product.label[0]" alt="Label" height="75px">
+        </div>
+        <div class="product-img">
+          <div *ngIf="product.image != undefined; else placeholder">
+            <img [src]="environment.apiURI + '/images/' + product.image.th" alt="product" width="152px"
+              heihgt="152px">
+          </div>
+        </div>
+        <ng-template #placeholder>
+          <img src="assets/placeholder/placeholder-images-image_large.png" alt="" width="152px" heihgt="152px">
+        </ng-template>
+      </div>
+    </div>
+    <!-- headline name and brand -->
+    <div class="mini-description-wrapper">
+      <div class="mini-description-brand">
+        {{product.brand}}
+      </div>
+      <div class="mini-description-titel-wrapper">
+        <div class="mini-description-titel">
+          {{product.name}}
+        </div>
+      </div>
+      <div class="grammage" *ngIf="product.content">
+        {{displayContentAmount()}} {{product.content.displayAmount}} ({{conversionGrammagePrice()}})
+      </div>
+      <div class="mini-description-price" [ngClass]="{'additional-tax':product.taxes.length > 0 && showTax}">
+        <div class="tax-info additional" *ngIf="product.taxes.length > 0 && showTax">
+          {{displayTaxDescription()}} {{displayAdditionalTaxInfo() | currency:product.currency}}
+        </div>
+        <div>{{(product.netPrice + displayAdditionalTaxInfo()) * (1 + product.vat) | currency:product.currency}}</div>
+        <div class="tax-info">
+          inkl. Mwst.
+        </div>
+      </div>
+    </div>
+  </a>
+  <!-- quick actions -->
+  <div class="action-bar-wrapper">
+    <div class="action-bar-inner">
+      <!-- <div class="action-bar-items"> -->
+      <!-- <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button> -->
+      <div class="rotate">
+        <div *ngIf="showScore && product.score != undefined" class="score-bar-background">
+          <div appScore [score]="calculateScore()"></div>
+        </div>
+      </div>
+      <div style="display:flex; border: 1px solid #ccc;">
+        <button (click)="remove()" mat-button>
+          <mat-icon>remove</mat-icon>
+        </button>
+        <div class="counter">
+          <span class="number">
+            {{counter}}
+          </span>
+        </div>
+        <button (click)="add()" mat-button color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <button (click)="addToCart()" color="primary" mat-mini-fab aria-label="Example icon-button with a heart icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="username" placeholder="Username" type="text" required>
+          <mat-error *ngIf="loginForm.get('username').hasError('required')">Pflichtfled</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="password" placeholder="Passwort" type="password" required>
+          <mat-error *ngIf="loginForm.get('password').hasError('required')">Pflichtfled</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <button mat-raised-button [disabled]="loginForm.invalid">Absenden</button>
+      </div>
+    </div>
+  </form>
+  <div *ngIf="showError" class="row justify-content-center mt-3">
+    <div class="col-md-6">
+      <p>Benutzername bzw. Passwort falsch.</p>
+      <a (click)="resendUsername()" class="text-primary" sytle="cursor: pointer;">Benutzername vergessen?</a>
+      <br>
+      <a (click)="resetPwd()" class="text-primary" sytle="cursor: pointer;">Passwort vergessen?</a>
+    </div>
+  </div>
+</div>

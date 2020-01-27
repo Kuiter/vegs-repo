@@ -1,0 +1,4 @@
+{
+  "env": "test",
+  "token_secret": "test"
+}

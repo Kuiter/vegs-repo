@@ -1,0 +1,1320 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FilterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/trial/filter/filter.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Filter Comopnent contains all elements for filtering the items diplayed in item grid.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-filter</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./filter.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./filter.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#baseAttributes">baseAttributes</a>
+                            </li>
+                            <li>
+                                <a href="#hasChild">hasChild</a>
+                            </li>
+                            <li>
+                                <a href="#selectedNode">selectedNode</a>
+                            </li>
+                            <li>
+                                <a href="#showArray">showArray</a>
+                            </li>
+                            <li>
+                                <a href="#showTagFilter">showTagFilter</a>
+                            </li>
+                            <li>
+                                <a href="#sortByTagsTree">sortByTagsTree</a>
+                            </li>
+                            <li>
+                                <a href="#tagTreeControl">tagTreeControl</a>
+                            </li>
+                            <li>
+                                <a href="#Trees">Trees</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#baseItemFilter">baseItemFilter</a>
+                            </li>
+                            <li>
+                                <a href="#deselectPreviousNode">deselectPreviousNode</a>
+                            </li>
+                            <li>
+                                <a href="#filter">filter</a>
+                            </li>
+                            <li>
+                                <a href="#limitSelection">limitSelection</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#pushNodes">pushNodes</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(filterService: <a href="../injectables/FilterService.html">FilterService</a>, productService: <a href="../injectables/ProductService.html">ProductService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/trial/filter/filter.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Injecting services to be used in component.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>filterService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FilterService.html" target="_self" >FilterService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="baseItemFilter"></a>
+                    <span class="name">
+                        <b>
+                            baseItemFilter
+                        </b>
+                        <a href="#baseItemFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>baseItemFilter(node)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:125</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener on leaf level of mat-tree. Here a filter action / event is started</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>node</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deselectPreviousNode"></a>
+                    <span class="name">
+                        <b>
+                            deselectPreviousNode
+                        </b>
+                        <a href="#deselectPreviousNode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deselectPreviousNode()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:137</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Helper funktion to be called to deselct previously selected tree node from filter tree.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filter"></a>
+                    <span class="name">
+                        <b>
+                            filter
+                        </b>
+                        <a href="#filter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filter(node)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnClick listener at tree node level for parent category level (not implemented). </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>node</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="limitSelection"></a>
+                    <span class="name">
+                        <b>
+                            limitSelection
+                        </b>
+                        <a href="#limitSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>limitSelection(base)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used to limit the selection of current items displayed based on their base Attributes.
+Operated by change listener on mat-checkbox.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>base</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>OnInit Funtion collects all necessary data form the services and decides the display options for the filters present.
+Initiates listener to react to resetFilter event.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pushNodes"></a>
+                    <span class="name">
+                        <b>
+                            pushNodes
+                        </b>
+                        <a href="#pushNodes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>pushNodes(el)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/trial/filter/filter.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p><a href="https://material.angular.io/components/tree/overview">https://material.angular.io/components/tree/overview</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>el</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="baseAttributes"></a>
+                        <span class="name">
+                            <b>
+                            baseAttributes</b>
+                            <a href="#baseAttributes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/trial/filter/filter.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Stores all selected baseAttributs included in limit selection filter. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hasChild"></a>
+                        <span class="name">
+                            <b>
+                            hasChild</b>
+                            <a href="#hasChild"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/trial/filter/filter.component.ts:110</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p><a href="https://material.angular.io/components/tree/overview">https://material.angular.io/components/tree/overview</a></p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedNode"></a>
+                        <span class="name">
+                            <b>
+                            selectedNode</b>
+                            <a href="#selectedNode"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/trial/filter/filter.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Stores reference to currently selected node. Used to highlight the tree node. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showArray"></a>
+                        <span class="name">
+                            <b>
+                            showArray</b>
+                            <a href="#showArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/trial/filter/filter.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Only true if any custom filters are present. Switch for diplaying custom filters in template. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTagFilter"></a>
+                        <span class="name">
+                            <b>
+                            showTagFilter</b>
+                            <a href="#showTagFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/trial/filter/filter.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Switch for displaying the category filter. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortByTagsTree"></a>
+                        <span class="name">
+                            <b>
+                            sortByTagsTree</b>
+                            <a href="#sortByTagsTree"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/trial/filter/filter.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Stores the base category filter tree automatically generated by the product.service at the start of the treatment. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tagTreeControl"></a>
+                        <span class="name">
+                            <b>
+                            tagTreeControl</b>
+                            <a href="#tagTreeControl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new NestedTreeControl&lt;any&gt;(node &#x3D;&gt; node.children)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/trial/filter/filter.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Tree control for mat-tree for category filter. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="Trees"></a>
+                        <span class="name">
+                            <b>
+                            Trees</b>
+                            <a href="#Trees"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/trial/filter/filter.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Stores all custom filter trees created for the treatment. Used for ngFor in template. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Output, EventEmitter, ElementRef, ViewChild, AfterViewInit, HostListener } from &#x27;@angular/core&#x27;;
+import { FilterService } from &#x27;../trial-services/filter.service&#x27;;
+import { NestedTreeControl } from &#x27;@angular/cdk/tree&#x27;;
+import { MatTreeNestedDataSource } from &#x27;@angular/material/tree&#x27;;
+import { ProductService } from &#x27;../trial-services/product.service&#x27;;
+
+/** Flat node with expandable and level information */
+interface ExampleFlatNode {
+  expandable: boolean;
+  name: string;
+  level: number;
+}
+
+/**
+ * Filter Comopnent contains all elements for filtering the items diplayed in item grid.
+ */
+@Component({
+  selector: &#x27;app-filter&#x27;,
+  templateUrl: &#x27;./filter.component.html&#x27;,
+  styleUrls: [&#x27;./filter.component.scss&#x27;]
+})
+export class FilterComponent implements OnInit {
+  /**Stores all custom filter trees created for the treatment. Used for ngFor in template. */
+  Trees: any[] &#x3D; [];
+  /**Only true if any custom filters are present. Switch for diplaying custom filters in template. */
+  showArray &#x3D; false;
+  /**Stores the base category filter tree automatically generated by the product.service at the start of the treatment. */
+  sortByTagsTree: any;
+  /**Tree control for mat-tree for category filter. */
+  tagTreeControl &#x3D; new NestedTreeControl&lt;any&gt;(node &#x3D;&gt; node.children);
+  /**Switch for displaying the category filter. */
+  showTagFilter &#x3D; false;
+  /**Stores reference to currently selected node. Used to highlight the tree node. */
+  selectedNode: any;
+
+  // baseAttribute Filter
+  /**Stores all selected baseAttributs included in limit selection filter. */
+  baseAttributes &#x3D; [];
+
+  /**
+   * Injecting services to be used in component.
+   * @param filterService 
+   * @param productService 
+   */
+  constructor(private filterService: FilterService, private productService: ProductService) { }
+  /**
+   * OnInit Funtion collects all necessary data form the services and decides the display options for the filters present.
+   * Initiates listener to react to resetFilter event.
+   */
+  ngOnInit() {
+    this.filterService.getFilterTrees().subscribe((val: any[]) &#x3D;&gt; {
+      // val &#x3D; val.concat([{name: &#x27;Sort by Tags&#x27;,tree: this.productService.getTreeOfTagsOfAllProducts()}]);
+      val.forEach((element, i) &#x3D;&gt; {
+        console.log(element);
+        this.pushNodes(element);
+        if (i &#x3D;&#x3D; val.length - 1) {
+          this.showArray &#x3D; true;
+        }
+      });
+    });
+    // sort by tags
+    this.sortByTagsTree &#x3D; this.productService.getTreeOfTagsOfAllProducts();
+    if (this.sortByTagsTree.length &gt; 0) {
+      this.showTagFilter &#x3D; true
+    }
+    // if (this.tags.length &gt; 0) { this.showTagFilter &#x3D; true }
+    // console.log(this.showTagFilter);
+    this.productService.getBaseAttributes().forEach(val &#x3D;&gt; this.baseAttributes.push({ name: val, selected: false }))
+    if (!!this.filterService.selectedFilter &amp;&amp; this.filterService.selectedFilter.type &#x3D;&#x3D; &#x27;limitSelection&#x27;) {
+      for (let l of this.filterService.selectedFilter.filter) {
+        console.log(l);
+        const ind &#x3D; this.baseAttributes.findIndex(x &#x3D;&gt; x.name &#x3D;&#x3D; l);
+        console.log(ind);
+        if (ind &gt;&#x3D; 0) {
+          this.baseAttributes[ind].selected &#x3D; true;
+        }
+      }
+    }
+    this.filterService.resetFilter.subscribe(() &#x3D;&gt; {
+      if (this.selectedNode) {
+        this.selectedNode.selected &#x3D; false;
+        this.selectedNode &#x3D; null;
+      }
+      if (this.baseAttributes.some(o &#x3D;&gt; o.selected &#x3D;&#x3D; true)) {
+        this.baseAttributes.forEach(element &#x3D;&gt; { element.selected &#x3D; false });
+        this.limitSelection(&#x27;&#x27;);
+      }
+    })
+  }
+  /**
+   * https://material.angular.io/components/tree/overview
+   * @param el 
+   */
+  pushNodes(el) {
+    let treeControl &#x3D; new NestedTreeControl&lt;any&gt;(node &#x3D;&gt; node.children);
+    let dataSource &#x3D; new MatTreeNestedDataSource&lt;any&gt;();
+    let obj &#x3D; {
+      treeControl: treeControl,
+      dataSource: dataSource,
+      data: el
+    }
+    obj.dataSource.data &#x3D; el.tree;
+    obj.treeControl.dataNodes &#x3D; el.tree;
+    obj.treeControl.expandAll();
+    this.Trees.push(obj)
+  }
+  /**
+   * https://material.angular.io/components/tree/overview
+   */
+  hasChild &#x3D; (_: number, node: any) &#x3D;&gt; !!node.children &amp;&amp; node.children.length &gt; 0;
+  /**
+   * OnClick listener at tree node level for parent category level (not implemented). 
+   * @param node 
+   */
+  filter(node) {
+    this.deselectPreviousNode()
+    node.selected &#x3D; true;
+    this.selectedNode &#x3D; node;
+    this.filterService.categoryFilter(node.name);
+  }
+  /**
+   * OnClick listener on leaf level of mat-tree. Here a filter action / event is started
+   * @param node 
+   */
+  baseItemFilter(node) {
+    this.deselectPreviousNode();
+    node.selected &#x3D; true;
+    this.selectedNode &#x3D; node;
+    if (!node.items) {
+      return this.filterService.filterItems(node.name, &#x27;tagFilter&#x27;);
+    }
+    return this.filterService.filterItems(node.items, &#x27;filterTree&#x27;);
+  }
+  /**
+   * Helper funktion to be called to deselct previously selected tree node from filter tree.
+   */
+  deselectPreviousNode(): void {
+    if (!this.selectedNode) { return }
+    this.selectedNode.selected &#x3D; false;
+  }
+
+  /**
+   * Used to limit the selection of current items displayed based on their base Attributes.
+   * Operated by change listener on mat-checkbox.
+   * @param {String} base 
+   */
+  limitSelection(base): void {
+    let limit &#x3D; [];
+    this.baseAttributes.forEach(element &#x3D;&gt; {
+      if (element.selected) {
+        limit.push(element.name);
+      }
+    })
+    if (limit.length &#x3D;&#x3D; 0) {
+      if (this.selectedNode !&#x3D; null) {
+        this.filterService.filterItems(this.selectedNode.name, &#x27;tagFilter&#x27;);
+        return;
+      }
+      this.filterService.resetFilterEmit();
+      return;
+    }
+    this.filterService.filterItems(limit, &#x27;limitSelection&#x27;);
+  }
+
+  /**
+   * @ignore
+   */
+  resetFilter() {
+    this.filterService.resetFilterEmit();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;height-limitter&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;showArray&quot; style&#x3D;&quot;margin-top: 5px&quot;&gt;
+    &lt;div *ngFor&#x3D;&quot;let t of Trees&quot;&gt;
+      &lt;mat-accordion&gt;
+        &lt;mat-expansion-panel expanded&#x3D;&quot;true&quot;&gt;
+          &lt;mat-expansion-panel-header&gt;
+            &lt;mat-panel-title&gt;
+              {{t.data.name}}
+            &lt;/mat-panel-title&gt;
+          &lt;/mat-expansion-panel-header&gt;
+
+          &lt;mat-tree [dataSource]&#x3D;&quot;t.dataSource&quot; [treeControl]&#x3D;&quot;t.treeControl&quot; class&#x3D;&quot;example-tree&quot;&gt;
+            &lt;mat-tree-node *matTreeNodeDef&#x3D;&quot;let node&quot; matTreeNodeToggle&gt;
+              &lt;li class&#x3D;&quot;mat-tree-node&quot; (click)&#x3D;&quot;baseItemFilter(node)&quot;&gt;
+                &lt;!-- use a disabled button to provide padding for tree leaf --&gt;
+                {{node.name}}
+              &lt;/li&gt;
+            &lt;/mat-tree-node&gt;
+            &lt;mat-nested-tree-node *matTreeNodeDef&#x3D;&quot;let node; when: hasChild&quot;&gt;
+              &lt;li&gt;
+                &lt;div (click)&#x3D;&quot;filter(node)&quot; class&#x3D;&quot;mat-tree-node&quot; mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]&#x3D;&quot;&#x27;toggle &#x27; + node.name&quot;&gt;
+                  {{node.name}}
+                &lt;/div&gt;
+                &lt;ul [class.example-tree-invisible]&#x3D;&quot;!t.treeControl.isExpanded(node)&quot;&gt;
+                  &lt;ng-container matTreeNodeOutlet&gt;&lt;/ng-container&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/mat-nested-tree-node&gt;
+          &lt;/mat-tree&gt;
+          &lt;button style&#x3D;&quot;width: 100%&quot; mat-raised-button (click)&#x3D;&quot;resetFilter()&quot;&gt;Alle Produkte&lt;/button&gt;
+        &lt;/mat-expansion-panel&gt;
+      &lt;/mat-accordion&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;showTagFilter&quot;&gt;
+    &lt;mat-accordion&gt;
+      &lt;mat-expansion-panel expanded&#x3D;&quot;!showArray&quot;&gt;
+        &lt;mat-expansion-panel-header&gt;
+          &lt;mat-panel-title&gt;
+            Sort by Tags
+          &lt;/mat-panel-title&gt;
+        &lt;/mat-expansion-panel-header&gt;
+        &lt;mat-tree [dataSource]&#x3D;&quot;sortByTagsTree&quot; [treeControl]&#x3D;&quot;tagTreeControl&quot; class&#x3D;&quot;example-tree&quot;&gt;
+          &lt;mat-tree-node *matTreeNodeDef&#x3D;&quot;let node&quot; matTreeNodeToggle&gt;
+            &lt;li class&#x3D;&quot;mat-tree-node&quot; [ngClass]&#x3D;&quot;{&#x27;selected&#x27;: node.selected}&quot; (click)&#x3D;&quot;baseItemFilter(node)&quot;&gt;
+              {{node.name}}
+            &lt;/li&gt;
+          &lt;/mat-tree-node&gt;
+          &lt;mat-nested-tree-node *matTreeNodeDef&#x3D;&quot;let node; when: hasChild&quot;&gt;
+            &lt;li&gt;
+              &lt;div (click)&#x3D;&quot;filter(node)&quot; class&#x3D;&quot;mat-tree-node&quot; [ngClass]&#x3D;&quot;{&#x27;selected&#x27;: node.selected}&quot; mat-icon-button
+                matTreeNodeToggle [attr.aria-label]&#x3D;&quot;&#x27;toggle &#x27; + node.name&quot;&gt;
+                {{node.name}}
+              &lt;/div&gt;
+              &lt;ul [class.example-tree-invisible]&#x3D;&quot;tagTreeControl.isExpanded(node)&quot;&gt;
+                &lt;ng-container matTreeNodeOutlet&gt;&lt;/ng-container&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/mat-nested-tree-node&gt;
+        &lt;/mat-tree&gt;
+        &lt;button style&#x3D;&quot;width: 100%&quot; mat-raised-button (click)&#x3D;&quot;resetFilter()&quot;&gt;Alle Produkte&lt;/button&gt;
+      &lt;/mat-expansion-panel&gt;
+    &lt;/mat-accordion&gt;
+    &lt;mat-accordion *ngIf&#x3D;&quot;baseAttributes.length &gt; 0&quot;&gt;
+      &lt;mat-expansion-panel expanded&#x3D;&quot;true&quot;&gt;
+        &lt;mat-expansion-panel-header&gt;
+          &lt;mat-panel-title&gt;
+            Auswahl einschränken
+          &lt;/mat-panel-title&gt;
+        &lt;/mat-expansion-panel-header&gt;
+        &lt;div *ngFor&#x3D;&quot;let base of baseAttributes&quot;&gt;
+          &lt;mat-checkbox [(ngModel)]&#x3D;&quot;base.selected&quot; (change)&#x3D;&quot;limitSelection(base)&quot;&gt;{{base.name}}&lt;/mat-checkbox&gt;
+        &lt;/div&gt;
+      &lt;/mat-expansion-panel&gt;
+    &lt;/mat-accordion&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./filter.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">// a.pointer {
+//     cursor: pointer;
+// }
+
+// a:hover {
+//     color: rgba(0,0,0,0.8)
+// }
+
+// mat-list-item {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul {
+  padding-inline-start: 15px;
+}
+
+.mat-tree-node {
+  min-height: 34px !important;
+  cursor: pointer;
+}
+
+div.mat-tree-node {
+  font-weight: bold;
+}
+
+.mat-tree-node.selected {
+  background-color: rgba(0, 123, 255, 0.3);
+}
+
+.height-limitter {
+  max-height: 75vh;
+  overflow: scroll;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="height-limitter">  <div *ngIf="showArray" style="margin-top: 5px">    <div *ngFor="let t of Trees">      <mat-accordion>        <mat-expansion-panel expanded="true">          <mat-expansion-panel-header>            <mat-panel-title>              {{t.data.name}}            </mat-panel-title>          </mat-expansion-panel-header>          <mat-tree [dataSource]="t.dataSource" [treeControl]="t.treeControl" class="example-tree">            <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>              <li class="mat-tree-node" (click)="baseItemFilter(node)">                <!-- use a disabled button to provide padding for tree leaf -->                {{node.name}}              </li>            </mat-tree-node>            <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">              <li>                <div (click)="filter(node)" class="mat-tree-node" mat-icon-button matTreeNodeToggle                  [attr.aria-label]="\'toggle \' + node.name">                  {{node.name}}                </div>                <ul [class.example-tree-invisible]="!t.treeControl.isExpanded(node)">                  <ng-container matTreeNodeOutlet></ng-container>                </ul>              </li>            </mat-nested-tree-node>          </mat-tree>          <button style="width: 100%" mat-raised-button (click)="resetFilter()">Alle Produkte</button>        </mat-expansion-panel>      </mat-accordion>    </div>  </div>  <div *ngIf="showTagFilter">    <mat-accordion>      <mat-expansion-panel expanded="!showArray">        <mat-expansion-panel-header>          <mat-panel-title>            Sort by Tags          </mat-panel-title>        </mat-expansion-panel-header>        <mat-tree [dataSource]="sortByTagsTree" [treeControl]="tagTreeControl" class="example-tree">          <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>            <li class="mat-tree-node" [ngClass]="{\'selected\': node.selected}" (click)="baseItemFilter(node)">              {{node.name}}            </li>          </mat-tree-node>          <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">            <li>              <div (click)="filter(node)" class="mat-tree-node" [ngClass]="{\'selected\': node.selected}" mat-icon-button                matTreeNodeToggle [attr.aria-label]="\'toggle \' + node.name">                {{node.name}}              </div>              <ul [class.example-tree-invisible]="tagTreeControl.isExpanded(node)">                <ng-container matTreeNodeOutlet></ng-container>              </ul>            </li>          </mat-nested-tree-node>        </mat-tree>        <button style="width: 100%" mat-raised-button (click)="resetFilter()">Alle Produkte</button>      </mat-expansion-panel>    </mat-accordion>    <mat-accordion *ngIf="baseAttributes.length > 0">      <mat-expansion-panel expanded="true">        <mat-expansion-panel-header>          <mat-panel-title>            Auswahl einschränken          </mat-panel-title>        </mat-expansion-panel-header>        <div *ngFor="let base of baseAttributes">          <mat-checkbox [(ngModel)]="base.selected" (change)="limitSelection(base)">{{base.name}}</mat-checkbox>        </div>      </mat-expansion-panel>    </mat-accordion>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'FilterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FilterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<div *ngIf="!data.taxes">
+  <h3>{{data.object.header}}</h3>
+  <div class="image" *ngIf="showImg">
+    <img [src]="environment.apiURI +'/image/label/' + data.object._id" alt="Logo">
+  </div>
+  <div class="description">
+    <p>{{data.object.description}}</p>
+  </div>
+</div>
+<div *ngIf="data.taxes">
+  <div *ngFor="let t of data.taxes">
+    <h3>{{t.header}} ({{t.shortDescription}})</h3>
+    <p>{{t.description}}</p>
+    <p>Amount: {{t.amount | percent:'2.2'}}</p>
+  </div>
+</div>
+<button (click)="onNoClick()" mat-raised-button color="warn">Cancel</button>

@@ -1,0 +1,124 @@
+<div class="container">
+  <div class="wrapper">
+    <h5>Manage Assortment</h5>
+    <a routerLink="itemCreate">Create base item</a>
+    <br>
+    <a routerLink="itemManage">Manage base items</a>
+    <h5>Subjects</h5>
+    <a routerLink="subjectManage">Subjekte verwalten</a>
+    <h5>Use Cases</h5>
+    <div class="row" style="margin-right: -15px">
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header">Label</h5>
+          <div class="card-body">
+            <h5 class="card-title">Create Label</h5>
+            <p class="card-text">Here you can create labels, and assign labels to specific store items.</p>
+            <a routerLink="labelCreate" class="btn btn-primary text-white">Edit</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header">Tax</h5>
+          <div class="card-body">
+            <h5 class="card-title">Create Tax</h5>
+            <p class="card-text">Here you can create tax rates to additionally tax certain items. These can
+              then be
+              assigned to specific store items with individual amounts.</p>
+            <a routerLink="taxCreate" class="btn btn-primary text-white">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-right: -15px">
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header">Score</h5>
+          <div class="card-body">
+            <h5 class="card-title">Create Score</h5>
+            <p class="card-text">Here you can create scores that represent additional information for
+              subjects or for
+              assessing shopping carts. These can then be
+              assigned to specific store items with individual amounts.</p>
+            <a routerLink="scoreCreate" class="btn btn-primary text-white">Edit</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h5 class="card-header">Filter</h5>
+          <div class="card-body">
+            <h5 class="card-title">Create Custom Filter</h5>
+            <p class="card-text">Create a custom filter tree with categories. Is build as dynamic tree
+              structure, the
+              leaf items have store items as children.</p>
+            <a routerLink="filterCreate" class="btn btn-primary text-white">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <a routerLink="labelCreate">Label anlegen</a>
+          <br>
+          <a routerLink="taxCreate">Steuer anlegen</a>
+          <br>
+          <a routerLink="scoreCreate">Score anlegen</a>
+          <br>
+          <a routerLink="filterCreate">Filter anlegen</a> -->
+    <!-- <a routerLink="itemManage">Items verwalten</a> -->
+    <div *ngIf="showTable">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 my-3">
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="ID">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+          <th style="width: 60px" mat-header-cell *matHeaderCellDef> Edit </th>
+          <td style="text-align: center" mat-cell *matCellDef="let element">
+            <button [matMenuTriggerFor]="menu" mat-icon-button>
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button (click)="deleteTreatment(element)" mat-menu-item>Delete</button>
+              <button (click)="editTreatment(element)" mat-menu-item>Edit Data</button>
+              <button *ngIf="element.active" (click)="disable(element)" mat-menu-item>Disable</button>
+              <button *ngIf="!element.active" (click)="enable(element)" mat-menu-item>Enable</button>
+              
+              <!-- <button (click)="downloadData(element)" mat-menu-item>Download Subject Data</button> -->
+            </mat-menu>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="play">
+          <th mat-header-cell *matHeaderCellDef> Test </th>
+          <td mat-cell *matCellDef="let element">
+            <button [routerLink]="['/t/' + element._id + '/s/0' + '/shop/products']" mat-icon-button>
+              <mat-icon>play_arrow</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+    <button routerLink="treatmentCreate" mat-raised-button>New Treatment</button>
+  </div>
+</div>

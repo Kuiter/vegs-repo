@@ -1,0 +1,717 @@
+<div class="container">
+  <mat-horizontal-stepper #stepper [linear]="linear">
+    <mat-step [stepControl]="satForm">
+      <ng-template matStepLabel>Erlebnis</ng-template>
+
+      <form [formGroup]="satForm">
+        <div class="card" *ngFor="let construct of sat">
+          <div class="card-header">{{construct.text}}</div>
+          <div class="card-body">
+            <div class="row" *ngFor="let q of construct.subconstruct; let x = index">
+              <div appAlternateBgColor [index]="x" class="col">
+                <div>{{q.text}}</div>
+              </div>
+              <div appAlternateBgColor [index]="x" class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>{{q.scale.low}}</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input [formControlName]="q.identifier" type="radio" [value]="i" [name]="q.identifier">
+                  </label>
+                  <p>{{q.scale.high}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Generelles Feedback</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <p>Haben Sie noch weiteres Feedback zum generellen Design bzw. der Funktionsweise des Shops?</p>
+                <mat-form-field>
+                  <textarea matInput formControlName="dmd.5" type="text" placeholder="Generelles Feedback"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div>
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button [disabled]="satForm.invalid" mat-raised-button matStepperNext>Weiter</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="sqForm">
+      <ng-template matStepLabel>Nachumfrage</ng-template>
+      <div class="card">
+        <div class="card-body">
+          Wie haben Sie die Qualität der Informationen auf der soeben benutzen Webseite empfunden?
+        </div>
+      </div>
+
+      <form [formGroup]="iqForm">
+        <div class="card" *ngFor="let construct of iq">
+          <div class="card-header">{{construct.text}}</div>
+          <div class="card-body">
+            <div class="row" *ngFor="let q of construct.subconstruct; let x = index">
+              <div appAlternateBgColor [index]="x" class="col">
+                <div>{{q.text}}</div>
+              </div>
+              <div appAlternateBgColor [index]="x" class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>{{q.scale.low}}</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input [formControlName]="q.identifier" type="radio" [value]="i" [name]="q.identifier">
+                  </label>
+                  <p>{{q.scale.high}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <form [formGroup]="sqForm">
+        <div class="card" *ngFor="let construct of sq">
+          <div class="card-header">{{construct.text}}</div>
+          <div class="card-body">
+            <div class="row" *ngFor="let q of construct.subconstruct; let x = index">
+              <div appAlternateBgColor [index]="x" class="col">
+                <div>{{q.text}}</div>
+              </div>
+              <div appAlternateBgColor [index]="x" class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>{{q.scale.low}}</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input [formControlName]="q.identifier" type="radio" [value]="i" [name]="q.identifier">
+                  </label>
+                  <p>{{q.scale.high}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div>
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button [disabled]="sqForm.invalid || iqForm.invalid" mat-raised-button matStepperNext>Weiter</button>
+      </div>
+    </mat-step>
+    <!-- <div class="card">
+        <div class="card-header">Verstädnlichkeit der Informationen ...</div>
+        <form [formGroup]="iqUnderstandibilityFQ">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUnderstandibility">
+              <div class="cont">
+                <div class="txt">{{q.text}}</div>
+                <div class="rb1">
+                  <input [formControlName]="q.identifier" type="radio" value="1" [name]="q.identifier">
+                </div>
+                <div class="rb2">
+                  <input [formControlName]="q.identifier" type="radio" value="2" [name]="q.identifier">
+                </div>
+                <div class="rb3">
+                  <input [formControlName]="q.identifier" type="radio" value="3" [name]="q.identifier">
+                </div>
+                <div class="rb4">
+                  <input [formControlName]="q.identifier" type="radio" value="4" [name]="q.identifier">
+                </div>
+                <div class="rb5">
+                  <input [formControlName]="q.identifier" type="radio" value="5" [name]="q.identifier">
+                </div>
+                <div class="rb6"></div>
+                <div class="rb7">
+                  <input [formControlName]="q.identifier" type="radio" value="6" [name]="q.identifier">
+                </div>
+                <div class="justify-bad" *ngIf="(!!q.value && q.value <= 2)">
+                  <mat-form-field>
+                    <textarea [(ngModel)]="q.jsutification" matInput placeholder="Optional: Warum?"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+
+    <!-- <div class="card">
+        <div class="card-header">Die Verständlichkeit der Informationen war ...</div>
+        <form [formGroup]="iqUnderstandibilityFQ">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUnderstandibility">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+
+    <!-- <div class="card">
+        <div class="card-header">
+          Verstädnlichkeit der Informationen ...
+        </div>
+        <form [formGroup]="iqUnderstandibilityFQ">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUnderstandibility">
+              <div class="cont">
+                <div class="txt">
+                  {{q.text}}
+                </div>
+                <div class="desc1">0</div>
+                <div class="select">
+                  <mat-slider style="width: 100%" [formControlName]="q.identifier" min="0" max="10"></mat-slider>
+                </div>
+                <div class="desc2">
+                  10
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+    <!-- <div class="card">
+        <div class="card-header">Die Verlässlichkeit der Informationen war ...</div>
+        <form [formGroup]="iqReliabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqReliability">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+
+    <!-- <div class="card">
+        <div class="card-header">
+          Verlässlichkeit der Informationen ...
+        </div>
+        <form [formGroup]="iqReliabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqReliability">
+              <div class="cont">
+                <div class="txt">
+                  {{q.text}}
+                </div>
+                <div class="desc1">0</div>
+                <div class="select">
+                  <mat-slider style="width: 100%" [formControlName]="q.identifier" min="0" max="10"></mat-slider>
+                </div>
+                <div class="desc2">
+                  10
+                </div>
+              </div>
+            </li>
+          </ul>
+        </form>
+      </div> -->
+
+    <!-- <div class="card">
+        <div class="card-header">Die Nützlichkeit der Informationen war ...</div>
+        <form [formGroup]="iqUsefulnessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUsefulness">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          Wie schätzen Sie die technische Qualität der soeben verwenseten Webseite ein?
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Die Benutzung der Seite vermittelte einen ...</div>
+        <form [formGroup]="sqUsabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqUsability">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Die Benuterfreundlichkeit der Seite war im Bezug auf ... gegeben.</div>
+        <form [formGroup]="sqUserfreindlinessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqUserfreindliness">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Die Navigation auf der Seite hat es ermöglicht ...</div>
+        <form [formGroup]="sqNavigationFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqNavigation">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig schlecht</mat-radio-button>
+                <mat-radio-button value="1">sehr schlecht</mat-radio-button>
+                <mat-radio-button value="2">ziemlich schlecht</mat-radio-button>
+                <mat-radio-button value="3">weder gut noch schlecht</mat-radio-button>
+                <mat-radio-button value="4">ziemlich gut</mat-radio-button>
+                <mat-radio-button value="5">sehr gut</mat-radio-button>
+                <mat-radio-button value="6">am besten</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div> -->
+    <!-- <button mat-button matStepperPrevious>Zurück</button> -->
+    <!-- <button color="primary" matStepperNext mat-raised-button>Weiter</button>
+      </div> -->
+    <!-- </mat-step> -->
+    <!-- <mat-step> -->
+    <!-- <ng-template matStepLabel>Erwatung</ng-template>
+      <div class="card">
+        <div class="card-body">
+          Wurden Ihre Erwartungen an die angezeigten Informationen im Zusammenhang mit der soeben benutzten Webseite
+          erfüllt?
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren Sie mit der Verstädnlichkeit der Informationen zufrieden, im Zusammenhang mit ...
+        </div>
+        <form [formGroup]="disciqUnderstandibilityFQ">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of disciqUnderstandibility">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">erwartungen überhaupt nicht erfüllt</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">erwartungen übertroffen</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren Sie mit der Verlässlichkeit der Informationen zufrieden, im Zusammenhang mit ...
+        </div>
+        <form [formGroup]="disciqReliabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of disciqReliability">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unzufrieden</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">völlig zufrieden</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren Sie mit der Nützlichkeit der Informationen zufrieden, im Zusammenhang mit ...
+        </div>
+        <form [formGroup]="disciqUsefulnessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of disciqUsefulness">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unzufrieden</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">völlig zufrieden</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          Wurden Ihre Erwartungen an die technische Qualität im Zusammenhang mit der soeben benutzten Webseite erfüllt?
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren sie mit der Benutzung der Seite zufrieden, im Bezug auf ...</div>
+        <form [formGroup]="discsqUsabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of discsqUsability">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unzufrieden</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">völlig zufrieden</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren Sie mit der Benuterfreundlichkeit der Seite zufrieden, im Bezug auf ...</div>
+        <form [formGroup]="discsqUserfreindlinessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of discsqUserfreindliness">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unzufrieden</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">völlig zufrieden</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Waren Sie mit den Navigationswerkzeugen auf der Seite zufrieden, im Bezug auf ...</div>
+        <form [formGroup]="discsqNavigationFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of discsqNavigation">
+              <div>{{q.text}}</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unzufrieden</mat-radio-button>
+                <mat-radio-button value="1">sehr unzufrieden</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unzufrieden</mat-radio-button>
+                <mat-radio-button value="3">weder zufrieden noch unzufrieden</mat-radio-button>
+                <mat-radio-button value="4">ziemlich zufrieden</mat-radio-button>
+                <mat-radio-button value="5">sehr zufrieden</mat-radio-button>
+                <mat-radio-button value="6">völlig zufrieden</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button color="primary" matStepperNext mat-raised-button>Weiter</button>
+      </div> -->
+    <!-- </mat-step> -->
+    <!-- <mat-step> -->
+    <!-- <ng-template matStepLabel>Gesamteindruck</ng-template>
+      <div class="card">
+        <div class="card-header">Auf die Informationen bezogen waren Sie insgesamt ...</div>
+        <form [formGroup]="satIQFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of satIQ">
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">{{q.scale0}}</mat-radio-button>
+                <mat-radio-button value="1">{{q.scale1}}</mat-radio-button>
+                <mat-radio-button value="2">{{q.scale2}}</mat-radio-button>
+                <mat-radio-button value="3">{{q.scale3}}</mat-radio-button>
+                <mat-radio-button value="4">{{q.scale4}}</mat-radio-button>
+                <mat-radio-button value="5">{{q.scale5}}</mat-radio-button>
+                <mat-radio-button value="6">{{q.scale6}}</mat-radio-button>
+                <mat-radio-button value="none">{{q.scale7}}</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Im Zusammenhang mit den Funktionen und Features der Webseite, die die Informationen
+          abgebildet haben waren Sie insgesamt ...
+        </div>
+        <form [formGroup]="satSQFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of satSQ">
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">{{q.scale0}}</mat-radio-button>
+                <mat-radio-button value="1">{{q.scale1}}</mat-radio-button>
+                <mat-radio-button value="2">{{q.scale2}}</mat-radio-button>
+                <mat-radio-button value="3">{{q.scale3}}</mat-radio-button>
+                <mat-radio-button value="4">{{q.scale4}}</mat-radio-button>
+                <mat-radio-button value="5">{{q.scale5}}</mat-radio-button>
+                <mat-radio-button value="6">{{q.scale6}}</mat-radio-button>
+                <mat-radio-button value="none">{{q.scale7}}</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Ihre insgesamte Zufriedenheit in Bezug auf die Nutzung der Webseite ...</div>
+        <form [formGroup]="satBothFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of satBoth">
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">{{q.scale0}}</mat-radio-button>
+                <mat-radio-button value="1">{{q.scale1}}</mat-radio-button>
+                <mat-radio-button value="2">{{q.scale2}}</mat-radio-button>
+                <mat-radio-button value="3">{{q.scale3}}</mat-radio-button>
+                <mat-radio-button value="4">{{q.scale4}}</mat-radio-button>
+                <mat-radio-button value="5">{{q.scale5}}</mat-radio-button>
+                <mat-radio-button value="6">{{q.scale6}}</mat-radio-button>
+                <mat-radio-button value="none">{{q.scale7}}</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Der Aufbau der Webseite hat mit das Gefühl gegeben eine echten Web-Shop zu benutzen ...
+        </div>
+        <form [formGroup]="satGeneralFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of satGeneral">
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">{{q.scale0}}</mat-radio-button>
+                <mat-radio-button value="1">{{q.scale1}}</mat-radio-button>
+                <mat-radio-button value="2">{{q.scale2}}</mat-radio-button>
+                <mat-radio-button value="3">{{q.scale3}}</mat-radio-button>
+                <mat-radio-button value="4">{{q.scale4}}</mat-radio-button>
+                <mat-radio-button value="5">{{q.scale5}}</mat-radio-button>
+                <mat-radio-button value="6">{{q.scale6}}</mat-radio-button>
+                <mat-radio-button value="none">{{q.scale7}}</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button mat-raised-button matStepperNext>Weiter</button>
+      </div> -->
+    <!-- </mat-step> -->
+    <mat-step [stepControl]="personalInfo">
+      <ng-template matStepLabel>Zur Person</ng-template>
+      <div class="card">
+        <div class="card-header">
+          Demografische Daten
+        </div>
+        <div class="card-body">
+          <form [formGroup]="personalInfo">
+            <div class="row">
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Geschlecht</mat-label>
+                  <mat-select formControlName="gender">
+                    <mat-option value="none">Keine Angabe</mat-option>
+                    <mat-option value="female">weiblich</mat-option>
+                    <mat-option value="male">männchlich</mat-option>
+                    <mat-option value="diverse">divers</mat-option>
+                    <mat-option value="other">Andere</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Alter</mat-label>
+                  <input matInput type="number" formControlName="age">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Beziehungsstatus</mat-label>
+                  <mat-select formControlName="maritalStatus">
+                    <mat-option class="vertical" value="none">Keine Angabe</mat-option>
+                    <mat-option class="vertical" value="ledig">Ledig</mat-option>
+                    <mat-option class="vertical" value="realtionship">In unverheirateter Beziehung
+                    </mat-option>
+                    <mat-option class="vertical" value="married">Verheiratet</mat-option>
+                    <mat-option class="vertical" value="widowed">Verwitwet</mat-option>
+                    <mat-option class="vertical" value="divorce">Geschieden</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Ausbildungsstand</mat-label>
+                  <mat-select formControlName="education">
+                    <mat-option value="none">Keinen Angabe</mat-option>
+                    <mat-option value="no_education">keinen Abschluss</mat-option>
+                    <mat-option value="Haupt_Realschule">Haupt-/ Realschule</mat-option>
+                    <mat-option value="abitur">Abitur</mat-option>
+                    <mat-option value="abgeschlossene_ausbildung">Abgeschlossene Ausbildung</mat-option>
+                    <mat-option value="university">Fach-/ Hochschulabschluss</mat-option>
+                    <!-- <mat-option value="master"></mat-option> -->
+                    <mat-option value="phd">Promotion</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <!-- <div class="col">
+                <mat-form-field>
+                  <mat-label>Wohnsitz</mat-label>
+                  <input matInput type="text" formControlName="location" required>
+                </mat-form-field>
+              </div> -->
+
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Beschäftigung</mat-label>
+                  <mat-select formControlName="occupation" required>
+                    <mat-option class="vertical" value="none">Keine Angabe</mat-option>
+                    <mat-option class="vertical" value="student_wo">Student, ohne Nebenjob</mat-option>
+                    <mat-option class="vertical" value="student_wi">Student, mit Nebenjob</mat-option>
+                    <mat-option class="vertical" value="job_training">Ausbildung</mat-option>
+                    <mat-option class="vertical" value="fulltimeworker">Vollzeit Beschäftigt</mat-option>
+                    <mat-option class="vertical" value="job_search">Arbeitssuchend</mat-option>
+                    <mat-option class="vertical" value="other">Sonstiges</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Wohnsituation</mat-label>
+                  <mat-select formControlName="housing" required>
+                    <mat-option value="none">Keinen Angabe</mat-option>
+                    <mat-option value="own_appartment">Eigene Wohnung</mat-option>
+                    <mat-option value="wg_zimmer">WG-Zimmer</mat-option>
+                    <mat-option value="wohnheim">Wohnheim</mat-option>
+                    <mat-option value="wohnen_bei_verwandten">Wohnen bei den Eltern / Verwandten</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Wie viel Geld in EUR haben Sie monatlich nach Abzug aller
+                  Fixkosten (Miete, Auto, Semestergebühren, o.ä.) zur freien Verfügung?</p>
+                <mat-form-field>
+                  <mat-label>Verfügbares Einkommen</mat-label>
+                  <input matInput type="number" formControlName="income" required>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <p>Wie viel EUR geben Sie durchschnittlich pro Woche für
+                  Lebensmitteleinkäufe aus?</p>
+                <mat-form-field>
+                  <mat-label>Ca. Ausgaben</mat-label>
+                  <input matInput type="number" formControlName="expenditures" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col">
+                <div>Sind Sie in Ihrem Haushalt für den Einkauf von Lebensmitteln zuständig?</div>
+              </div>
+              <div class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>trifft gar nicht zu</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input formControlName="foodPurchaseResp" type="radio" [value]="i" [name]="foodPurchaseResp">
+                  </label>
+                  <p>trifft voll zu</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Wie häufig gehen Sie in der Woche einkaufen?</p>
+              </div>
+              <div class="col">
+                <mat-form-field>
+                  <mat-label>Ca. Häufigkeit</mat-label>
+                  <input matInput type="number" formControlName="shoppingFrequency" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  Wenn Sie an der Verlosung von den Amazon Gutscheinen teilnehmen möchten, geben Sie hier bitte Ihre
+                  E-Mailadresse an.
+                </p>
+                <mat-form-field>
+                  <mat-label>E-Mail</mat-label>
+                  <input matInput type="email" formControlName="email">
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button [disabled]="personalInfo.invalid" (click)="submitPostTrial(stepper)" color="primary" matStepperNext
+          mat-raised-button>Weiter</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Ende</ng-template>
+      <div class="card">
+        <div class="card-body">
+          <p>Danke für die Teilnahme an dieser Umfrage.</p>
+          <p>Sie können nun Ihren Browser schließen.</p>
+        </div>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

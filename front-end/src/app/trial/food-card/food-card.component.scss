@@ -1,0 +1,195 @@
+.wrapper {
+  border: 1px solid #ccc;
+  // height: 416px;
+  width: 100%;
+  min-width: 244px;
+}
+
+.img-wrapper {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  height: 152px;
+}
+
+.product-img {
+  margin: 0 auto;
+  display: block;
+  height: 152px;
+  width: 152px;
+}
+
+.mini-description-wrapper {
+  max-width: calc(100% - 32px);
+  height: 172px;
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-description-brand {
+  width: 100%;
+  height: 24px;
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  color: #285f86;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.mini-description-titel-wrapper {
+  width: 100%;
+  max-height: 64px;
+  min-height: 20px;
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11;
+  color: #4a4a4a;
+}
+
+.mini-description-titel {
+  display: inline-block;
+  // max-height: 39px;
+  // overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.grammage {
+  width: 100%;
+  height: 32px;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.mini-description-price {
+  width: 100%;
+  height: 24px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  align-self: flex-end;
+  text-align: right;
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  color: #4a4a4a;
+}
+
+.mini-description-price.additional-tax {
+  margin-top: 40px;
+}
+
+.action-bar-wrapper {
+  display: flex;
+  min-width: 200px;
+  height: 40px;
+  margin: 8px 10px 16px;
+}
+.action-bar-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.counter {
+  height: 100%;
+  width: 34px;
+  display: inline-block;
+  line-height: 36px;
+  // vertical-align: middle;
+}
+
+.number {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  border-left: none;
+  border-right: none;
+  width: 35px;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f6f6f6;
+  // padding-top: auto;
+}
+
+button {
+  padding: 0 !important;
+  min-width: 32px;
+}
+
+.tax-info {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 16px;
+  text-align: right;
+  color: #4a4a4a;
+  letter-spacing: -0.1px;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.tax-info.additional {
+  color: red;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.label-container {
+  position: relative;
+}
+
+.label-container .label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  height: 75px;
+  width: 75px;
+  //   background-color: grey;
+}
+
+.label-container .label img {
+  //   object-fit: ;
+}
+
+.score-bar-background {
+  position: absolute;
+  top: 8px;
+  // left: 8px;
+  // display: flex;
+  width: 40px;
+  height: 24px;
+  background-image: linear-gradient(90deg, #00FF00, #FF4500);
+  // border-radius: 4px;
+}
+
+.rotate {
+  width: 40px;
+  position: relative;
+  transform: rotate(180deg);
+  margin-right: -20px;
+}
+
+// .score-bar {
+//   // position: absolute;
+//   height: 24px;
+//   width: 25%;
+//   // padding-right: 2px;
+//   background-color:rgb(0, 126, 0);
+//   // animation-delay: 0;
+// }

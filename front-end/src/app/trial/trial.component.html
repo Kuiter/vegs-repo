@@ -1,0 +1,92 @@
+<div class="wrapper" *ngIf="show; else error">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="info-bar">
+    <div class="search">
+      <!-- <div *ngIf="showBack"> -->
+      <button *ngIf="showBack" (click)="navBack()" class="btn-back" mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <!-- </div> -->
+      <form [formGroup]="searchForm" class="example" (ngSubmit)="onSearch()">
+        <input [ngClass]="{'test': !showBack, 'test1': showBack}" formControlName="search" matInput type="text"
+          placeholder="Search" autocomplete="off">
+        <span>
+          <div *ngIf="filtered | async; else close">
+            <button mat-icon-button type="button" (click)="cancelSearch()">
+              <mat-icon [inline]="true">close</mat-icon>
+            </button>
+          </div>
+        </span>
+      </form>
+    </div>
+    <div class="info" *ngIf="innerWidth > 520; else dropdown">
+      <div class="shopping-cart">
+        <div [ngClass]="{'popover__wrapper': showPopOverCart}">
+          <button [matBadge]="numberOfItems" [matBadgeHidden]="numberOfItems < 1" matBadgePosition="before"
+            mat-stroked-button (click)="routeShoppingCart()">
+            <mat-icon>shopping_cart</mat-icon>
+            Warenkorb
+          </button>
+          <div class="popover__content">
+            <mat-toolbar color="primary" style="height: 48px">
+              <span>Ihr Warenkorb</span>
+            </mat-toolbar>
+            <div class="container py-3">
+              <app-shopping-cart host="popover"></app-shopping-cart>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="showSum" class="shopping-cart">
+          <div class="info">
+            Sum: {{sumCart | currency: currency}}
+          </div>
+        </div>
+        <div *ngIf="showBudget" class="shopping-cart budget">
+          <div [ngClass]="{'info':!showRemainder, 'b-expanded':showRemainder}">
+            <div [ngClass]="{'':!showRemainder, 'test':showRemainder}">
+              <span *ngIf="showRemainder">Remaining: {{remainder | currency: currency}}</span>
+              <span [ngClass]="{'shrink':showRemainder}">Budget: {{budget | currency: currency}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<ng-template #error>
+  <div>
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #dropdown>
+  <button [matBadge]="numberOfItems" [matBadgeHidden]="numberOfItems < 1" matBadgePosition="before" mat-stroked-button
+    (click)="routeShoppingCart()">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</ng-template>
+
+<ng-template #close>
+  <button mat-icon-button type="submit">
+    <mat-icon [inline]="true">search</mat-icon>
+  </button>
+</ng-template>

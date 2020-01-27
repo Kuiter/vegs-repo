@@ -1,0 +1,56 @@
+<div style="position: relative">
+  <div style="position: absolute; position: absolute; top: 0px; right: 0px; font-size: 18px;">
+    <button (click)="closeEdit()" mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div *ngIf=show>
+    <div class="subform">
+      <h5>Edit Filter</h5>
+      <form [formGroup]="obj.form" style="display: inline-grid; width: 100%">
+        <mat-form-field style="width: 100%">
+          <input formControlName="name" type="text" placeholder="Name" matInput>
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <textarea formControlName="description" type="text" placeholder="Descritption" matInput></textarea>
+        </mat-form-field>
+      </form>
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle
+          [ngClass]="{'':!editTreatment, 'space-between':editTreatment}">
+          <li class="mat-tree-node" *ngIf="!editTreatment; else names">
+            <!-- use a disabled button to provide padding for tree leaf -->
+            <form [formGroup]="node.name">
+              <mat-form-field>
+                <input formControlName="name" type="text" matInput placeholder="Name">
+              </mat-form-field>
+            </form>
+          </li>
+          <ng-template #names>
+            <p [matBadge]="node.items.length">{{node.name.controls.name.value}}</p>
+          </ng-template>
+          <button *ngIf="editTreatment" mat-raised-button (click)="addItems(node)">Add Items</button>
+          <button *ngIf="!editTreatment" mat-raised-button (click)="deleteTree(node)">Löschen</button>
+          <button *ngIf="!editTreatment" mat-raised-button (click)="addChild(node)">Subkategorie</button>
+        </mat-tree-node>
+        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+          <li>
+            <div class="mat-tree-node" mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+              {{node.name.controls.name.value}}
+              <div style="margin-left: auto">
+                <button *ngIf="!editTreatment" mat-raised-button (click)="deleteTree(node)">Löschen</button>
+                <button *ngIf="!editTreatment" mat-raised-button (click)="addChild(node)">Subkategorie</button>
+              </div>
+            </div>
+            <ul [class.example-tree-invisible]="!treeControl.isExpanded(node)">
+              <ng-container matTreeNodeOutlet></ng-container>
+            </ul>
+          </li>
+        </mat-nested-tree-node>
+      </mat-tree>
+      <button *ngIf="!editTreatment" mat-raised-button (click)="addFilterTree()">Create nested filter</button>
+      <button mat-raised-button (click)="printTree()">Save</button>
+    </div>
+  </div>
+  <button mat-raised-button *ngIf="!show" (click)="addFilterTree()">Create Custom Filter</button>
+</div>

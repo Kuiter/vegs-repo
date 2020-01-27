@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div *ngIf="showSum" class="price-sum">
+    Summe: <strong>{{calculateSumOfItems() | currency: currency}}</strong>
+  </div>
+  <div class="finish">
+    <button [disabled]="items.length < 10" (click)="endTrial()" mat-raised-button>Zur Kasse</button>
+  </div>
+  <div *ngIf="items.length < 10" class="alert alert-info" role="alert">
+    Bitte wählen Sie mindestens 10 verschiedene Produkte. 
+  </div>
+</div>

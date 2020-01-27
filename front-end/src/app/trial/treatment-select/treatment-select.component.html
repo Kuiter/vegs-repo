@@ -1,0 +1,16 @@
+<!-- <div style="padding: 15px">
+  <div class="c" style="text-align: center"> -->
+<h3>Wähle das richtige Treatment</h3>
+<form [formGroup]="treatmentForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Treatment ID</mat-label>
+    <input matInput formControlName="treatment" type="text" required>
+    <mat-error *ngIf="treatmentForm.controls.treatment.errors?.notFound">Treatment ID nicht gefunden</mat-error>
+    <!-- <mat-select>
+      <mat-option *ngFor="let t of treatments" [value]="t">{{t}}</mat-option>
+    </mat-select> -->
+  </mat-form-field>
+  <button mat-raised-button>Get</button>
+</form>
+<!-- </div>
+</div> -->

@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a style="cursor: pointer"><span>Administration</span></a>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <div *ngIf="show" style="margin: 0 16px;">
+        <table style="width: 100%; font-size: 14px">
+          <tr>
+            <td>Username: </td>
+            <td>{{user.username}}</td>
+          </tr>
+          <tr>
+            <td>E-Mail: </td>
+            <td>{{user.email}}</td>
+          </tr>
+        </table>
+      </div>
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

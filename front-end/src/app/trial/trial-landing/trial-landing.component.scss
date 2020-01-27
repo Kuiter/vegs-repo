@@ -1,0 +1,64 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 210px auto 400px 250px;
+  grid-template-columns: 10fr;
+  height: 100%;
+}
+
+.welcome {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  background-image: url("../../../assets/placeholder/landing/shop-banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.caption-banner {
+  font-size: 1.5em;
+  font-weight: 400;
+  //   line-height: 48px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.subtitle-banner {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  background: #fff;
+  display: inline;
+  padding: 4px 8px;
+}
+
+.categories {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.featured {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}
+
+.info {
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 10;
+}

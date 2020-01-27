@@ -1,0 +1,889 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ShoppingCartComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/trial/shopping-cart/shopping-cart.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-shopping-cart</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./shopping-cart.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./shopping-cart.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculateGrossSum">calculateGrossSum</a>
+                            </li>
+                            <li>
+                                <a href="#changeItemAmount">changeItemAmount</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#host">host</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(shoppingCartService: <a href="../injectables/ShoppingCartService.html">ShoppingCartService</a>, eventsService: <a href="../injectables/EventsService.html">EventsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>shoppingCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShoppingCartService.html" target="_self" >ShoppingCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="host"></a>
+                        <b>host</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:16</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateGrossSum"></a>
+                    <span class="name">
+                        <b>
+                            calculateGrossSum
+                        </b>
+                        <a href="#calculateGrossSum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateGrossSum(item)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeItemAmount"></a>
+                    <span class="name">
+                        <b>
+                            changeItemAmount
+                        </b>
+                        <a href="#changeItemAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeItemAmount(item, delta, amount)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>delta</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>amount</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <span class="name">
+                            <b>
+                            items</b>
+                            <a href="#items"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.shoppingCartService.getCart()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/trial/shopping-cart/shopping-cart.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { ShoppingCartService } from &#x27;./shopping-cart.service&#x27;;
+import { EventsService } from &#x27;../trial-services/events.service&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+
+/**
+ * 
+ */
+@Component({
+  selector: &#x27;app-shopping-cart&#x27;,
+  templateUrl: &#x27;./shopping-cart.component.html&#x27;,
+  styleUrls: [&#x27;./shopping-cart.component.scss&#x27;]
+})
+export class ShoppingCartComponent implements OnInit {
+
+  @Input() host: string;
+
+  items &#x3D; this.shoppingCartService.getCart();
+  // showCart: boolean;
+
+  constructor(
+    private shoppingCartService: ShoppingCartService,
+    private eventsService: EventsService
+  ) { }
+
+  /**
+   * 
+   */
+  ngOnInit() {
+    console.log(this.items);
+    // this.showCart &#x3D; true;
+    this.eventsService.emitShowBack(true);
+  }
+  /**
+   * @ignore
+   */
+  get environment() {
+    return environment;
+  }
+
+  /**
+   * 
+   * @param item 
+   */
+  calculateGrossSum(item) {
+    let sum &#x3D; 0;
+    if (item.taxes.length &gt; 0) {
+      for (let t of item.taxes) {
+        sum +&#x3D; Math.round(item.netPrice * t.amount * 100) / 100;
+      }
+    }
+    sum +&#x3D; item.netPrice;
+    sum &#x3D; Math.round(sum * (1 + item.vat) * 100) / 100;
+    return sum;
+  }
+  /**
+   * 
+   * @param {Object} item 
+   * @param {Number} delta 
+   * @param {Number} amount 
+   */
+  changeItemAmount(item, delta, amount) {
+    if (amount &gt;&#x3D; 1) {
+      if (amount + delta &gt; 0) {
+        this.shoppingCartService.changeAmountOfItem(item, delta);
+      } else if (amount + delta &#x3D;&#x3D; 0) {
+        // this.checkShow();
+        this.shoppingCartService.removeItemFromCart(item);
+      }
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wrapper&quot;&gt;
+  &lt;div class&#x3D;&quot;cart&quot; *ngIf&#x3D;&quot;items.length &gt; 0; else nItems&quot;&gt;
+    &lt;div [ngClass]&#x3D;&quot;{&#x27;cart-wrapper&#x27;: host &#x3D;&#x3D; undefined, &#x27;popover-wrapper&#x27;: host &#x3D;&#x3D; &#x27;popover&#x27;}&quot; *ngFor&#x3D;&quot;let it of items&quot;&gt;
+      &lt;div class&#x3D;&quot;image&quot;&gt;
+        &lt;img [src]&#x3D;&quot;environment.apiURI + &#x27;/images/&#x27; + it.item.image.full&quot; alt&#x3D;&quot;product&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;description&quot;&gt;
+        &lt;p class&#x3D;&quot;header&quot; [ngClass]&#x3D;&quot;{&#x27;text-bold&#x27;: host &#x3D;&#x3D; undefined}&quot;&gt;{{it.item.name}}&lt;/p&gt;
+        &lt;p class&#x3D;&quot;sub-header&quot;&gt;{{it.item.brand}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;amount&quot;&gt;
+        &lt;div style&#x3D;&quot;display: inline-block; border: 1px solid #ccc;&quot;&gt;
+          &lt;button (click)&#x3D;&quot;changeItemAmount(it.item, -1, it.amount)&quot; mat-button&gt;
+            &lt;mat-icon&gt;remove&lt;/mat-icon&gt;
+          &lt;/button&gt;
+          &lt;div class&#x3D;&quot;counter&quot;&gt;
+            &lt;span class&#x3D;&quot;number&quot;&gt;
+              {{it.amount}}
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;button (click)&#x3D;&quot;changeItemAmount(it.item, 1, it.amount)&quot; mat-button color&#x3D;&quot;primary&quot;&gt;
+            &lt;mat-icon&gt;add&lt;/mat-icon&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- {{it.amount}} --&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;price&quot;&gt;
+        {{calculateGrossSum(it.item) | currency:it.item.currency}}
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;divider&quot;&gt;
+        &lt;hr&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;metrics&quot;&gt;
+    &lt;app-shopping-metrics&gt;&lt;/app-shopping-metrics&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #nItems&gt;
+  &lt;div class&#x3D;&quot;card&quot; style&#x3D;&quot;margin-left: 15px;&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      Sie haben noch keine Waren in Ihrem Warenkorb.
+      &lt;br&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;../products&#x27;]&quot;&gt;Zu den Produkten&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./shopping-cart.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-areas:
+    &quot;cart&quot;
+    &quot;metrics&quot;;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    grid-template-columns: 4fr 1.5fr;
+    grid-template-areas: &quot;cart  metrics&quot;;
+  }
+}
+
+.cart {
+  grid-area: cart;
+}
+
+.metrics {
+  grid-area: metrics;
+}
+
+.cart-wrapper {
+  display: grid;
+  grid-template-columns: 155px auto auto;
+  grid-template-rows: 75px auto auto;
+  //   height: 150px;
+  grid-template-areas:
+    &quot;image description description&quot;
+    &quot;image amount price&quot;
+    &quot;divider divider divider&quot;;
+  grid-column-gap: 15px;
+  // grid-auto-rows: 250px;
+}
+
+.popover-wrapper {
+  display: grid;
+  grid-template-columns: 75px auto auto;
+  grid-template-rows: 75px auto auto;
+  //   height: 150px;
+  grid-template-areas:
+    &quot;image description description&quot;
+    &quot;image amount price&quot;
+    &quot;divider divider divider&quot;;
+  grid-column-gap: 15px;
+  // grid-auto-rows: 250px;
+}
+
+@media (min-width: 500px) {
+  .cart-wrapper {
+    grid-template-columns: 155px auto 102px 90px;
+    grid-template-rows: 150px auto;
+    //   height: 150px;
+    grid-template-areas:
+      &quot;image description amount price&quot;
+      &quot;divider divider divider divider&quot;;
+  }
+
+  .popover-wrapper {
+    grid-template-columns: 75px auto 102px 45px;
+    grid-template-rows: 75px auto;
+    //   height: 150px;
+    grid-template-areas:
+      &quot;image description amount price&quot;
+      &quot;divider divider divider divider&quot;;
+  } 
+}
+
+.image {
+  // grid-column-start: 1;
+  // grid-column-end: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  grid-area: image;
+}
+
+.image img {
+  max-width: 155px;
+  max-height: 155px;
+}
+
+.popover-wrapper .image img {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.description {
+  // grid-column-start: 2;
+  // grid-column-end: 2;
+  grid-area: description;
+}
+
+.description .header {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.description .sub-header {
+  font-size: 1rem;
+}
+
+.divider {
+  //   grid-column-start: 1;
+  //   grid-column-end: 3;
+  grid-area: divider;
+}
+
+.divider hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.6em 0;
+  padding: 0;
+}
+
+.amount {
+  // grid-column-start: 3;
+  // grid-column-end: 3;
+  grid-area: amount;
+}
+
+.price {
+  text-align: end;
+  grid-area: price;
+}
+
+.amount button {
+  padding: 0 !important;
+  min-width: 32px;
+}
+
+.amount .counter {
+  height: 100%;
+  width: 34px;
+  display: inline-block;
+  line-height: 36px;
+  // vertical-align: middle;
+}
+
+.amount .number {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  border-left: none;
+  border-right: none;
+  width: 35px;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f6f6f6;
+  // padding-top: auto;
+}
+
+.text-bold {
+  font-weight: bold;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="wrapper">  <div class="cart" *ngIf="items.length > 0; else nItems">    <div [ngClass]="{\'cart-wrapper\': host == undefined, \'popover-wrapper\': host == \'popover\'}" *ngFor="let it of items">      <div class="image">        <img [src]="environment.apiURI + \'/images/\' + it.item.image.full" alt="product">      </div>      <div class="description">        <p class="header" [ngClass]="{\'text-bold\': host == undefined}">{{it.item.name}}</p>        <p class="sub-header">{{it.item.brand}}</p>      </div>      <div class="amount">        <div style="display: inline-block; border: 1px solid #ccc;">          <button (click)="changeItemAmount(it.item, -1, it.amount)" mat-button>            <mat-icon>remove</mat-icon>          </button>          <div class="counter">            <span class="number">              {{it.amount}}            </span>          </div>          <button (click)="changeItemAmount(it.item, 1, it.amount)" mat-button color="primary">            <mat-icon>add</mat-icon>          </button>        </div>        <!-- {{it.amount}} -->      </div>      <div class="price">        {{calculateGrossSum(it.item) | currency:it.item.currency}}      </div>      <div class="divider">        <hr>      </div>    </div>  </div>  <div class="metrics">    <app-shopping-metrics></app-shopping-metrics>  </div></div><ng-template #nItems>  <div class="card" style="margin-left: 15px;">    <div class="card-body">      Sie haben noch keine Waren in Ihrem Warenkorb.      <br>      <a [routerLink]="[\'../products\']">Zu den Produkten</a>    </div>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'ShoppingCartComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ShoppingCartComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,332 @@
+<div class="container">
+  <mat-horizontal-stepper #stepper [linear]="true">
+    <mat-step>
+      <ng-template matStepLabel>Einleitung</ng-template>
+      <div class="card" style="margin-top: 15px;">
+        <div class="card-body">
+          <h5>Allgemeines</h5>
+          <!-- 
+            Danke das Sie an dieser Umfrage teilnehmen! Diese Umfrage wird im Rahmen der Masterarbeit zum Thema
+            "Developing an Experimental E-Commerce Simulation for Designing & Conducting Behavioral Experiments"
+            durchgeführt. Das Ziel ist es, dass Nutzerverhalten im Rahmen von Lebensmitteleinkäufen im online Kontext zu
+            untersuchen.
+           -->
+          <!-- <p>
+            Danke, dass Sie an dieser Umfrage teilnehmen! Diese Umfrage wird im Rahmen meiner Masterarbeit zum Thema
+            "Developing an Experimental E-Commerce Simulation for Designing & Conducting Behavioral Experiments"
+            durchgeführt.
+            Im Verlauf des Experiments werden Ihre Erwartungen und Anforderungen an online shopping Systeme abgefragt.
+            Sie werden gebeten Lebensmittel in einem online Lebensmittelhandel
+            einzukaufen.
+            Die Waren, die Sie in den Warenkorb legen bzw. einkaufen, werden nicht an Sie verkauft.
+            Durch Ihre Teilnahme entstehen somit weder Kaufverpflichtungen, noch werden Sie gebeten,
+            Zahlungsinformationen anzugeben.
+          </p> -->
+          <p>
+            Danke, dass Sie an dieser Umfrage teilnehmen! Diese Umfrage wird im Rahmen meiner Masterarbeit zum Thema
+            "Developing an Experimental E-Commerce Simulation for Designing & Conducting Behavioral Experiments"
+            durchgeführt. Das Ziel ist es, das Nutzerverhalten bei Lebensmitteleinkäufen im Online-Kontext zu
+            untersuchen. Hierfür werden Ihre Erwartungen und Anforderungen an solche Systeme abgefragt.
+          </p>
+          <!-- <h5>Zur Umfrage</h5> -->
+          <p>
+            Zu diesem Zweck werden Sie im Verlauf der Erhebung darum gebeten, Ihren Wocheneinkauf an Lebensmitteln
+            (mindestens zwölf unterschiedliche Produkte) in einem von mir entwickelten Online-Supermarkt zu tätigen.
+            Darüber hinaus sind Sie völlig frei in Ihrer Kaufentscheidung. Allerdings möchte ich Sie bitten, sich sowohl
+            beim Budget als auch bei der Produktauswahl an Ihren regulären Einkaufsgewohnheiten zu orientieren.
+          </p>
+          <p>
+            Die Waren, die Sie in den Warenkorb legen bzw. einkaufen, werden nicht an Sie verkauft. Durch Ihre Teilnahme
+            entstehen somit weder Kaufverpflichtungen, noch werden Sie gebeten, Zahlungsinformationen anzugeben.
+          </p>
+          <p>
+            Bevor Sie zum Online-Supermarkt weitergeleitet werden, werden Ihre Erwartungen an einen
+            Online-Lebensmittelhandel abgefragt. Nach dem Versuch werden dann Ihr Eindruck und dieser im Vergleich zu
+            Erwartungshaltung abgefragt. Insgesamt sollten Sie ca. 25 Minuten für diese Umfrage einplanen.
+            Datenerfassung
+          </p>
+          <!-- <p>
+            Bevor der Versuch startet werden hier Ihre Erwartungen an einen online Lebenmittelhandel abgefragt.
+            Nach finalisierung des Versuchs werden dann Ihr Eindruck und dieser im Verlgeich zu Erwartungshaltung
+            abgefragt. Insgesamt
+            sollten sie ca. 25 Minuten für diese Umfrage einplanen.
+          </p> -->
+          <h5>Datenerfassung</h5>
+          <p>
+            Personenbezogenedaten werden anonymisiert erfasst, und nur im Rahmen dieser Auswertung verwendet. Die Daten
+            werden nicht an Dritte weitergeleitet. Ihre Daten in einer Weise erfasst, dass keine Rückschlüsse auf Ihre
+            Person möglich sind.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="nav-buttons">
+          <button color="primary" matStepperNext mat-raised-button>Weiter</button>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="sqForm">
+      <ng-template matStepLabel>Vorumfrage</ng-template>
+      <div class="card">
+        <div class="card-body">
+          Basierend auf den soeben erhaltenen Informationen, welche Erwartungen haben Sie an die
+          Produktinformationen eines Online-Supermarktes. Die im Shop zur Verfügung gestellten
+          Produktinformationen sollten generell...
+        </div>
+      </div>
+      <form [formGroup]="iqForm">
+        <div class="card" *ngFor="let construct of iq">
+          <div class="card-header">{{construct.text}}</div>
+          <div class="card-body">
+            <div class="row" *ngFor="let q of construct.subconstruct; let x = index">
+              <div appAlternateBgColor [index]="x" class="col">
+                <div>{{q.text}}</div>
+              </div>
+              <div appAlternateBgColor [index]="x" class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>{{q.scale.low}}</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input [formControlName]="q.identifier" type="radio" [value]="i" [name]="q.identifier">
+                  </label>
+                  <p>{{q.scale.high}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="card" style="margin-top: 15px;">
+        <div class="card-body">
+          Bitte nennen Sie uns auch Ihre Erwartungen an die technischen Qualitäten des Online-Shops.
+        </div>
+      </div>
+      <form [formGroup]="sqForm">
+        <div class="card" *ngFor="let construct of sq">
+          <div class="card-header">{{construct.text}}</div>
+          <div class="card-body">
+            <div class="row" *ngFor="let q of construct.subconstruct; let x = index">
+              <div appAlternateBgColor [index]="x" class="col">
+                <div>{{q.text}}</div>
+              </div>
+              <div appAlternateBgColor [index]="x" class="col">
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <p>{{q.scale.low}}</p>
+                  <label class="radio-inline inlineRadio" *ngFor="let num of scale; let i = index">
+                    <input [formControlName]="q.identifier" type="radio" [value]="i" [name]="q.identifier">
+                  </label>
+                  <p>{{q.scale.high}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="nav-buttons">
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button [disabled]="sqForm.invalid || iqForm.invalid" (click)="submitForm()" color="primary" matStepperNext mat-raised-button>Weiter</button>
+      </div>
+    </mat-step>
+
+    <!-- 
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Verstädnlichkeit der Informationen?</div>
+        <form [formGroup]="iqUnderstandibilityFQ">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUnderstandibility">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Verlässlichkeit der Informationen?</div>
+        <form [formGroup]="iqReliabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqReliability">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Nützlichkeit der Informationen?</div>
+        <form [formGroup]="iqUsefulnessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of iqUsefulness">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card" style="margin-top: 15px;">
+        <div class="card-body">
+          Basierend auf den soeben erhaltenen Informationen, was erwarten Sie in Verbindung mit der Qualität so einer
+          Webseite selber?
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Benutzbarkeit einer solchen Webseite im Bezug auf ...</div>
+        <form [formGroup]="sqUsabilityFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqUsability">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Benutzerfreundlichkeit einer solchen Webseite im Buezug auf
+          ...</div>
+        <form [formGroup]="sqUserfreindlinessFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqUserfreindliness">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-header">Wie wichtig ist Ihnen die Navigierbarkeit einer solchen Webseite im Bezug auf ...</div>
+        <form [formGroup]="sqNavigationFG">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let q of sqNavigation">
+              <div>{{q.text}} ...</div>
+              <mat-radio-group [formControlName]="q.identifier">
+                <mat-radio-button value="0">völlig unwichtig</mat-radio-button>
+                <mat-radio-button value="1">sehr unwichtig</mat-radio-button>
+                <mat-radio-button value="2">ziemlich unwichtig</mat-radio-button>
+                <mat-radio-button value="3">weder wichtig noch unwichtig</mat-radio-button>
+                <mat-radio-button value="4">ziemlich wichtig</mat-radio-button>
+                <mat-radio-button value="5">sehr wichtig</mat-radio-button>
+                <mat-radio-button value="6">völlig wichtig</mat-radio-button>
+                <mat-radio-button value="none">Kann ich nicht sagen</mat-radio-button>
+              </mat-radio-group>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="nav-buttons">
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button (click)="submitForm()" color="primary" matStepperNext mat-raised-button>Weiter</button>
+      </div>
+    </mat-step> -->
+    <!-- <mat-step>
+      <ng-template matStepLabel>Einkaufsverhalten</ng-template>
+      <div class="cont" *ngFor="let question of questionsShopping">
+        <div class="txt">{{question.text}}</div>
+        <div class="select">
+          <mat-form-field>
+            <input required matInput placeholder="Anzahl im Jahr" type="number">
+            <mat-hint>Ungefähre Zahl</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+          <button mat-button matStepperPrevious>Zurück</button>
+        <button color="primary" (click)="submitPersonalInfo(stepper)"
+          mat-raised-button>Weiter</button>
+      </div>
+    </mat-step> -->
+    <mat-step>
+      <ng-template matStepLabel>Abschluss</ng-template>
+      <div class="card">
+        <div class="card-header">
+          Aufgabenstellung
+        </div>
+        <div class="card-body">
+          <p>
+            Wenn Sie "Weiter" klicken werden Sie auf eine Onlineshopping Webseite weitergeleitet. Hier bitten wir Sie
+            Waren für Ihren normalen Wocheneinkauf auszuwählen. Bitte "kaufen" Sie dabei mindestens zwölf
+            unterschiedliche Produkte.
+            <!-- Waren mit insgesamt <strong>mindestens
+              30€ Warenwert</strong>. -->
+          </p>
+          <p>
+            Die Waren, die Sie in den Warenkorb legen bzw. einkaufen, werden nicht an Sie verkauft.
+            Durch Ihre Teilnahme entstehen somit weder Kaufverpflichtungen, noch werden Sie gebeten,
+            Zahlungsinformationen anzugeben.
+          </p>
+          <p>
+            Um Ihren Einkauf zu beenden, navigieren Sie zum Warenkorb und klicken auf den Button
+            "Zur Kasse". Hierdurch gelangen Sie zum abschließenden Fragebogen.
+          </p>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button mat-button matStepperPrevious>Zurück</button>
+        <button mat-raised-button (click)="startTreatment()">Weiter</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<div *ngIf="loading">
+  <div class="overlay">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="email" placeholder="E-Mail" type="email" required>
+          <mat-error *ngIf="registerForm.get('email').hasError('required')">Pflichtfled</mat-error>
+          <mat-error *ngIf="registerForm.get('email').hasError('email')">Bitte geben Sie eine gültige Email an
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="username" placeholder="Benutzername" type="text" required>
+          <mat-error *ngIf="registerForm.get('username').hasError('required')">Pflichtfled</mat-error>
+          <mat-error
+            *ngIf="registerForm.get('password').hasError('minLength') || registerForm.get('username').hasError('exists')">
+            Benutzername bereits vergeben.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="password" placeholder="Passwort" type="password" required>
+          <mat-error *ngIf="registerForm.get('password').hasError('required')">Pflichtfled</mat-error>
+          <mat-error *ngIf="registerForm.get('password').hasError('content')">Passwort muss Zahlen und Sonderzeichen
+            enthalten.</mat-error>
+          <mat-error
+            *ngIf="registerForm.get('password').hasError('minLength') || registerForm.get('password').hasError('minlength')">
+            Passwort muss mindestens 6 Zeichen lang sein.</mat-error>
+          <mat-error
+            *ngIf="registerForm.get('password').hasError('maxLength') || registerForm.get('password').hasError('maxlength')">
+            Passwort darf nicht länger sein als 20 Zeichen.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 cont-width">
+        <mat-form-field>
+          <input matInput formControlName="pwd1" placeholder="Passwort" type="password" required>
+          <mat-error *ngIf="registerForm.get('pwd1').hasError('required')">Pflichtfled</mat-error>
+          <mat-error *ngIf="registerForm.hasError('mismatch')">Passwort stimmt nicht überein</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- <mat-form-field> -->
+      <div class="col-md-6 cont-width">
+        <button mat-raised-button [disabled]="registerForm.invalid">Absenden</button>
+      </div>
+      <!-- </mat-form-field> -->
+    </div>
+  </form>
+  <div class="row">
+
+  </div>
+</div>

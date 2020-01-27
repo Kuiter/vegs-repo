@@ -1,0 +1,46 @@
+.mini-nav {
+  display: flex;
+}
+
+form {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.subform {
+  margin: 15px 0 30px 0;
+}
+
+// .example-tree-invisible {
+//     display: none;
+// }
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul {
+  padding-inline-start: 15px;
+}
+
+.mat-tree-node {
+  min-height: 34px !important;
+  cursor: pointer;
+}
+
+div.mat-tree-node {
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  line-height: 40px;
+}

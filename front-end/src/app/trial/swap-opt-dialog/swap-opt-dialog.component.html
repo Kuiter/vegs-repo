@@ -1,0 +1,20 @@
+<h5>Tauschoptionen</h5>
+<div *ngIf="!swapConfig.showOptInStart; else atStart">
+  <p>Die von Ihnen gewählte Ware hat Tauschoptionen zur Auswahl, sollen diese angzeigt werden? Wenn Sie "Meine Antwort
+    speichern" bestätigen wird Ihre Antwort für die Dauer des einkaufes gespeichert.</p>
+</div>
+<form [formGroup]="remember" *ngIf="!swapConfig.showOptInStart">
+  <mat-checkbox formControlName="rememberMyAnswer">Meine Antwort speichern</mat-checkbox>
+</form>
+
+<div mat-dialog-actions>
+  <button [disabled]="submitted" mat-raised-button (click)="onSubmit(false)">Nein</button>
+  <button [disabled]="submitted" mat-raised-button (click)="onSubmit(true)">Ja</button>
+</div>
+
+<ng-template #atStart>
+  <p>
+    Im Verlauf des Einkaufs können Ihnen zu bestimmten Waren Tauschoptionen vorgeschlagen werden. Möchten Sie
+    diese hinweise erhalten?
+  </p>
+</ng-template>

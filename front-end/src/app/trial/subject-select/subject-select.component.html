@@ -1,0 +1,17 @@
+<h3>Einstellungen</h3>
+<div style="margin: 1em 0 1em 0">
+  <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
+    <p>Hier die Probanden ID eingeben, wenn das Subjekt den Test erneut durchführt.</p>
+    <mat-form-field>
+      <mat-label>Subject ID</mat-label>
+      <input matInput type="text" formControlName="subjectID" required>
+      <mat-error *ngIf="subjectForm.controls.subjectID.errors?.trial">Trial already started?</mat-error>
+    </mat-form-field>
+    <button [disabled]="btnDisabled" mat-raised-button>Weiter</button>
+  </form>
+</div>
+<mat-divider></mat-divider>
+<div style="margin: 1em 0 1em 0">
+  <p>Hiermit wird ein neuer Proband angelegt.</p>
+  <button (click)="generateSubject()" mat-raised-button>Neuen Probanten erstellen</button>
+</div>

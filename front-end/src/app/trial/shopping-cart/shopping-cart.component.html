@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <div class="cart" *ngIf="items.length > 0; else nItems">
+    <div [ngClass]="{'cart-wrapper': host == undefined, 'popover-wrapper': host == 'popover'}" *ngFor="let it of items">
+      <div class="image">
+        <img [src]="environment.apiURI + '/images/' + it.item.image.full" alt="product">
+      </div>
+      <div class="description">
+        <p class="header" [ngClass]="{'text-bold': host == undefined}">{{it.item.name}}</p>
+        <p class="sub-header">{{it.item.brand}}</p>
+      </div>
+      <div class="amount">
+        <div style="display: inline-block; border: 1px solid #ccc;">
+          <button (click)="changeItemAmount(it.item, -1, it.amount)" mat-button>
+            <mat-icon>remove</mat-icon>
+          </button>
+          <div class="counter">
+            <span class="number">
+              {{it.amount}}
+            </span>
+          </div>
+          <button (click)="changeItemAmount(it.item, 1, it.amount)" mat-button color="primary">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+        <!-- {{it.amount}} -->
+      </div>
+      <div class="price">
+        {{calculateGrossSum(it.item) | currency:it.item.currency}}
+      </div>
+      <div class="divider">
+        <hr>
+      </div>
+    </div>
+  </div>
+  <div class="metrics">
+    <app-shopping-metrics></app-shopping-metrics>
+  </div>
+</div>
+
+<ng-template #nItems>
+  <div class="card" style="margin-left: 15px;">
+    <div class="card-body">
+      Sie haben noch keine Waren in Ihrem Warenkorb.
+      <br>
+      <a [routerLink]="['../products']">Zu den Produkten</a>
+    </div>
+  </div>
+</ng-template>

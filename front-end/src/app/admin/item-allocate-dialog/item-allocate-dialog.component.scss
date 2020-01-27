@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+}
+td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // cursor: pointer;
+}
+
+.max-height {
+    max-height: 80%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.wrapper {
+    overflow-y: scroll;
+}

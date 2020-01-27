@@ -1,0 +1,78 @@
+<h3>Tausch Option</h3>
+<p>Wollen Sie Ihre Auswahl des folgenden Produktes eintauschen gegen eine der folgenden Optionen?</p>
+<div *ngIf="showGrid">
+  <div class="cart-wrapper">
+    <div class="image">
+      <img [src]="environment.apiURI + '/images/' + originalItem[0].image.th" alt="not found">
+    </div>
+    <div class="description">
+      <h5>{{originalItem[0].name}}</h5>
+      <p>{{originalItem[0].brand}}</p>
+    </div>
+    <!-- <div class="amount">
+      <div style="display: inline-block; border: 1px solid #ccc;">
+        <button class="change" (click)="changeItemAmount(it, -1, it.amount)" mat-button>
+          <mat-icon>remove</mat-icon>
+        </button>
+        <div class="counter">
+          <span class="number">
+            {{data.amount}}
+          </span>
+        </div>
+        <button class="change" (click)="changeItemAmount(it, 1, it.amount)" mat-button color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="price">
+      {{data.amount * originalItem.netPrice * (1 + originalItem.vat) | currency:it.item.currency}}
+      <button (click)="onSubmit(it.item, it.amount)" class="success" mat-raised-button>Ja!</button>
+    </div> -->
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="float-right">
+        <button (click)="onNoClick()" mat-raised-button color="warn">Nein Danke!</button>
+      </div>
+    </div>
+  </div>
+  <div class="divider">
+    <hr>
+  </div>
+  <h5>Tausch Optionen:</h5>
+  <div class="cart-wrapper" *ngFor="let it of items">
+    <div class="image">
+      <img [src]="environment.apiURI + '/images/' + it.item.image.th" alt="not found">
+    </div>
+    <div class="description">
+      <h5>{{it.item.name}}</h5>
+      <p>{{it.item.brand}}</p>
+    </div>
+    <div class="amount">
+      <div style="display: inline-block; border: 1px solid #ccc;">
+        <button class="change" (click)="changeItemAmount(it, -1, it.amount)" mat-button>
+          <mat-icon>remove</mat-icon>
+        </button>
+        <div class="counter">
+          <span class="number">
+            {{it.amount}}
+          </span>
+        </div>
+        <button class="change" (click)="changeItemAmount(it, 1, it.amount)" mat-button color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <!-- {{it.amount}} -->
+    </div>
+    <div class="price">
+      {{it.amount * it.item.netPrice * (1 + it.item.vat) | currency:it.item.currency}}
+      <button (click)="onSubmit(it.item, it.amount)" class="success" mat-raised-button>Ja!</button>
+    </div>
+    <div class="divider">
+      <hr>
+    </div>
+  </div>
+</div>
+
+<!-- <button (click)="onNoClick()" mat-raised-button>Cancel</button> -->
+<!-- <button (click)="submit(true)" mat-raised-button color="accent">Ja</button> -->

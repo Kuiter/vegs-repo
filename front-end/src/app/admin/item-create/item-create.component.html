@@ -1,0 +1,384 @@
+<div class="container">
+  <div *ngIf="showNav" class="mini-nav">
+    <button mat-icon-button (click)="onBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h3 class="ml-2 mt-1">Back to administration</h3>
+  </div>
+
+  <div class="subcard">
+    <div *ngIf="!showNav; else createItem" class="bar-back">
+      <span style="font-size: 20px">Edit item</span>
+      <span class="toolbar-spacer"></span>
+      <div>
+        <button (click)="closeEdit()" mat-icon-button>
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+    <ng-template #createItem>
+      <div class="bar-back">
+        <span style="font-size: 20px">Create new base item</span>
+      </div>
+    </ng-template>
+    <div *ngIf="show">
+      <div class="subform">
+        <!-- <h4 *ngIf="showNav">Neues Produkt anlegen</h4> -->
+        <form [formGroup]="itemFormObject.data">
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Product name</mat-label>
+                <input matInput type="text" formControlName="name">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Brand</mat-label>
+                <input matInput type="text" formControlName="brand">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Amount</mat-label>
+                <input matInput type="number" formControlName="amount">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Net Price</mat-label>
+                <input matInput type="number" formControlName="netPrice">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Vat.</mat-label>
+                <input matInput type="number" formControlName="vat">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Ingredients</mat-label>
+                <textarea matInput type="text" formControlName="ingredients"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Allergens</mat-label>
+                <textarea matInput type="text" formControlName="allergens"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Niceness</mat-label>
+                <input matInput type="number" formControlName="niceness" min="0" max="1">
+                <mat-hint>Min 0, max 1</mat-hint>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="subform">
+        <h5>Nutritional table</h5>
+        <form [formGroup]="itemFormObject.nutritionalTable">
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>KJ</mat-label>
+                <input matInput type="number" formControlName="kj">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Kcal</mat-label>
+                <input matInput type="number" formControlName="kcal">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Fat</mat-label>
+                <input matInput type="number" formControlName="totalFat">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Saturated fat</mat-label>
+                <input matInput type="number" formControlName="saturatedFat">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Carbohydrates</mat-label>
+                <input matInput type="number" formControlName="totalCarbohydrate">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Sugar</mat-label>
+                <input matInput type="number" formControlName="sugar">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Protein</mat-label>
+                <input matInput type="number" formControlName="protein">
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Salt</mat-label>
+                <input matInput type="number" formControlName="salt">
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="subform">
+        <h5>Add product descriptions</h5>
+        <div *ngIf="showDescription">
+          <div *ngFor="let fg of itemFormObject.description">
+            <form [formGroup]="fg">
+              <mat-form-field>
+                <mat-label>Header</mat-label>
+                <input matInput type="text" formControlName="header">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Text</mat-label>
+                <textarea matInput type="text" formControlName="text"></textarea>
+              </mat-form-field>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button (click)="addDescriptionItem()">Add</button>
+      </div>
+
+      <div class="subform">
+        <mat-form-field class="example-chip-list">
+          <mat-chip-list #chipList aria-label="Edit tags">
+            <mat-chip *ngFor="let tag of itemFormObject.tags" [selectable]="selectable" [removable]="removable"
+              (removed)="removeTag(tag)">
+              {{tag}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="New tag..." [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+      </div>
+
+      <div class="subform">
+        <h5>Content</h5>
+        <form [formGroup]="itemFormObject.content">
+          <div class="row">
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Content in kg</mat-label>
+                <input matInput type="text" formControlName="amountInKG">
+                <mat-hint>E.g. 500g as 0.5</mat-hint>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Type of content</mat-label>
+                <mat-select formControlName="contentType">
+                  <mat-option value="fluid">Fluid</mat-option>
+                  <mat-option value="solid">Solid</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field>
+                <mat-label>Conversion</mat-label>
+                <mat-select formControlName="displayAmount">
+                  <mat-option value="g">Gramm / Millilitre</mat-option>
+                  <mat-option value="kg">Kilogramm / Liter</mat-option>
+                </mat-select>
+                <mat-hint>Price per 100g or per 1kg</mat-hint>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="subform" *ngIf="treatmentEdit">
+        <button mat-raised-button (click)="addSwapItems()">Add Swap</button>
+        <div *ngIf="showSwaps">
+          <table mat-table [dataSource]="swapItems">
+            <ng-container matColumnDef="_id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="brand">
+              <th mat-header-cell *matHeaderCellDef> Marke </th>
+              <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef> Delete </th>
+              <td mat-cell *matCellDef="let element">
+                <button (click)="deleteSwap(element._id)" mat-icon-button>
+                  <mat-icon>close</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="subform" *ngIf="treatmentEdit">
+        <button mat-raised-button (click)="addLabel()">Add Label</button>
+        <div *ngIf="showLabel">
+          <table mat-table [dataSource]="labelItems">
+            <ng-container matColumnDef="_id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="header">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.header}} </td>
+            </ng-container>
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef> Delete </th>
+              <td mat-cell *matCellDef="let element">
+                <button (click)="deleteLabel(element._id)" mat-icon-button>
+                  <mat-icon>close</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsLabel"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsLabel;"></tr>
+          </table>
+        </div>
+
+        <div class="subform" *ngIf="treatmentEdit">
+          <button mat-raised-button (click)="addScore()">Add Score</button>
+          <div *ngIf="showScore">
+            <table mat-table [dataSource]="scoreItems">
+              <ng-container matColumnDef="scoreID">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.scoreID}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="header">
+                <th mat-header-cell *matHeaderCellDef> Score </th>
+                <td mat-cell *matCellDef="let element"> {{element.header}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> Score </th>
+                <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element">
+                  <button (click)="deleteScore(element.scoreID)" mat-icon-button>
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsScore"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsScore;"></tr>
+            </table>
+          </div>
+          <div *ngIf="showScoreForm">
+            <form [formGroup]="scoreForm">
+              <mat-form-field>
+                <mat-label>Select Score</mat-label>
+                <mat-select formControlName="scoreID">
+                  <mat-option *ngFor="let s of scores" [value]="s._id">{{s.header}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Score</mat-label>
+                <input matInput formControlName="amount" type="number">
+              </mat-form-field>
+            </form>
+            <button mat-raised-button (click)="saveScoers()">Add</button>
+          </div>
+        </div>
+        <div class="subform" *ngIf="treatmentEdit">
+          <div *ngIf="showTax">
+            <table mat-table [dataSource]="taxItems">
+              <ng-container matColumnDef="taxID">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.taxID}} </td>
+              </ng-container>
+              <ng-container matColumnDef="header">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.header}} </td>
+              </ng-container>
+              <ng-container matColumnDef="shortDescription">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.shortDescription}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element">
+                  <button (click)="deleteTax(element.taxID)" mat-icon-button>
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsTax"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumnsTax;"></tr>
+            </table>
+          </div>
+          <div *ngIf="showTaxForm">
+            <form [formGroup]="taxForm">
+              <mat-form-field>
+                <mat-label>Select Score</mat-label>
+                <mat-select formControlName="taxID">
+                  <mat-option *ngFor="let s of taxes" [value]="s._id">{{s.header}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Tax</mat-label>
+                <input matInput formControlName="amount" type="number">
+                <mat-hint>in-%</mat-hint>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button (click)="saveTax()">Add</button>
+          </div>
+          <button mat-raised-button (click)="addTax()">Add Tax</button>
+        </div>
+        <button (click)="saveItem()" mat-raised-button>Save Item</button>
+      </div>
+      <div *ngIf=!treatmentEdit>
+        <button mat-raised-button (click)="saveItem()">Save Item</button>
+      </div>
+    </div>
+  </div>

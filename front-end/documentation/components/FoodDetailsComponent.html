@@ -1,0 +1,1732 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>storefront documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">storefront documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FoodDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/trial/food-details/food-details.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Food Details Component</p>
+<p>Displays detail information saved to a individual product.</p>
+<ul>
+<li>Nutritional information</li>
+<li>product details</li>
+<li>Labels</li>
+<li>Score</li>
+<li>Image
+...</li>
+</ul>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-food-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./food-details.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./food-details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#counter">counter</a>
+                            </li>
+                            <li>
+                                <a href="#param">param</a>
+                            </li>
+                            <li>
+                                <a href="#product">product</a>
+                            </li>
+                            <li>
+                                <a href="#show">show</a>
+                            </li>
+                            <li>
+                                <a href="#showLabel">showLabel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                <a href="#addToCart">addToCart</a>
+                            </li>
+                            <li>
+                                <a href="#calculateScore">calculateScore</a>
+                            </li>
+                            <li>
+                                <a href="#displayAdditionalTaxInfo">displayAdditionalTaxInfo</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#remove">remove</a>
+                            </li>
+                            <li>
+                                <a href="#showInfo">showInfo</a>
+                            </li>
+                            <li>
+                                <a href="#showTaxInfo">showTaxInfo</a>
+                            </li>
+                            <li>
+                                <a href="#swapDialog">swapDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#showScore">showScore</a>
+                                </li>
+                                <li>
+                                    <a href="#showTax">showTax</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, productService: <a href="../injectables/ProductService.html">ProductService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, eventsService: <a href="../injectables/EventsService.html">EventsService</a>, shoppingCartService: <a href="../injectables/ShoppingCartService.html">ShoppingCartService</a>, dialog: MatDialog, trialLabelService: <a href="../injectables/TrialLabelService.html">TrialLabelService</a>, trialTreatmentService: <a href="../guards/TrialTreatmentService.html">TrialTreatmentService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductService.html" target="_self" >ProductService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>shoppingCartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ShoppingCartService.html" target="_self" >ShoppingCartService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialLabelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TrialLabelService.html" target="_self" >TrialLabelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>trialTreatmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../guards/TrialTreatmentService.html" target="_self" >TrialTreatmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <b>
+                            add
+                        </b>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>add()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Click listener for + button in template. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addToCart"></a>
+                    <span class="name">
+                        <b>
+                            addToCart
+                        </b>
+                        <a href="#addToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addToCart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="194"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:194</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Click listener for add item to shopping cart button on template.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateScore"></a>
+                    <span class="name">
+                        <b>
+                            calculateScore
+                        </b>
+                        <a href="#calculateScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculateScore()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculates score for display in template.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayAdditionalTaxInfo"></a>
+                    <span class="name">
+                        <b>
+                            displayAdditionalTaxInfo
+                        </b>
+                        <a href="#displayAdditionalTaxInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>displayAdditionalTaxInfo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Calculation of tax amount for display in template. </p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="175"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:175</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Workaround for template edited after diplayed warning </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="remove"></a>
+                    <span class="name">
+                        <b>
+                            remove
+                        </b>
+                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>remove()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Click listener for - button in template. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showInfo"></a>
+                    <span class="name">
+                        <b>
+                            showInfo
+                        </b>
+                        <a href="#showInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showInfo(labelID)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Starts Mat-Dialog for additional iformation about displayed Labels.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>labelID</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showTaxInfo"></a>
+                    <span class="name">
+                        <b>
+                            showTaxInfo
+                        </b>
+                        <a href="#showTaxInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showTaxInfo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Starts show Mat-Dialog for additional tax info.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="swapDialog"></a>
+                    <span class="name">
+                        <b>
+                            swapDialog
+                        </b>
+                        <a href="#swapDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>swapDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/app/trial/food-details/food-details.component.ts:236</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="counter"></a>
+                        <span class="name">
+                            <b>
+                            counter</b>
+                            <a href="#counter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="param"></a>
+                        <span class="name">
+                            <b>
+                            param</b>
+                            <a href="#param"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="product"></a>
+                        <span class="name">
+                            <b>
+                            product</b>
+                            <a href="#product"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="show"></a>
+                        <span class="name">
+                            <b>
+                            show</b>
+                            <a href="#show"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showLabel"></a>
+                        <span class="name">
+                            <b>
+                            showLabel</b>
+                            <a href="#showLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showScore"></a>
+                        <span class="name"><b>showScore</b><a href="#showScore"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>showScore()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:79</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Databinding to template </p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showTax"></a>
+                        <span class="name"><b>showTax</b><a href="#showTax"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>showTax()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/trial/food-details/food-details.component.ts:83</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Databinding to template </p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { ProductService } from &#x27;../trial-services/product.service&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { EventsService } from &#x27;../trial-services/events.service&#x27;;
+import { ShoppingCartService } from &#x27;../shopping-cart/shopping-cart.service&#x27;;
+import { InfoDialogComponent } from &#x27;../info-dialog/info-dialog.component&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { TrialLabelService } from &#x27;../trial-services/trial-label.service&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { SwapDialogComponent } from &#x27;../swap-dialog/swap-dialog.component&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+import { TrialTreatmentService } from &#x27;../trial-services/trial-treatment.service&#x27;;
+import { SwapOptDialogComponent } from &#x27;../swap-opt-dialog/swap-opt-dialog.component&#x27;;
+/**
+ * Food Details Component
+ * 
+ * Displays detail information saved to a individual product.
+ * - Nutritional information
+ * - product details
+ * - Labels
+ * - Score
+ * - Image
+ * ...
+ */
+@Component({
+  selector: &#x27;app-food-details&#x27;,
+  templateUrl: &#x27;./food-details.component.html&#x27;,
+  styleUrls: [&#x27;./food-details.component.scss&#x27;]
+})
+export class FoodDetailsComponent implements OnInit, AfterViewInit {
+  /** */
+  param: any;
+  show &#x3D; false;
+  showLabel &#x3D; false;
+  // showScore &#x3D; false;
+  product: any;
+  counter &#x3D; 1;
+
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService,
+    private router: Router,
+    private eventsService: EventsService,
+    private shoppingCartService: ShoppingCartService,
+    private dialog: MatDialog,
+    private trialLabelService: TrialLabelService,
+    private trialTreatmentService: TrialTreatmentService
+  ) { }
+
+  ngOnInit() {
+    // this.eventsService.emitShowBack(true);
+    this.route.params.subscribe(
+      res &#x3D;&gt; {
+        // console.log(res.id);
+        this.param &#x3D; res.id;
+        this.productService.getProduct(this.param)
+          .then((item) &#x3D;&gt; {
+            if (item &#x3D;&#x3D; undefined) {
+              this.router.navigate([&#x27;/shop&#x27;]);
+              return;
+            }
+            this.product &#x3D; item;
+            if (item.label.length &gt; 0) {
+              this.showLabel &#x3D; true;
+            }
+            this.show &#x3D; true;
+          })
+          .catch(() &#x3D;&gt; {
+            this.router.navigate([&#x27;/shop&#x27;]);
+          });
+      }
+    );
+  }
+  /**@ignore */
+  get environment() {
+    return environment;
+  }
+  /**Databinding to template */
+  get showScore() {
+    return this.trialTreatmentService.getDisplayOptions().showScore;
+  }
+  /**Databinding to template */
+  get showTax() {
+    return this.trialTreatmentService.getDisplayOptions().showTax;
+  }
+  /**Calculation of tax amount for display in template. 
+   * @returns {Number}
+  */
+  displayAdditionalTaxInfo() {
+    let taxes &#x3D; 0;
+    if (this.product.taxes.length &gt; 0) {
+      for (let t of this.product.taxes) {
+        taxes +&#x3D; t.amount * this.product.netPrice;
+      }
+    }
+    return taxes;
+  }
+  /**
+   * Calculates score for display in template.
+   * @returns {String}
+   */
+  calculateScore() {
+    const max &#x3D; this.product.score.maxValue;
+    const min &#x3D; this.product.score.minValue;
+    const score &#x3D; (this.product.score.amount - min) / (max - min);
+    // console.log(score)
+    return &#x60;${(1 - score) * 100}%&#x60;;
+  }
+  /**
+   * Starts Mat-Dialog for additional iformation about displayed Labels.
+   * @param labelID 
+   * @emits $recordEvent
+   */
+  showInfo(labelID) {
+    console.log(labelID);
+    let obs &#x3D; new Observable&lt;any&gt;((sub) &#x3D;&gt; {
+      this.trialLabelService.getLabelByID(labelID).subscribe(
+        (labelData) &#x3D;&gt; {
+          const dialogRef &#x3D; this.dialog.open(InfoDialogComponent, {
+            maxHeight: &#x27;80vh&#x27;,
+            width: &#x27;80%&#x27;,
+            data: {
+              object: labelData,
+            }
+          });
+          sub.next(dialogRef);
+        },
+        (error) &#x3D;&gt; {
+          sub.error(error);
+        }
+      );
+    })
+    obs.subscribe((dialogRef) &#x3D;&gt; {
+      let t &#x3D; new Date().toISOString();
+      this.eventsService.$recordEvent.emit(
+        {
+          event: &#x27;labelInfoOpened&#x27;,
+          data: {
+            infoID: labelID,
+            started: t
+          }
+        }
+      )
+      dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+        let t &#x3D; new Date().toISOString();
+        this.eventsService.$recordEvent.emit(
+          {
+            event: &#x27;labelInfoClosed&#x27;,
+            data: {
+              infoID: labelID,
+              ended: t
+            }
+          }
+        )
+        console.log(result);
+      })
+    });
+  }
+  /**
+   * Starts show Mat-Dialog for additional tax info.
+   * @todo not implemented...
+   */
+  showTaxInfo() {
+    // record info viewed
+    const dialogRef &#x3D; this.dialog.open(InfoDialogComponent, {
+      maxHeight: &#x27;80vh&#x27;,
+      width: &#x27;80%&#x27;,
+      data: {
+        taxes: this.product.taxes,
+      }
+    });
+    dialogRef.afterClosed().subscribe(() &#x3D;&gt; { })
+  }
+  /**Workaround for template edited after diplayed warning */
+  ngAfterViewInit() {
+    // work around for reload on food details showBack
+    setTimeout(() &#x3D;&gt; {
+      this.eventsService.emitShowBack(true);
+    }, 1)
+  }
+  /**Click listener for + button in template. */
+  add() {
+    this.counter +&#x3D; 1;
+  }
+  /**Click listener for - button in template. */
+  remove() {
+    if (this.counter &gt; 1) {
+      this.counter -&#x3D; 1;
+    }
+  }
+  /**Click listener for add item to shopping cart button on template.
+   * @emits $recordEvent
+   */
+  addToCart(): void {
+    const { showSwaps, showOptInEachTime, showSwapEnd, showOptInStart } &#x3D; this.trialTreatmentService.getSwapConfig();
+    const rememberStart &#x3D; localStorage.getItem(&#x27;rememberStart&#x27;);
+    const remember &#x3D; localStorage.getItem(&#x27;remember&#x27;);
+    if (showSwaps &amp;&amp; this.product.swaps.length &gt; 0) {
+      if (!showSwapEnd) {
+        if (showOptInEachTime &amp;&amp; !remember) {
+          const dialogRef &#x3D; this.dialog.open(SwapOptDialogComponent, {
+            data: { item: this.product },
+            maxHeight: &#x27;80%&#x27;,
+            maxWidth: &#x27;80%&#x27;
+          })
+          dialogRef.afterClosed().subscribe(
+            (bool) &#x3D;&gt; {
+              if (bool) {
+                this.swapDialog().subscribe(
+                  () &#x3D;&gt; { }
+                )
+              } else {
+                this.shoppingCartService.addItemToCart(this.product, this.counter);
+              }
+            }
+          )
+        } else if (showOptInEachTime &amp;&amp; remember &#x3D;&#x3D; &#x27;true&#x27;) {
+          this.swapDialog().subscribe(() &#x3D;&gt; { })
+        } else if (showOptInStart &amp;&amp; rememberStart &#x3D;&#x3D; &#x27;true&#x27;) {
+          this.swapDialog().subscribe(() &#x3D;&gt; { })
+        } else if (showSwaps &amp;&amp; !showSwapEnd &amp;&amp; !showOptInStart &amp;&amp; !showOptInEachTime) {
+          this.swapDialog().subscribe(
+            () &#x3D;&gt; { }
+          )
+        } else {
+          this.shoppingCartService.addItemToCart(this.product, this.counter);
+        }
+      } else if (showSwapEnd) {
+        this.shoppingCartService.addItemToCart(this.product, this.counter);
+      }
+    } else {
+      this.shoppingCartService.addItemToCart(this.product, this.counter);
+    }
+  }
+
+  swapDialog() {
+    return new Observable((sub) &#x3D;&gt; {
+      this.eventsService.$recordEvent.emit(
+        {
+          event: &#x27;swapStarted&#x27;,
+          data: {
+            originalItem: this.product._id,
+            originalAmount: this.counter,
+            swapOptions: this.product.swaps
+          }
+        }
+      )
+      const dialogRef &#x3D; this.dialog.open(SwapDialogComponent, {
+        maxHeight: &#x27;80vh&#x27;,
+        width: &#x27;80%&#x27;,
+        data: {
+          originalItem: this.product._id,
+          items: this.product.swaps,
+          amount: this.counter
+        }
+      })
+
+      dialogRef.afterClosed().subscribe((result: any) &#x3D;&gt; {
+        console.log(result);
+        if (!result) {
+          this.eventsService.$recordEvent.emit(
+            {
+              event: &#x27;swapEnded&#x27;,
+              data: {
+                resultItem: this.product._id,
+                resultAmount: this.counter,
+                success: false
+              }
+            }
+          )
+          this.shoppingCartService.addItemToCart(this.product, this.counter);
+          sub.next();
+          sub.complete();
+        }
+        this.eventsService.$recordEvent.emit(
+          {
+            event: &#x27;swapEnded&#x27;,
+            data: {
+              resultItem: result.item._id,
+              resultAmount: result.amount,
+              success: true
+            }
+          }
+        )
+        this.shoppingCartService.addItemToCart(result.item, result.amount);
+        sub.next();
+        sub.complete();
+      });
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;show&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;width:100%; margin: 0&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-12 col-lg-3 pt-3&quot;&gt;
+      &lt;div *ngIf&#x3D;&quot;product.image !&#x3D; undefined; else placeholder&quot; style&#x3D;&quot;text-align: center&quot;&gt;
+        &lt;img [src]&#x3D;&quot;environment.apiURI + &#x27;/images/&#x27; + product.image.full&quot; alt&#x3D;&quot;product&quot; width&#x3D;&quot;260px&quot; heihgt&#x3D;&quot;260px&quot;&gt;
+      &lt;/div&gt;
+      &lt;ng-template #placeholder&gt;
+        &lt;img src&#x3D;&quot;assets/placeholder/placeholder-images-image_large.png&quot; alt&#x3D;&quot;&quot; width&#x3D;&quot;260px&quot; heihgt&#x3D;&quot;260px&quot;&gt;
+      &lt;/ng-template&gt;
+      &lt;!-- &lt;img class&#x3D;&quot;mx-auto d-block&quot;
+      src&#x3D;&quot;../../../assets/products/BaxtersCountryGardenSoup400g-GemüsesuppemitReis_d9f2c4bd-a7d3-46dc-ac25-a9ddd0b517a5_mp.jpg&quot;
+      alt&#x3D;&quot;product&quot; width&#x3D;&quot;260&quot; height&#x3D;&quot;260&quot;&gt; --&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-md-6 col-lg-6 pt-3&quot;&gt;
+      &lt;h3&gt;{{product.name}}&lt;/h3&gt;
+      &lt;div *ngIf&#x3D;&quot;product.description.length &gt; 0&quot;&gt;
+        &lt;p&gt;{{product.description[0].text}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showLabel&quot;&gt;
+        &lt;h3&gt;Certification&lt;/h3&gt;
+        &lt;div class&#x3D;&quot;label-container&quot;&gt;
+          &lt;div class&#x3D;&quot;label&quot; *ngFor&#x3D;&quot;let l of product.label&quot;&gt;
+            &lt;img (click)&#x3D;&quot;showInfo(l)&quot; [src]&#x3D;&quot;environment.apiURI + &#x27;/image/label/&#x27; + l&quot; alt&#x3D;&quot;Label&quot; height&#x3D;&quot;75px&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showScore &amp;&amp; product.score !&#x3D; undefined&quot;&gt;
+        &lt;div class&#x3D;&quot;pt-3&quot;&gt;
+          &lt;h3&gt;{{product.score.header}} Score: {{product.score.amount}}&lt;/h3&gt;
+          &lt;p&gt;{{product.score.description}}&lt;/p&gt;
+          &lt;div class&#x3D;&quot;rotate&quot;&gt;
+            &lt;div class&#x3D;&quot;score-bar-background&quot;&gt;
+              &lt;div appScore [score]&#x3D;&quot;calculateScore()&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showTax &amp;&amp; product.taxes.length &gt; 0&quot;&gt;
+        &lt;h5&gt;This item is additionally taxed by:&lt;/h5&gt;
+        &lt;div *ngFor&#x3D;&quot;let t of product.taxes&quot;&gt;
+          &lt;div class&#x3D;&quot;info&quot;&gt;
+            &lt;div&gt;{{t.header}} - {{t.shortDescription}}&lt;/div&gt;
+            &lt;span style&#x3D;&quot;flex: 1 1 auto&quot;&gt;&lt;/span&gt;
+            &lt;button (click)&#x3D;&quot;showTaxInfo()&quot; color&#x3D;&quot;primary&quot; mat-icon-button type&#x3D;&quot;button&quot;&gt;
+              &lt;mat-icon&gt;info&lt;/mat-icon&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-md-6 col-lg-3&quot;&gt;
+      &lt;div class&#x3D;&quot;call-to-action&quot;&gt;
+        &lt;span class&#x3D;&quot;call-to-action-num&quot;&gt;Art.-Nr. {{product._id}}&lt;/span&gt;
+        &lt;div class&#x3D;&quot;call-to-action-price additional&quot; *ngIf&#x3D;&quot;product.taxes.length &gt; 0 &amp;&amp; showTax&quot;&gt;
+          &lt;div *ngFor&#x3D;&quot;let t of product.taxes&quot;&gt;
+            &lt;div&gt;
+              {{t.shortDescription}} + {{t.amount * product.netPrice | currency: product.currency}}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;call-to-action-price&quot;&gt;
+          {{(product.netPrice + displayAdditionalTaxInfo()) * (1 + product.vat) | currency: product.currency}}&lt;/div&gt;
+        &lt;div class&#x3D;&quot;call-to-action-price tax&quot;&gt;inkl. gesetzliche Mwst.&lt;/div&gt;
+        &lt;div class&#x3D;&quot;action-bar-wrapper&quot;&gt;
+          &lt;div class&#x3D;&quot;counter-div&quot; style&#x3D;&quot;border: 1px solid #ccc;&quot;&gt;
+            &lt;button (click)&#x3D;&quot;remove()&quot; mat-button&gt;
+              &lt;mat-icon&gt;remove&lt;/mat-icon&gt;
+            &lt;/button&gt;
+            &lt;div class&#x3D;&quot;counter&quot;&gt;
+              &lt;span class&#x3D;&quot;number&quot;&gt;
+                {{counter}}
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;button (click)&#x3D;&quot;add()&quot; mat-button color&#x3D;&quot;primary&quot;&gt;
+              &lt;mat-icon&gt;add&lt;/mat-icon&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button (click)&#x3D;&quot;addToCart(product)&quot; mat-raised-button style&#x3D;&quot;width: 100%&quot;&gt;
+          &lt;mat-icon&gt;shopping_cart&lt;/mat-icon&gt;
+          &lt;span&gt;In den Warenkorb&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style&#x3D;&quot;margin: 1rem 2rem&quot;&gt;
+    &lt;mat-divider&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;product.description.length &gt; 0&quot;&gt;
+    &lt;div *ngFor&#x3D;&quot;let d of product.description&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;width:100%; margin: 0&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+          &lt;h5&gt;{{d.header}}&lt;/h5&gt;
+          &lt;p&gt;{{d.text}}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;product.ingredients !&#x3D; null&quot;&gt;
+    &lt;h5&gt;Inhaltsstoffe:&lt;/h5&gt;
+    &lt;p&gt;{{product.ingredients}}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;product.allergens !&#x3D; null&quot;&gt;
+    &lt;h5&gt;Allergene:&lt;/h5&gt;
+    &lt;p&gt;{{product.allergens}}&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div style&#x3D;&quot;margin: 1rem 2rem&quot;&gt;
+    &lt;mat-divider&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;product.nutritionalTable !&#x3D; undefined&quot; class&#x3D;&quot;row&quot; style&#x3D;&quot;margin: 0&quot;&gt;
+    &lt;div class&#x3D;&quot;col&quot;&gt;
+      &lt;table id&#x3D;&quot;nutritionalInfo&quot;&gt;
+        &lt;tr&gt;
+          &lt;th colspan&#x3D;&quot;2&quot;&gt;Nutritional Information (100 g)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Kj.:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.kj}}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Kcal.:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.kcal}}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Protein:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.protein}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Carbohydrate:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.totalCarbohydrate}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Sugar:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.sugar}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Fat:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.totalFat}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;saturated fat:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.saturatedFat}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Salt:&lt;/td&gt;
+          &lt;td&gt;{{product.nutritionalTable.salt}}&amp;nbsp;g&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./food-details.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.call-to-action {
+  background-color: #f5f4f2;
+  // margin: 1rem 1rem 0.5rem 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+span.call-to-action-num {
+  color: #9b9b9b;
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div.call-to-action-price {
+  align-self: flex-end;
+  flex-grow: 1;
+  // margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0 10px;
+  color: #4a4a4a;
+}
+
+div.call-to-action-price.additional {
+  font-size: 0.9rem;
+  color: red;
+}
+
+div.call-to-action-price.tax {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.action-bar-wrapper {
+  display: flex;
+  position: relative;
+  // min-width: 200px;
+  flex-direction: row;
+  height: 40px;
+  margin: 8px 10px 16px;
+}
+
+.counter-div {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.counter {
+  height: 100%;
+  width: 34px;
+  display: inline-block;
+  line-height: 36px;
+  // vertical-align: middle;
+}
+
+.number {
+  font-family: UnitRoundedOT, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #4a4a4a;
+  border-left: none;
+  border-right: none;
+  width: 35px;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f6f6f6;
+  // padding-top: auto;
+}
+
+button {
+  padding: 0 !important;
+  min-width: 32px;
+}
+
+img {
+  // position: absolute;
+  margin: auto;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  height: 75px;
+  padding-right: 15px;
+}
+
+#nutritionalInfo td,
+#nutritionalInfo td {
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+
+#nutritionalInfo th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #3f51b5;
+  color: white;
+}
+
+#nutritionalInfo {
+  border-collapse: collapse;
+}
+
+#nutritionalInfo tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.score-bar-background {
+  // position: absolute;
+  // top: 8px;
+  // left: 8px;
+  // display: flex;
+  // width: 80%;
+  height: 24px;
+  background-image: linear-gradient(90deg, #00ff00, #ff4500);
+  // border-radius: 4px;
+}
+
+.rotate {
+  width: 80%;
+  position: relative;
+  transform: rotate(180deg);
+  // margin-right: -40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  line-height: 40px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="show">  <div class="row" style="width:100%; margin: 0">    <div class="col-md-12 col-lg-3 pt-3">      <div *ngIf="product.image != undefined; else placeholder" style="text-align: center">        <img [src]="environment.apiURI + \'/images/\' + product.image.full" alt="product" width="260px" heihgt="260px">      </div>      <ng-template #placeholder>        <img src="assets/placeholder/placeholder-images-image_large.png" alt="" width="260px" heihgt="260px">      </ng-template>      <!-- <img class="mx-auto d-block"      src="../../../assets/products/BaxtersCountryGardenSoup400g-GemüsesuppemitReis_d9f2c4bd-a7d3-46dc-ac25-a9ddd0b517a5_mp.jpg"      alt="product" width="260" height="260"> -->    </div>    <div class="col-md-6 col-lg-6 pt-3">      <h3>{{product.name}}</h3>      <div *ngIf="product.description.length > 0">        <p>{{product.description[0].text}}</p>      </div>      <div *ngIf="showLabel">        <h3>Certification</h3>        <div class="label-container">          <div class="label" *ngFor="let l of product.label">            <img (click)="showInfo(l)" [src]="environment.apiURI + \'/image/label/\' + l" alt="Label" height="75px">          </div>        </div>      </div>      <div *ngIf="showScore && product.score != undefined">        <div class="pt-3">          <h3>{{product.score.header}} Score: {{product.score.amount}}</h3>          <p>{{product.score.description}}</p>          <div class="rotate">            <div class="score-bar-background">              <div appScore [score]="calculateScore()"></div>            </div>          </div>        </div>      </div>      <div *ngIf="showTax && product.taxes.length > 0">        <h5>This item is additionally taxed by:</h5>        <div *ngFor="let t of product.taxes">          <div class="info">            <div>{{t.header}} - {{t.shortDescription}}</div>            <span style="flex: 1 1 auto"></span>            <button (click)="showTaxInfo()" color="primary" mat-icon-button type="button">              <mat-icon>info</mat-icon>            </button>          </div>        </div>      </div>    </div>    <div class="col-md-6 col-lg-3">      <div class="call-to-action">        <span class="call-to-action-num">Art.-Nr. {{product._id}}</span>        <div class="call-to-action-price additional" *ngIf="product.taxes.length > 0 && showTax">          <div *ngFor="let t of product.taxes">            <div>              {{t.shortDescription}} + {{t.amount * product.netPrice | currency: product.currency}}            </div>          </div>        </div>        <div class="call-to-action-price">          {{(product.netPrice + displayAdditionalTaxInfo()) * (1 + product.vat) | currency: product.currency}}</div>        <div class="call-to-action-price tax">inkl. gesetzliche Mwst.</div>        <div class="action-bar-wrapper">          <div class="counter-div" style="border: 1px solid #ccc;">            <button (click)="remove()" mat-button>              <mat-icon>remove</mat-icon>            </button>            <div class="counter">              <span class="number">                {{counter}}              </span>            </div>            <button (click)="add()" mat-button color="primary">              <mat-icon>add</mat-icon>            </button>          </div>        </div>        <button (click)="addToCart(product)" mat-raised-button style="width: 100%">          <mat-icon>shopping_cart</mat-icon>          <span>In den Warenkorb</span>        </button>      </div>    </div>  </div>  <div style="margin: 1rem 2rem">    <mat-divider></mat-divider>  </div>  <div *ngIf="product.description.length > 0">    <div *ngFor="let d of product.description">      <div class="row" style="width:100%; margin: 0">        <div class="col">          <h5>{{d.header}}</h5>          <p>{{d.text}}</p>        </div>      </div>    </div>  </div>  <div *ngIf="product.ingredients != null">    <h5>Inhaltsstoffe:</h5>    <p>{{product.ingredients}}</p>  </div>  <div *ngIf="product.allergens != null">    <h5>Allergene:</h5>    <p>{{product.allergens}}</p>  </div>  <div style="margin: 1rem 2rem">    <mat-divider></mat-divider>  </div>  <div *ngIf="product.nutritionalTable != undefined" class="row" style="margin: 0">    <div class="col">      <table id="nutritionalInfo">        <tr>          <th colspan="2">Nutritional Information (100 g)</th>        </tr>        <tr>          <td>Kj.:</td>          <td>{{product.nutritionalTable.kj}}</td>        </tr>        <tr>          <td>Kcal.:</td>          <td>{{product.nutritionalTable.kcal}}</td>        </tr>        <tr>          <td>Protein:</td>          <td>{{product.nutritionalTable.protein}}&nbsp;g</td>        </tr>        <tr>          <td>Carbohydrate:</td>          <td>{{product.nutritionalTable.totalCarbohydrate}}&nbsp;g</td>        </tr>        <tr>          <td>Sugar:</td>          <td>{{product.nutritionalTable.sugar}}&nbsp;g</td>        </tr>        <tr>          <td>Fat:</td>          <td>{{product.nutritionalTable.totalFat}}&nbsp;g</td>        </tr>        <tr>          <td>saturated fat:</td>          <td>{{product.nutritionalTable.saturatedFat}}&nbsp;g</td>        </tr>        <tr>          <td>Salt:</td>          <td>{{product.nutritionalTable.salt}}&nbsp;g</td>        </tr>      </table>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminHeaderComponent', 'selector': 'app-admin-header'},{'name': 'AdminLandingComponent', 'selector': 'app-admin-landing'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EndTrialComponent', 'selector': 'app-end-trial'},{'name': 'FilterAllocateDialogComponent', 'selector': 'app-filter-allocate-dialog'},{'name': 'FilterComponent', 'selector': 'app-filter'},{'name': 'FoodCardComponent', 'selector': 'app-food-card'},{'name': 'FoodDetailsComponent', 'selector': 'app-food-details'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ImageDialogComponent', 'selector': 'app-image-dialog'},{'name': 'InfoDialogComponent', 'selector': 'app-info-dialog'},{'name': 'ItemAllocateDialogComponent', 'selector': 'app-item-allocate-dialog'},{'name': 'ItemCreateComponent', 'selector': 'app-item-create'},{'name': 'ItemGridComponent', 'selector': 'app-item-grid'},{'name': 'ItemManageComponent', 'selector': 'app-item-manage'},{'name': 'LabelAllocateDialogComponent', 'selector': 'app-label-allocate-dialog'},{'name': 'LabelCreateComponent', 'selector': 'app-label-create'},{'name': 'LandingComponent', 'selector': 'app-landing'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'ScoreCreateComponent', 'selector': 'app-score-create'},{'name': 'ShoppingCartComponent', 'selector': 'app-shopping-cart'},{'name': 'ShoppingMetricsComponent', 'selector': 'app-shopping-metrics'},{'name': 'SubjectManageComponent', 'selector': 'app-subject-manage'},{'name': 'SubjectSelectComponent', 'selector': 'app-subject-select'},{'name': 'SwapDialogComponent', 'selector': 'app-swap-dialog'},{'name': 'SwapOptDialogComponent', 'selector': 'app-swap-opt-dialog'},{'name': 'TaxCreateComponent', 'selector': 'app-tax-create'},{'name': 'TreatmentCreateComponent', 'selector': 'app-treatment-create'},{'name': 'TreatmentSelectComponent', 'selector': 'app-treatment-select'},{'name': 'TreeCreateComponent', 'selector': 'app-tree-create'},{'name': 'TreeManageComponent', 'selector': 'app-tree-manage'},{'name': 'TrialComponent', 'selector': 'app-trial'},{'name': 'TrialConfigComponent', 'selector': 'app-trial-config'},{'name': 'TrialLandingComponent', 'selector': 'app-trial-landing'},{'name': 'TrialShopComponent', 'selector': 'app-trial-shop'}];
+    var DIRECTIVES = [{'name': 'FixedNavDirective', 'selector': '[appFixedNav]'},{'name': 'ScoreDirective', 'selector': '[appScore]'}];
+    var ACTUAL_COMPONENT = {'name': 'FoodDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FoodDetailsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

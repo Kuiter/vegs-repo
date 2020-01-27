@@ -1,0 +1,26 @@
+<div class="cont">
+  <nav *ngIf="innerWidth > 520; else popover">
+    <div *ngIf="isFirefox; else notFirefox">
+      <app-filter appFixedNav (fixed)="fixed($event)"></app-filter>
+    </div>
+    <div *ngIf="nav.fixed" style="color: white" [style.width]="nav.width">Placeholder</div>
+  </nav>
+  <main>
+    <!-- <router-outlet></router-outlet> -->
+    <app-item-grid></app-item-grid>
+  </main>
+</div>
+
+<ng-template #popover>
+  <nav class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <app-filter></app-filter>
+  </nav>
+  <div class="flt-btn">
+    <span class="b-sh" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+  </div>
+</ng-template>
+
+<ng-template #notFirefox>
+  <app-filter></app-filter>
+</ng-template>
