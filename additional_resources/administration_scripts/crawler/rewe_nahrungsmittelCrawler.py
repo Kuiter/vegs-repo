@@ -178,7 +178,7 @@ for q in queries:
                 if l['alt'] in label:
                     continue
                 label.add(l['alt'])
-                urllib.request.urlretrieve(l['src'], f'/home/sebastian/Documents/2019/Studium/Master/python/crawler/label/{l["alt"]}.png')
+                urllib.request.urlretrieve(l['src'], f'<path_to_label>{l["alt"]}.png')
         # for the images?
         if len(soup.select('div.pdr-PictureHoverZoom--ThumbWrapper picture img')) > 0:
             pic = soup.select('div.pdr-PictureHoverZoom--ThumbWrapper picture img')[0]
@@ -187,8 +187,8 @@ for q in queries:
         picName = pic['alt'].replace(' ', '_')
         if '/' in picName:
             picName = picName.replace('/', '')
-        urllib.request.urlretrieve(pic['src'], f'/home/sebastian/Documents/2019/Studium/Master/python/crawler/item_image/{picName}.png')
-        item['imagePath'] = f'/home/sebastian/Documents/2019/Studium/Master/python/crawler/item_image/{picName}.png'
+        urllib.request.urlretrieve(pic['src'], f'<path>/{picName}.png')
+        item['imagePath'] = f'<path>{picName}.png'
         items.append(item)
     
     with open (f'{q[2]}.json', 'w') as f: 
