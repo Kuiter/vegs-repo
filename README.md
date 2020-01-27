@@ -98,3 +98,6 @@ After starting the development server the front-end is is hosted on localhost:42
 The item data, and images used in this demonstration can be downloaded here:
 
 https://owncloud.gwdg.de/index.php/s/ZfXUziwdPqotyNb
+
+## Disclaimer
+The data is not our own property, images, and item information is publicly available and was merely aggregated by us. 
