@@ -12,6 +12,10 @@ Virtual E-Grocery Store (VEGS)is a configurable, and open-source web application
 - (Smart) Disclosure & Feedback
 - Economic Incentives
 
+# Example
+
+https://vegs.codemuenster.eu/t/5de85530c2cda70bf6a2360f/s/0/shop/products
+
 # Installation
 
 ## Prerequisites
