@@ -101,3 +101,9 @@ https://owncloud.gwdg.de/index.php/s/ZfXUziwdPqotyNb
 
 ## Disclaimer
 The data is not our own property, images, and item information is publicly available and was merely aggregated by us. 
+
+## Contacts
+
+Author: sebastian.kuiter@stud.uni-goettinge.de
+Co-Author: nils.engelbrecht@wiwi.uni-goettingen.de
+Co-Author: tim-benjamin.lembcke@uni-goettingen.de
