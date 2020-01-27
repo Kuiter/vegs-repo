@@ -34,7 +34,7 @@ node -v
 npm -v
 ```
 
-For running the back-end application you also need a running instance of MongoDB as the database server. For installation instructions see your operating system specific instructions provided \href{https://docs.mongodb.com/manual/installation/}{here}. By default MongoDB listens on localhost:27017. This port is also configured by default for the back-end application. MongoDB needs to be running before you start the back-end application. If MongoDB does not start automatically you can start it by typing the following command (see listing \ref{it:mongo_set}).
+For running the back-end application you also need a running instance of MongoDB as the database server. For installation instructions see your operating system specific instructions provided here: https://docs.mongodb.com/manual/installation/. By default MongoDB listens on localhost:27017. This port is also configured by default for the back-end application. MongoDB needs to be running before you start the back-end application. If MongoDB does not start automatically you can start it by typing the following command.
 
 ```
 sudo service mongod start
@@ -52,7 +52,7 @@ With this you cloned or downloaded the front-end, and back-end application. The 
 npm install
 ```
 
-This will install all necessary dependencies to run the applications. After this you might want to update the dependencies, and audit-fix any critical security issues by running the following commands (see listing \ref{it:npm_set}). With this the dependencies are updated and any security issues are fixed, when they have known fixes.
+This will install all necessary dependencies to run the applications. After this you might want to update the dependencies, and audit-fix any critical security issues by running the following commands. With this the dependencies are updated and any security issues are fixed, when they have known fixes.
 
 ```
 npm update
@@ -71,7 +71,7 @@ npm run start
 npm run start-watch
 ```
 
-Doing this both applications are hosted in "development mode", after changing source files the applications are recompiled, and the sever is automatically restarted. The above commands act as aliases for the following commands specified in the respective package.json (see listing \ref{it:package}) file in the root folder of each application.
+Doing this both applications are hosted in "development mode", after changing source files the applications are recompiled, and the sever is automatically restarted. The above commands act as aliases for the following commands specified in the respective package.json file in the root folder of each application.
 
 ```
 # front-end
