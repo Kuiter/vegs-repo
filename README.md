@@ -91,3 +91,10 @@ Doing this both applications are hosted in "development mode", after changing so
 ```
 
 After starting the development server the front-end is is hosted on localhost:4200, and the back-end listens on localhost:3000.
+
+
+# Example Item Stock
+
+The item data, and images used in this demonstration can be downloaded here:
+
+https://owncloud.gwdg.de/index.php/s/ZfXUziwdPqotyNb
