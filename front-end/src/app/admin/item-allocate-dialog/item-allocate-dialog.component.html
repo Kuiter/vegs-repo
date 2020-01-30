@@ -36,7 +36,7 @@
       </tr>
     </table>
   </div>
-  <mat-paginator #paginator [showFirstLastButtons]="true" (page)="handlePage($event)" pageSize="10"
+  <mat-paginator #paginator [showFirstLastButtons]="true" (page)="handlePage($event)" [pageSize]="pageSize"
     [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 
   <button (click)="onNoClick()" mat-raised-button color="warn">Cancel</button>

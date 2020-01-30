@@ -27,6 +27,8 @@ export class ItemAllocateDialogComponent implements OnInit {
   selection = new SelectionModel<any>(true, []);
   /**DOM binding for mat-paginator.  */
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  pageSize = 10;
+
 
   /**@ignore */
   constructor(
@@ -54,11 +56,6 @@ export class ItemAllocateDialogComponent implements OnInit {
     if (this.data.ref == 'swap') {
       this.items = this.data.allItems;
       this.refresh();
-      this.dataSource.data.forEach((row) => {
-        if (this.data.selectedItems.includes(row._id)) {
-          this.selection.select(row);
-        }
-      });
       return;
     }
     this.itemService.getAllItems().subscribe(
@@ -75,7 +72,7 @@ export class ItemAllocateDialogComponent implements OnInit {
               this.selection.select(row);
             }
           });
-          this.show = true;
+          // this.show = true;
         }
       }
     );
@@ -121,8 +118,15 @@ export class ItemAllocateDialogComponent implements OnInit {
     this.dataSource.data = this.items;
     this.dataSource.paginator = this.paginator;
     this.dataSource.paginator.length = this.dataSource.data.length;
-    this.iterator(this.paginator.pageIndex, this.paginator.pageSize)
-    this.show = true;
+    this.iterator(this.paginator.pageIndex, this.paginator.pageSize ? this.paginator.pageSize : 10)
+
+    if (this.data.selectedItems) {
+      this.dataSource.data.forEach((row) => {
+        if (this.data.selectedItems.includes(row._id)) {
+          this.selection.select(row);
+        }
+      });
+    }
   }
 
   handlePage($event) {
@@ -143,5 +147,7 @@ export class ItemAllocateDialogComponent implements OnInit {
     const start = currentPage * pageSize;
     const part = this.dataSource.data.slice(start, end);
     this.dataSource.slice = part;
+    console.log('iterator', this.dataSource.slice);
+    this.show = true;
   }
 }
