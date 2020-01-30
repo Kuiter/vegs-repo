@@ -51,6 +51,12 @@ export class ShoppingMetricsComponent implements OnInit {
     return this.trialTreatmentService.getCurrency();
   }
 
+  get minNumItems() {
+    const subjectOptions = this.trialTreatmentService.getSujectOptions();
+    if (!subjectOptions) { return 0 }
+    return subjectOptions.minAmountOfItemsPurchased ? subjectOptions.minAmountOfItemsPurchased : 0;
+  }
+
   /**
    * 
    * @returns {Number} Sum of Items in shopping cart

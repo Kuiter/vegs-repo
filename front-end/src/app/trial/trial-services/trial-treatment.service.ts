@@ -130,6 +130,10 @@ export class TrialTreatmentService implements Resolve<Observable<any>> {
     return this.treatmentData.showOptions;
   }
 
+  getSujectOptions() {
+    return this.treatmentData.subjectOptions;
+  }
+
   getSwapConfig() {
     return this.treatmentData.swapConfig;
   }

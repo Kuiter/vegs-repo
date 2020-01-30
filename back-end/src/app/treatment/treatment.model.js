@@ -34,7 +34,8 @@ let TreatmentSchema = new Schema({
   },
   subjectOptions: {
     money: Number,
-    restricted: Boolean
+    restricted: Boolean,
+    minAmountOfItemsPurchased: Number
   },
   // sharing options?
   questionnaire: { type: Boolean, default: false }
