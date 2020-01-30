@@ -316,6 +316,7 @@ export class ItemCreateComponent implements OnInit {
     this.labelService.getAllMyLabel().subscribe((label) => {
       const dialogRef = this.dialog.open(LabelAllocateDialogComponent, {
         width: '80%',
+        maxHeight: '90vh',
         data: {
           itemID: this.itemFormObject._id,
           allLabel: label,

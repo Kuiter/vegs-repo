@@ -157,6 +157,7 @@ export class TreatmentCreateComponent implements OnInit {
   addFilter() {
     const dialogRef = this.dialog.open(FilterAllocateDialogComponent, {
       width: '80%',
+      maxHeight: '90vh',
       data: { ref: 'treatment', filters: this.newTreatment.filters }
     });
 
