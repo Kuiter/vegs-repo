@@ -101,7 +101,7 @@ export class TreatmentCreateComponent implements OnInit {
           this.uploading = false;
           return;
         }
-        this.router.navigate(['/admin/treatmentEdit/' + val._id]);
+        // this.router.navigate(['/admin/treatmentEdit/' + val._id]);
       }
     );
   }

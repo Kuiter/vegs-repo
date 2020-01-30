@@ -79,7 +79,7 @@ export class TreatmentService implements Resolve<Observable<any>>{
    * @returns {Observable}
    */
   updateSpecificTreatment(body) {
-    return this.http.put(environment.apiURI + '/treatment/', body);
+    return this.http.put(environment.apiURI + '/treatment', body);
   }
 
   /**

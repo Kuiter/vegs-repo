@@ -464,15 +464,13 @@ export class ItemCreateComponent implements OnInit {
       },
       amount: this.itemFormObject.data.controls.amount.value,
       content: {
-        contentType: this.itemFormObject.content.controlscontentType.value,
+        contentType: this.itemFormObject.content.controls.contentType.value,
         amountInKG: this.itemFormObject.content.controls.amountInKG.value,
         displayAmount: this.itemFormObject.content.controls.displayAmount.value,
       },
       images: [],
       ingredients: this.itemFormObject.data.controls.ingredients.value,
       allergens: this.itemFormObject.data.controls.allergens.value,
-      // superGroup: this.itemFormObject.data.controls.superGroup.value,
-      // subGroup: this.itemFormObject.data.controls.subGroup.value,
       score: this.itemFormObject.score,
       swaps: this.itemFormObject.swaps,
       label: this.itemFormObject.label,
@@ -490,15 +488,12 @@ export class ItemCreateComponent implements OnInit {
         );
       });
     }
-
     if (!this.selectedItem) {
       this.itemService.saveNewItem(item).subscribe(
         (item) => {
           if (this.treatmentEdit) {
             this.treatmentService.getAllTreatments().subscribe(() => { });
           }
-          // load all items new... ?
-
         },
         (error) => {
           console.error(error);
@@ -522,7 +517,6 @@ export class ItemCreateComponent implements OnInit {
         }
       );
     }
-    // this.itemService.saveNewItem(item).subscribe(());
   }
 
   /**

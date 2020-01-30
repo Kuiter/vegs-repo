@@ -19,22 +19,22 @@ module.exports = function (app) {
   app.route('/treatment', verifySession)
     .get(verifySession, treatment.get_all_my_treatments)
     // used to update the name and description of a treatment
-    .put(verifySession, (req, res) => {
-      Treatment.findById(req.body._id, (err, treatment) => {
-        if (err) {
-          console.error(err);
-          return res.status(500).send(err)
-        }
-        // Object.assign(treatment, req.body);
-        treatment.name = req.body.name;
-        treatment.description = req.body.description;
+    .put(verifySession, async (req, res) => {
+      const { _id } = req.body;
+      delete req.body.items;
+      const qr = Treatment.findById(_id).select('-items');
+      try {
+        const treatment = await qr.exec(); 
         Object.assign(treatment, req.body);
-        treatment.save()
-          .catch((err) => { return res.status(500).send(err) })
-          .then((val) => {
-            res.status(200).send(val);
-          })
-      });
+        try {
+          await treatment.save();
+          return res.status(200).send();
+        } catch (error) {
+          throw error;  
+        }
+      } catch (error) {
+        return res.status(500).send(err)
+      }
     })
     .post(verifySession, treatment.post_new_treatment);
 
@@ -103,7 +103,7 @@ module.exports = function (app) {
     '/activate/tr/:treatmentID',
     verifySession,
     async (req, res) => {
-      const {treatmentID} = req.params;
+      const { treatmentID } = req.params;
       const qr = Treatment.findById(treatmentID).select('-items');
       try {
         const tr = await qr.exec();
@@ -111,9 +111,9 @@ module.exports = function (app) {
         try {
           await tr.save();
           return res.status(200).send();
-        } catch(err) {
+        } catch (err) {
           console.error('err1', err)
-          return res.status(500).send(err)  
+          return res.status(500).send(err)
         }
       } catch (err) {
         console.log('err2', err);
@@ -126,7 +126,7 @@ module.exports = function (app) {
     '/deactivate/tr/:treatmentID',
     verifySession,
     async (req, res) => {
-      const {treatmentID} = req.params;
+      const { treatmentID } = req.params;
       const qr = Treatment.findById(treatmentID).select('-items')
       try {
         const tr = await qr.exec();
