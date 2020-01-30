@@ -61,9 +61,10 @@ export class TreatmentCreateComponent implements OnInit {
       this.show = true;
     }
     if (this.activatedRoute.snapshot.paramMap.get('id')) {
+      console.log('this here');
       this.treatmentService.getSpecificTreatment(this.activatedRoute.snapshot.paramMap.get('id')).subscribe(
-        (val: any[]) => {
-          this.newTreatment = val[0];
+        (val) => {
+          this.newTreatment = val;
           this.treatmentForm = this.fb.group({
             name: [this.newTreatment.name],
             description: [this.newTreatment.description]
@@ -213,7 +214,7 @@ export class TreatmentCreateComponent implements OnInit {
   refresh() {
     this.treatmentService.getSpecificTreatment(this.activatedRoute.snapshot.paramMap.get('id')).subscribe(
       (val: any[]) => {
-        this.newTreatment = val[0];
+        this.newTreatment = val;
         this.show = true;
       }
     );

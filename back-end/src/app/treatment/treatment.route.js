@@ -24,19 +24,34 @@ module.exports = function (app) {
       delete req.body.items;
       const qr = Treatment.findById(_id).select('-items');
       try {
-        const treatment = await qr.exec(); 
+        const treatment = await qr.exec();
         Object.assign(treatment, req.body);
         try {
           await treatment.save();
           return res.status(200).send();
         } catch (error) {
-          throw error;  
+          throw error;
         }
       } catch (error) {
         return res.status(500).send(err)
       }
     })
     .post(verifySession, treatment.post_new_treatment);
+
+  app.get(
+    '/treatment/:id',
+    verifySession,
+    async (req, res) => {
+      const { id } = req.params;
+      const qr = Treatment.findById(id);
+      try {
+        const treatment = await qr.exec();
+        res.send(treatment);
+      } catch (error) {
+        return res.status(500).send(error);
+      }
+    }
+  )
 
   // Put new items in treatment
   /**Route for adding items to treatment. */

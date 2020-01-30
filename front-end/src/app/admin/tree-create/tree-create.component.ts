@@ -79,14 +79,14 @@ export class TreeCreateComponent implements OnInit {
       this.treatmentID = this.route.snapshot.parent.url[1].path;
       this.editTreatment = true;
       this.treatmentService.getSpecificTreatment(this.route.snapshot.parent.url[1].path).subscribe(
-        (val: any[]) => {
+        (val: any) => {
           this.treeID = this.route.snapshot.url[1].path
-          const ind = val[0].filters.findIndex(x => x._id == this.treeID);
+          const ind = val.filters.findIndex(x => x._id == this.treeID);
           if (ind == -1) {
             // handle if tree not present
             return;
           }
-          let tree = val[0].filters[ind];
+          let tree = val.filters[ind];
           this.obj.form = this.fb.group({ name: tree.name, description: tree.description })
           let resTree = this.populateFormsTree(tree.tree);
           this.obj.trees = resTree;

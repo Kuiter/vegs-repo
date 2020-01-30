@@ -125,7 +125,7 @@ export class ItemCreateComponent implements OnInit {
       const treatmentID = this.route.snapshot.parent.url[1].path;
       this.route.params.subscribe((param) => {
         this.treatmentService.getSpecificTreatment(treatmentID).subscribe((val: any) => {
-          this.selectedItem = val[0].items.filter((x) => { return x._id == param.itemID })[0];
+          this.selectedItem = val.items.filter((x) => { return x._id == param.itemID })[0];
           // populate form with existing data
           this.populateForms();
           this.swapItems = [];

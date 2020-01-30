@@ -48,7 +48,7 @@ export class TreeManageComponent implements OnInit {
       this.treatmentEdit = true;
       this.treatementService.getSpecificTreatment(this.route.snapshot.url[1].path)
         .subscribe((val: any) => {
-          this.trees = val[0].filters;
+          this.trees = val.filters;
           this.show = true;
         });
       this.treatementService.refreshUI.subscribe(() => {
@@ -121,10 +121,10 @@ export class TreeManageComponent implements OnInit {
     if (this.treatmentEdit) {
       this.treatementService.getSpecificTreatment(this.route.snapshot.url[1].path)
         .subscribe((val: any) => {
-          if (val[0].filters == undefined) {
+          if (val.filters == undefined) {
 
           } else {
-            this.trees = val[0].filters;
+            this.trees = val.filters;
           }
           this.show = true;
         });

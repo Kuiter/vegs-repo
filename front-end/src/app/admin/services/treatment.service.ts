@@ -140,11 +140,13 @@ export class TreatmentService implements Resolve<Observable<any>>{
    * @returns {Observable}
    */
   getSpecificTreatment(id) {
-    return new Observable((sub) => {
-      this.getAllTreatments().subscribe((val: any[]) => {
-        sub.next(this.treatments.filter((x) => { return x._id == id }));
-      })
-    });
+    return this.http.get(`${environment.apiURI}/treatment/${id}`);
+    
+    // return new Observable((sub) => {
+    //   this.getAllTreatments().subscribe((val: any[]) => {
+    //     sub.next(this.treatments.filter((x) => { return x._id == id }));
+    //   })
+    // });
   }
   /**
    * Function for emitting refresh UI components.

@@ -4,12 +4,14 @@ const User = mongoose.model('User');
 const Item = mongoose.model('Item');
 const Tree = mongoose.model('Tree');
 
-exports.get_all_my_treatments = function (req, res) {
-  Treatment.find({ owner: req.user.username }, (err, treatment) => {
-    if (err) { return res.status(500).send(err) }
-    if (!treatment) { return res.status(404).send({ success: false, msg: 'No treatment matching found' }) }
-    res.status(200).send(treatment);
-  });
+exports.get_all_my_treatments = async function (req, res) {
+  const qr = Treatment.find({ owner: req.user.username }).select('-items');
+  try {
+    const treatments = await qr.exec();
+    res.status(200).send(treatments)
+  } catch (error) {
+    return res.status(500).send(err);
+  }
 }
 
 exports.put_new_items_to_treatment = function (req, res) {
